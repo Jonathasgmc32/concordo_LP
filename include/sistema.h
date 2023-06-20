@@ -16,6 +16,7 @@ class sistema{
     public:
         sistema();
         ~sistema();
+        int getTamUser() const;
         usuario getUsuarioById(int idtoSerach) const;
         int getUsuarioAtual () const;
         void setUsuarioAtual();
@@ -24,5 +25,6 @@ class sistema{
         std::string getCanalAtual () const;
         void setCanalAtual();
         int emailCadastrado(std::string email) const;
+        void addUsuario(usuario u);
 };
 #endif

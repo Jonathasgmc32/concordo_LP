@@ -201,6 +201,30 @@ src/sistema.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/sistema.cpp.s
 .PHONY : src/sistema.cpp.s
 
+src/usuario.o: src/usuario.cpp.o
+.PHONY : src/usuario.o
+
+# target to build an object file
+src/usuario.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/usuario.cpp.o
+.PHONY : src/usuario.cpp.o
+
+src/usuario.i: src/usuario.cpp.i
+.PHONY : src/usuario.i
+
+# target to preprocess a source file
+src/usuario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/usuario.cpp.i
+.PHONY : src/usuario.cpp.i
+
+src/usuario.s: src/usuario.cpp.s
+.PHONY : src/usuario.s
+
+# target to generate assembly for a file
+src/usuario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/usuario.cpp.s
+.PHONY : src/usuario.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... src/sistema.o"
 	@echo "... src/sistema.i"
 	@echo "... src/sistema.s"
+	@echo "... src/usuario.o"
+	@echo "... src/usuario.i"
+	@echo "... src/usuario.s"
 .PHONY : help
 
 

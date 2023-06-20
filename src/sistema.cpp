@@ -14,6 +14,10 @@ sistema::~sistema() {
     todosServidores.clear();
 }
 
+int sistema::getTamUser() const{
+    return this->todosUsuarios.size();
+}
+
 usuario sistema::getUsuarioById(int idtoSerach) const{
     return this->todosUsuarios.at(idtoSerach);
 }
@@ -34,4 +38,8 @@ int sistema::emailCadastrado(std::string email) const{
         }
     }
     return 0;
+}
+
+void sistema::addUsuario(usuario u){
+    this->todosUsuarios.push_back(u);
 }
