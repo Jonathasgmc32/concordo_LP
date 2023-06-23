@@ -11,20 +11,30 @@ class sistema{
         std::vector<usuario> todosUsuarios;
         std::vector<servidor> todosServidores;
         int usuarioAtualId;
+        bool logado;
         std::string nomeServidorAtual;
         std::string nomeCanalAtual;
     public:
         sistema();
         ~sistema();
         int getTamUser() const;
-        usuario getUsuarioById(int idtoSerach) const;
+        usuario getUsuarioByPos(int idtoSerach) const;
         int getUsuarioAtual () const;
         void setUsuarioAtual();
         std::string getServidorAtual () const;
         void setServidorAtual();
         std::string getCanalAtual () const;
         void setCanalAtual();
-        int emailCadastrado(std::string email) const;
+        bool emailCadastrado(std::string email) const;
         void addUsuario(usuario u);
+        bool getEstadoLogin();
+        void createUser(std::vector<std::string> atributos);
+        void setLoginStatus(bool status, int idUser);
+        void loginUser(std::vector<std::string> atributos);
+        void logoffUser();
+        void addServer(servidor s);
+        servidor getServerByPos(int pos) const;
+        bool servidorCadastrado(std::string nomeServer);
+        void createServer(std::vector<std::string> atributos);
 };
 #endif

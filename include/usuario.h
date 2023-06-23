@@ -12,6 +12,7 @@ class usuario{
         usuario();
         usuario(const int id, const std::string nome, const std::string email, const std::string senha);
         std::string getEmail();
+        std::string getSenha();
 };
 
 #endif

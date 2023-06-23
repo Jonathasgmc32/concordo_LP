@@ -12,3 +12,7 @@ usuario::usuario(const int id, const std::string nome, const std::string email, 
 std::string usuario::getEmail(){
     return this->email;
 }
+
+std::string usuario::getSenha(){
+    return this->senha;
+}

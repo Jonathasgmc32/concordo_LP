@@ -1,0 +1,13 @@
+create-user
+create-user 1Entrada
+create-user 1Entradas 2Entradas
+create-user usuario1@email.com senhausuario1 Usuario1
+create-user usuario1@email.com senhausuario2 Usuario2
+create-user usuario2@email.com senhausuario2 Usuario2
+login
+login user
+disconect
+create-server
+login usuario1@email.com senhaerrada
+login usuario1@email.com senhausuario1
+quit

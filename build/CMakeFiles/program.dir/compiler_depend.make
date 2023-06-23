@@ -181,14 +181,27 @@ CMakeFiles/program.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  /usr/include/c++/11/sstream \
-  /usr/include/c++/11/bits/sstream.tcc \
-  ../include/sistema.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/sstream \
+  /usr/include/c++/11/bits/sstream.tcc \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  ../include/sistema.h \
   ../include/usuario.h \
   ../include/servidor.h \
   ../include/canal.h \
@@ -767,6 +780,18 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 
 ../include/usuario.h:
 
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/c++/11/array:
+
+/usr/include/c++/11/bits/stl_relops.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/sstream:
+
 /usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/bits/stl_bvector.h:
@@ -774,8 +799,6 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/vector:
-
-/usr/include/c++/11/sstream:
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -821,6 +844,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
+/usr/include/c++/11/utility:
+
 /usr/include/errno.h:
 
 ../src/sistema.cpp:
@@ -840,6 +865,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/endian.h:
 
@@ -896,6 +923,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/c++/11/map:
 
 /usr/include/c++/11/bits/range_access.h:
 
@@ -963,6 +992,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
+/usr/include/c++/11/bits/stl_multimap.h:
+
 /usr/include/features.h:
 
 /usr/include/c++/11/ext/numeric_traits.h:
@@ -980,6 +1011,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 /usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -1003,6 +1036,8 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 
 /usr/include/c++/11/bits/postypes.h:
 
+/usr/include/c++/11/bits/invoke.h:
+
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/c++/11/exception:
@@ -1016,6 +1051,10 @@ CMakeFiles/program.dir/src/usuario.cpp.o: ../src/usuario.cpp \
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/c++/11/bits/stl_tree.h:
 
 /usr/include/c++/11/type_traits:
 
