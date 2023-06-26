@@ -34,7 +34,15 @@ class sistema{
         void logoffUser();
         void addServer(servidor s);
         servidor getServerByPos(int pos) const;
-        bool servidorCadastrado(std::string nomeServer);
+        int getIndiceServidorByName(std::string nomeServer) const;
         void createServer(std::vector<std::string> atributos);
+        void listServers() const;
+        void deleteServer(std::vector<std::string> atributos);
+        void setDescricao(std::vector<std::string> atributos);
+        void getInformacaoServer(std::vector<std::string> atributos);
+        void setCodigoConvite(std::vector<std::string> atributos);
+        void enterServer(std::vector<std::string> atributos);
+        void leaveServer();
+        void listarParticipantes() const;
 };
 #endif

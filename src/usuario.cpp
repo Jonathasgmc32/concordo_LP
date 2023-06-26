@@ -16,3 +16,7 @@ std::string usuario::getEmail(){
 std::string usuario::getSenha(){
     return this->senha;
 }
+
+std::string usuario::getNome(){
+    return this->nome;
+}

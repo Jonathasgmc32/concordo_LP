@@ -17,7 +17,13 @@ class servidor{
         servidor(int idDono, std::string nomeServidor);
         ~servidor();
         std::string getNomeServidor() const;
-
-
+        int getIdDono() const;
+        bool buscaUserId(int id) const;
+        void addUserId(int id);
+        void setDescricao(std::string novaDesc);
+        void infoServer() const;
+        void setCodigoConvite(std::string novoCodigo);
+        std::string getCodigoConvite() const;
+        std::vector<int> getAllUsers() const;
 };
 #endif

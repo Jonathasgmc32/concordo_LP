@@ -1,3 +1,5 @@
+entrada-aleatoria1
+entrada aleatoria com espaço
 create-user
 create-user 1Entrada
 create-user 1Entradas 2Entradas
@@ -8,6 +10,58 @@ login
 login user
 disconect
 create-server
+create-server testeDeslogado
 login usuario1@email.com senhaerrada
 login usuario1@email.com senhausuario1
+list-servers
+enter-server entrandoNoVazio
+create-server servidor legal
+create-server servidor-legal
+enter-server servidor-legal
+create-server servidor-legal
+create-server servidor-legal2
+create-server servidor-legal3
+list-servers a
+list-servers
+remove-server teste
+remove-server servidor-legal2
+list-servers
+set-server-desc servidor-legal sem aspas
+set-server-desc servidor-legal "
+set-server-desc servidor-legal "nova descrição"
+set-server-desc servidorInexistente "descrição legal"
+info-server servidor-legal
+info-server servidor-legal2
+info-server servidor-legal3
+set-server-desc servidor-legal ""
+info-server servidor-legal
+set-server-desc servidor-legal3 "Esse servidor tem um código, tente acha-lo"
+set-server-invite-code servidor-legal3 sl12345
+set-server-invite-code servidorInexistente codigo123
+disconect
+login usuario2@email.com senhausuario2
+remove-server servidor-legal
+set-server-desc servidor-legal "tentando mudar a descrição dos outros"
+list-servers
+info-server servidor-legal3
+enter-server servidor-legal
+enter-server servidor-legal3
+enter-server servidor-legal3 tentativafalha
+enter-server servidor-legal3 sl12345
+list-participants
+leave-server
+leave-server
+list-participants
+enter-server servidor-legal3
+set-server-invite-code servidor-legal3 meucodigo
+disconect
+login usuario2@email.com senhausuario2
+enter-server servidor-legal3
+disconect
+login usuario1@email.com senhausuario1
+remove-server servidor-legal3
+disconect
+login usuario2@email.com senhausuario2
+enter-server servidor-legal3
+quit a
 quit

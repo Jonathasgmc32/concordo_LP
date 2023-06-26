@@ -5,14 +5,6 @@ sistema::sistema(){
     this->logado = false;
 }
 sistema::~sistema() {
-    for (auto usuario: todosUsuarios){
-        //delete usuario;
-    }
-    todosUsuarios.clear();
-    for (auto servidor: todosServidores){
-        //delete servidor;
-    }
-    todosServidores.clear();
 }
 
 int sistema::getTamUser() const{
@@ -61,6 +53,7 @@ void sistema::createUser(std::vector<std::string> atributos){
 void sistema::setLoginStatus(bool status, int idUser){
     this->logado = status;
     this->usuarioAtualId = idUser;
+    this->nomeServidorAtual = "";
 }
 void sistema::loginUser(std::vector<std::string> atributos){
     int tam = this->todosUsuarios.size();
@@ -89,21 +82,177 @@ servidor sistema::getServerByPos(int pos) const{
     return this->todosServidores.at(pos);
 }
 
-bool sistema::servidorCadastrado(std::string nomeServer){
+int sistema::getIndiceServidorByName(std::string nomeServer) const{
     int tam = this->todosServidores.size();
     for (int i = 0; i < tam; i++){
         if(getServerByPos(i).getNomeServidor() == nomeServer){
-            return true;
+            return i;
         }
     }
-    return false;
+    return -1;
 }
 
 void sistema::createServer(std::vector<std::string> atributos){
-    if(servidorCadastrado(atributos.at(0)) == false){
-        addServer(servidor(this->getUsuarioAtual(), atributos.at(0)));
+    if(getIndiceServidorByName(atributos.at(0)) == -1){
+        addServer(servidor(getUsuarioAtual(), atributos.at(0)));
+        this->todosServidores.at(getIndiceServidorByName(atributos.at(0))).addUserId(getUsuarioAtual());
         std::cout << "Servidor '" << atributos.at(0) << "' criado com sucesso!" << std::endl;
         return;
     }
     std::cout << "Servidor '" << atributos.at(0) << "' já existe." << std::endl;
+}
+
+void sistema::listServers() const{
+    int tam = this->todosServidores.size();
+    if(tam == 0){
+        std::cout << "Não há servidores criados" << std::endl;
+    }
+    else{
+        for (int i = 0; i < tam; i++){
+            std::cout << getServerByPos(i).getNomeServidor() << std::endl;
+        }
+    }
+}
+
+void sistema::deleteServer(std::vector<std::string> atributos){
+    int indice = getIndiceServidorByName(atributos.at(0));
+    if(indice > -1){
+        if(getServerByPos(indice).getIdDono() == this->usuarioAtualId){
+            this->nomeServidorAtual = "";
+            this->todosServidores.erase(this->todosServidores.begin() + indice);
+            std::cout << "Servidor '" << atributos.at(0) << "' removido com sucesso" << std::endl;
+        }
+        else{
+            std::cout << "Esse servidor não pertence a você" << std::endl;
+        }
+    }
+    else{
+        std::cout << "Servidor '" << atributos.at(0) << "' não foi encontrado" << std::endl;
+    }
+}
+
+void sistema::setDescricao(std::vector<std::string> atributos){
+    int indice = getIndiceServidorByName(atributos.at(0));
+    if (indice > -1){
+        if(getServerByPos(indice).getIdDono() == this->usuarioAtualId){
+            std::string novaDesc = atributos.at(1);
+            if(novaDesc.length() >=2){
+                if(novaDesc[0] != '"' || novaDesc[novaDesc.length()-1] != '"'){
+                std::cout << "A descrição deve ser passada entre aspas duplas (\"<descricao>\")"
+                << std::endl;
+                }
+                else{
+                    novaDesc = novaDesc.substr(1, novaDesc.length() -2);
+                    this->todosServidores.at(indice).setDescricao(novaDesc);
+                    std::cout << "Descrição alterada com sucesso" << std::endl;
+                }
+            }
+            else{
+                std::cout << "Há algo de errado no parametro <descricao>" << std::endl;
+            }
+        }
+        else{
+            std::cout << "Esse servidor não pertence a você" << std::endl;
+        }
+    }
+    else{
+        std::cout << "Servidor '" << atributos.at(0) << "' não foi encontrado" << std::endl;
+    }
+}
+
+void sistema::getInformacaoServer(std::vector<std::string> atributos){
+    int indice = getIndiceServidorByName(atributos.at(0));
+    if(indice > -1){
+        getServerByPos(indice).infoServer();
+    }
+    else{
+        std::cout << "Servidor '" << atributos.at(0) << "' não foi encontrado" << std::endl;
+    }
+}
+
+void sistema::setCodigoConvite(std::vector<std::string> atributos){
+    int indice = getIndiceServidorByName(atributos.at(0));
+    if (indice > -1){
+        if(getServerByPos(indice).getIdDono() == this->usuarioAtualId){
+            this->todosServidores.at(indice).setCodigoConvite(atributos.at(1));
+            if(atributos.at(1) == ""){
+                std::cout << " O Código de convite foi removido" << std::endl;
+            }
+            else{
+                std::cout << "Código de convite alterado com sucesso!" << std::endl;
+            }
+        }
+        else{
+            std::cout << "Esse servidor não pertence a você" << std::endl;
+        }
+
+    }
+    else{
+        std::cout << "Servidor '" << atributos.at(0) << "' não foi encontrado" << std::endl;
+    }
+}
+
+void sistema::enterServer(std::vector<std::string> atributos){
+    int indice = getIndiceServidorByName(atributos.at(0));
+    if (indice > -1){
+
+        if(this->todosServidores.at(indice).buscaUserId(this->getUsuarioAtual()) == true){
+            if (this->nomeServidorAtual == getServerByPos(indice).getNomeServidor()){
+                std::cout << "Você já está visualizando o servidor '" << getServerByPos(indice).getNomeServidor()
+                << "'" << std::endl;
+            }
+            else{
+                std::cout << "Agora você está visualizando o servidor '" << getServerByPos(indice).getNomeServidor()
+                << "'" << std::endl;
+                this->nomeServidorAtual = getServerByPos(indice).getNomeServidor();
+            }
+        }
+        else{
+            if(this->todosServidores.at(indice).getCodigoConvite() == ""){
+                this->todosServidores.at(indice).addUserId(this->getUsuarioAtual());
+                std::cout << "Você entrou no servidor '" << getServerByPos(indice).getNomeServidor()
+                << "'" << std::endl;
+                this->nomeServidorAtual = getServerByPos(indice).getNomeServidor();
+            }
+            else{
+                if(atributos.at(1) == ""){
+                    std::cout << "O servidor '" << getServerByPos(indice).getNomeServidor()
+                << "' requer um código de convite" << std::endl;
+                }
+                else if (atributos.at(1) == getServerByPos(indice).getCodigoConvite()){
+                    this->todosServidores.at(indice).addUserId(this->getUsuarioAtual());
+                std::cout << "Você entrou no servidor '" << getServerByPos(indice).getNomeServidor()
+                << "'" << std::endl;
+                this->nomeServidorAtual = getServerByPos(indice).getNomeServidor();
+                } else{
+                    std::cout << "Código de convite inválido" << std::endl;
+                }
+            }
+        }
+    }
+    else{
+        std::cout << "Servidor '" << atributos.at(0) << "' não foi encontrado" << std::endl;
+    }
+}
+
+void sistema::leaveServer(){
+    if(this->nomeServidorAtual == ""){
+        std::cout << "Você não está visualizando nenhum servidor" << std::endl;
+    }
+    else{
+        std::cout << "Saindo do servidor '" << this->nomeServidorAtual << "'" << std::endl;
+        this->nomeServidorAtual = "";
+    }
+}
+
+void sistema::listarParticipantes() const{
+    if (this->nomeServidorAtual == ""){
+        std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
+    } else{
+        std::vector<int> ids = this->todosServidores.at(this->getIndiceServidorByName(this->nomeServidorAtual)).getAllUsers();
+        int tam = ids.size();
+        for(int i = 0; i < tam; i++){
+            std::cout<< getUsuarioByPos(ids.at(i)).getNome() << std::endl;
+        }
+    }
 }
