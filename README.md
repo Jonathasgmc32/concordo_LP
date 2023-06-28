@@ -75,6 +75,52 @@ list-participants
 #Lista os participantes do servidor
 ```
 >Observação 1: Os comandos que mudam algum dado de um servidor só podem ser feitos pelo dono do servidor
-<br>
 
->Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) retornarão uma mensagem de erro ou um feedback
+>Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) ou em um estado de login inválido (ex: desconect estando deslogado) retornarão uma mensagem de erro ou um feedback
+
+##Roteiro de exemplo
+
+<h3> Criar dois usuários e logar com um deles
+
+```bash
+create-user usuario1@gmail.com senhasegura Usuario1
+create-user usuario2@gmail.com senhamaissegura Usuario bacana
+login usuario1@gmail.com senhasegura
+```
+
+<h3> Criar e configurar um servidor (estando logado na conta 1), e desconectar
+
+```bash
+create-server servidor-bacana
+create-server meu-segundo-servidor
+set-server-desc servidor-bacana "um servidor para pessoas legais"
+set-server-desc meu-segundo-servidor "servidor para pessoas mais próximas"
+set-server-invite-code meu-segundo-servidor codigo123
+disconect
+```
+<h3> Listar servidores, buscar informações e entrar em servidores com e sem código (estando logado na conta 2) </h3>
+
+```bash
+list-servers
+info-server servidor-bacana
+info-server meu-segundo-servidor
+enter-server servidor-bacana
+enter-server meu-segundo-servidor
+enter-server meu-segundo-servidor codigoaleatorio
+enter-server meu-segundo-servidor codigo123
+list-participants
+leave-server
+disconect
+```
+
+##Problemas e dificudades
+
+A senha não está com hashing, então ao usar algum getSenha(), o valor é o mesmo que foi digitado. Isso é ruim quando for trabalhar com leitura de arquivo e tentarei aplicar isso nas proximas versões (pelo menos na parte 3 tentarei)
+
+Ler a entrada foi um trabalho um pouco complicado, tanto que a maneira que fiz não pareceu a melhor alternativa para a leitura.
+
+O script de teste não contempla entradas extremamente específicas, como caracteres diferentes do habitual alfabeto, ou que cada função possui um verificador de parâmetros máximo para que o teste não ficasse cansativo(mas sim, todas possuem esse verificador).
+
+Para a classe sistema, foi necessário adicionar um novo atributo: logado, que vê se o usuário está logado ou não. Isso foi necessário para a verificação de comandos ficar mais curta.
+
+Não colocar quit ao final de um arquivo de entrada faz um loop infinito do ultimo comando do arquivo. Isso pode ser problemático na parte 2 caso o último comando seja para enviar mensagem. 
