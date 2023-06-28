@@ -4,6 +4,10 @@
 #include <map>
 #include "sistema.h"
 
+/**
+* @brief Cria um map com os comandos, o estado de login desejado e a quantidade de parâmetros do comando
+* @param coms mapa original criado na main, passado por referência
+*/
 void createComs(std :: map <std::string , std::pair<bool, int>> &coms){
     coms["quit"] = std::pair(false, 0);
     coms["create-user"] = std::pair(false, 3);
@@ -20,6 +24,12 @@ void createComs(std :: map <std::string , std::pair<bool, int>> &coms){
     coms["list-participants"] = std::pair(true, 0);
 }
 
+/**
+* @brief Trata o restante da entrada que veio após o comando, separando cada atributo em uma posição
+do vector. Alguns comandos tem tratametos diferentes.
+* @param restanteLinha String com os atributos inseridos pelo usuário
+* @param comando Comando que foi solicitado
+*/
 std::vector<std::string> splitEntrada(std::string restanteLinha, std::string comando){
     std::vector<std::string> atributos;
     std::string a1, a2, a3, entComposta;
@@ -67,6 +77,10 @@ std::vector<std::string> splitEntrada(std::string restanteLinha, std::string com
     return atributos;
 }
 
+/**
+* @brief Função main. Cria um objeto da classe sistema, faz as verificações do status e da quantidade
+de parâmetros passados, e chama as funções de sistema para o respectivo comando passado.
+*/
 int main(){
     sistema s;
     std::string linha;

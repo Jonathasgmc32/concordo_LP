@@ -1,26 +1,29 @@
+/**
+* @file canal.h
+* @brief Definição da classe canal
+*/
 #ifndef CANAL_H
 #define CANAL_H
 #include <iostream>
 #include <vector>
 #include "mensagem.h"
 
+/**
+*@class mensagem
+*@brief Classe responsável pelo gerenciamento de canal
+*/
 class canal{
     private:
         std::string nome;
     public:
+        /**
+         * @brief Construtor padrão da classe canal
+         */
         canal();
-        canal(const std::string nome);
-};
-
-class canalTexto : public canal{
-    std::vector<mensagem> mensagens;
-    canalTexto();
-    canalTexto(mensagem novaMensagem);
-};
-
-class canalVoz : public canal{
-    mensagem ultimaMensagem;
-    canalVoz();
-    canalVoz(mensagem mensagemVoz);
+        /**
+         * @brief Construtor da classe canal, com atributo
+         * @param nomeCanal Nome do canal
+         */
+        canal(const std::string nomeCanal);
 };
 #endif
