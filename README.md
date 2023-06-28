@@ -15,13 +15,13 @@ exemplo de excecução, use ```./program < entradasTeste.txt```
 
 As entradas do programa são comandos, seguidos (ou não) por parâmetros. Aqui está a lista de comandos disponíveis:
 
-<h3>omandos que podem ser feitos a qualquer momento:
+<h3> Comandos que podem ser feitos a qualquer momento: </h3>
 ```bash
 #Encerra o concord
 quit
 ```
 
-<h3>omandos que podem ser feitos com o status deslogado:
+<h3> Comandos que podem ser feitos com o status deslogado: </h3>
 ```bash
 #Criar usuário
 create-user <email> <senhaSemEspaço> <nome podendo ter espaço>
@@ -30,11 +30,10 @@ create-user <email> <senhaSemEspaço> <nome podendo ter espaço>
 login <email> <senhaSemEspaço>
 ```
 
-<h3>omandos que podem ser feitos com o status logado:
+<h3> Comandos que podem ser feitos com o status logado: </h3>
 
-<h4>Em qualquer tela:
+<h4> Em qualquer tela: </h4>
 ```bash
-
 #Deslogar de uma conta
 disconect
 
@@ -63,7 +62,7 @@ enter-server <nomeDoServidorSemEspaço>
 enter-server <nomeDoServidorSemEspaço> <codigo>
 ```
 
-<h4>Visualizando algum servidor
+<h4> Visualizando algum servidor </h4>
 
 ```bash
 #Sair do servidor (apenas visualização)
@@ -73,4 +72,5 @@ leave-server
 list-participants
 ```
 >Observação 1: Os comandos que mudam algum dado de um servidor só podem ser feitos pelo dono do servidor
+<br>
 >Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) retornarão uma mensagem de erro ou um feedback
