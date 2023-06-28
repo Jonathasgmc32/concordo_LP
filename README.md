@@ -1,4 +1,4 @@
-# Concordo
+# Concordo - Um clone do Discord
 
 ## Aluno
 >Jonathas Gabriel Martins Costa
@@ -18,62 +18,63 @@ As entradas do programa são comandos, seguidos (ou não) por parâmetros. Aqui 
 <h3> Comandos que podem ser feitos a qualquer momento: </h3>
 
 ```bash
-#Encerra o concord
 quit
+#Encerra o concord
 ```
 
 <h3> Comandos que podem ser feitos com o status deslogado: </h3>
 
 ```bash
-#Criar usuário
 create-user <email> <senhaSemEspaço> <nome podendo ter espaço>
+#Cria um novo usuário
 
-#Fazer login
 login <email> <senhaSemEspaço>
+#Faz login
 ```
 
 <h3> Comandos que podem ser feitos com o status logado: </h3>
 
-<h4> Em qualquer tela: </h4>
+<h4> Em qualquer tela </h4>
 
 ```bash
-#Deslogar de uma conta
 disconect
+#Desloga de uma conta
 
-#Criar servidor
 create-server <nomeDoServidorSemEspaço>
+#Cria um servidor
 
-#Mudar descrição do servidor
 set-server-desc <nomeDoServidorSemEspaço> "<descriçao podendo ter espaço>"
+#Muda a descrição do servidor
 
-#Mudar ou definir código do servidor
 set-server-invite-code <nomeDoServidorSemEspaço> <codigo>
+#Muda ou define o código do servidor
 
-#Remover um servidor
 remove-server <nomeDoServidorSemEspaço>
+#Remove um servidor
 
-#Listar Servidores cadastrados no sistema
 list-servers
+#Lista os servidores cadastrados no sistema
 
-#Mostrar informações gerais de um servidor
 info-server <nomeDoServidorSemEspaço>
+#Mostra as informações gerais de um servidor
 
-#Entrar em um servidor (sem requisito de código)
 enter-server <nomeDoServidorSemEspaço>
+#Entra em um servidor (sem requisito de código)
 
-#Entrar em um servidor (com requisito de código)
 enter-server <nomeDoServidorSemEspaço> <codigo>
+#Entra em um servidor (com requisito de código)
 ```
 
 <h4> Visualizando algum servidor </h4>
 
 ```bash
-#Sair do servidor (apenas visualização)
 leave-server
+#Sai do servidor (apenas visualização)
 
-#Listar participantes do servidor
 list-participants
+#Lista os participantes do servidor
 ```
 >Observação 1: Os comandos que mudam algum dado de um servidor só podem ser feitos pelo dono do servidor
 <br>
+
 >Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) retornarão uma mensagem de erro ou um feedback
