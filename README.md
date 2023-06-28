@@ -113,7 +113,7 @@ leave-server
 disconect
 ```
 
-##Problemas e dificudades
+## Problemas e dificudades
 
 A senha não está com hashing, então ao usar algum getSenha(), o valor é o mesmo que foi digitado. Isso é ruim quando for trabalhar com leitura de arquivo e tentarei aplicar isso nas proximas versões (pelo menos na parte 3 tentarei)
 
