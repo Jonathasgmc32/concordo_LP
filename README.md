@@ -78,9 +78,9 @@ list-participants
 
 >Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) ou em um estado de login inválido (ex: desconect estando deslogado) retornarão uma mensagem de erro ou um feedback
 
-##Roteiro de exemplo
+## Roteiro de exemplo
 
-<h3> Criar dois usuários e logar com um deles
+<h3> Criar dois usuários e logar com um deles</h3>
 
 ```bash
 create-user usuario1@gmail.com senhasegura Usuario1
@@ -88,7 +88,7 @@ create-user usuario2@gmail.com senhamaissegura Usuario bacana
 login usuario1@gmail.com senhasegura
 ```
 
-<h3> Criar e configurar um servidor (estando logado na conta 1), e desconectar
+<h3> Criar e configurar um servidor (estando logado na conta 1), e desconectar</h3>
 
 ```bash
 create-server servidor-bacana
