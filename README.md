@@ -162,6 +162,7 @@ disconect
 * Adicionado envio e listagem de mensagens em um canal;
 * Corrigida a variavel "usuarioAtualId" está armazenando o indice do usuário logado em vez do seu id
 * Deletar um servidor não tirará mais a visualização do servidor que você está (a menos que seja o próprio servidor a ser deletado)
+* Corrigido problema em que apertar enter, sem nenhum comando escrito, replicava a última entrada inserida
 * Corrigido problemas na documentação de alguns .h
 * Retiradas algumas funções redundantes em sistema.h/sistema.cpp
 
@@ -171,11 +172,11 @@ A senha não está com hashing, então ao usar algum getSenha(), o valor é o me
 
 Ler a entrada foi um trabalho um pouco complicado, tanto que a maneira que fiz não pareceu a melhor alternativa para a leitura.
 
-O script de teste não contempla entradas extremamente específicas, como caracteres diferentes do habitual alfabeto, ou que cada função possui um verificador de parâmetros máximo para que o teste não ficasse cansativo(mas sim, todas possuem esse verificador).
+O script de teste não contempla entradas extremamente específicas, como caracteres diferentes do habitual alfabeto, ou todas as combinações possiveis de comandos, pricipalmente em relação ao verificador de está logado ou não/quantidade de parâmetros (mas sim, todas possuem esses verificadores).
 
 Para a classe sistema, foi necessário adicionar um novo atributo: logado, que vê se o usuário está logado ou não. Isso foi necessário para a verificação de comandos ficar mais curta.
 
-Não colocar quit ao final de um arquivo de entrada faz um loop infinito do ultimo comando do arquivo. Isso pode ser problemático na parte 2 caso o último comando seja para enviar mensagem. 
+Não colocar quit ao final de um arquivo de entrada faz um loop infinito do ultimo comando do arquivo. Isso pode ser problemático caso o último comando seja para enviar mensagem. 
 
 Tive problemas na classe de canais, principalmente na função de add, pois o meu destrutor estava destruindo
 todos os canais ao fim de cada execução de adicionar. Mas me alertaram o que poderia ser o erro e a correção

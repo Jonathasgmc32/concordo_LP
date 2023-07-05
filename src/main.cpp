@@ -115,10 +115,11 @@ de parâmetros passados, e chama as funções de sistema para o respectivo coman
 int main(){
     sistema s;
     std::string linha;
-    std::string comando = "start";
+    std::string comando;
     std :: map <std::string , std::pair<bool, int>> coms;
     createComs(coms);
     while(linha != "quit"){
+        comando = "";
         std::getline(std::cin, linha);
         std::istringstream iss(linha);
         iss >> comando;
