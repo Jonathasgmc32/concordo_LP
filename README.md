@@ -157,12 +157,13 @@ disconect
 ## Adições, correções e Melhorias
 
 <h3>v2.0</h3>
->Adicionado gerenciamento de canais (criar, entrar e sair de canal);
->Adicionado envio e listagem de mensagens em um canal;
->Corrigida a variavel "usuarioAtualId" está armazenando o indice do usuário logado em vez do seu id
->Deletar um servidor não tirará mais a visualização do servidor que você está (a menos que seja o próprio servidor a ser deletado)
->Corrigido problemas na documentação de alguns .h
->Retiradas algumas funções redundantes em sistema.h/sistema.cpp
+
+* Adicionado gerenciamento de canais (criar, entrar e sair de canal);
+* Adicionado envio e listagem de mensagens em um canal;
+* Corrigida a variavel "usuarioAtualId" está armazenando o indice do usuário logado em vez do seu id
+* Deletar um servidor não tirará mais a visualização do servidor que você está (a menos que seja o próprio servidor a ser deletado)
+* Corrigido problemas na documentação de alguns .h
+* Retiradas algumas funções redundantes em sistema.h/sistema.cpp
 
 ## Problemas e dificudades
 
