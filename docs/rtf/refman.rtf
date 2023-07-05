@@ -110,7 +110,7 @@
 2.0 \par
 }}Concordo}
 {\comment Gerado por doxygen 1.9.6.}
-{\creatim \yr2023\mo7\dy4\hr21\min18\sec58}
+{\creatim \yr2023\mo7\dy4\hr23\min35\sec44}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -299,21 +299,21 @@ Fun\'E7\'E3o que obt\'E9m o nome do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::string {\b tipoCanal} () const\par
+virtual std::string {\b tipoCanal} () const =0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que obt\'E9m o tipo do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)\par
+virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que adiciona uma mensagem ao vector de mensagens. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::vector< {\b mensagem} > {\b getMensagens} ()\par
+virtual std::vector< {\b mensagem} > {\b getMensagens} ()=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que retorna o vector de mensagens do canal. }{
@@ -409,7 +409,7 @@ Documenta\'E7\'E3o das fun\'E7\'F5es\par
 {\xe \v canal\:enviarMensagem}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void canal::enviarMensagem (int  {\i idUser}, std::string  {\i mensg}, std::string  {\i dataHora}){\f2 [virtual]}}}
+virtual void canal::enviarMensagem (int  {\i idUser}, std::string  {\i mensg}, std::string  {\i dataHora}){\f2 [pure virtual]}}}
 \par
 {\bkmkstart AAAAAAAABE}
 {\bkmkend AAAAAAAABE}
@@ -420,8 +420,8 @@ void canal::enviarMensagem (int  {\i idUser}, std::string  {\i mensg}, std::stri
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que adiciona uma mensagem ao vector de mensagens. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Fun\'E7\'E3o que adiciona uma mensagem ao vector de mensagens.\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Par\'E2metros\par}
 \pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
@@ -443,17 +443,13 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-Reimplementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABF \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABG \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 41                                                                          \{\par
-42 \}\par
-}
+Implementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABF \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABG \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 }
 {\xe \v getMensagens\:canal}
 {\xe \v canal\:getMensagens}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-std::vector< {\b mensagem} > canal::getMensagens (){\f2 [virtual]}}}
+virtual std::vector< {\b mensagem} > canal::getMensagens (){\f2 [pure virtual]}}}
 \par
 {\bkmkstart AAAAAAAABH}
 {\bkmkend AAAAAAAABH}
@@ -464,18 +460,12 @@ std::vector< {\b mensagem} > canal::getMensagens (){\f2 [virtual]}}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que retorna o vector de mensagens do canal. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Fun\'E7\'E3o que retorna o vector de mensagens do canal.\par
+\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 Um vector contendo as mensagens do canal. \par
 }}}{
-Reimplementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABI \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 48                                        \{\par
-49     std::vector<mensagem> m;\par
-50     {\cf19 return} m;\par
-51 \}\par
-}
+Implementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABI \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABJ \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 }
 {\xe \v getNomeCanal\:canal}
 {\xe \v canal\:getNomeCanal}
@@ -507,7 +497,7 @@ Uma string com o nome do canal \par
 {\xe \v canal\:tipoCanal}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-std::string canal::tipoCanal () const{\f2 [virtual]}}}
+virtual std::string canal::tipoCanal () const{\f2 [pure virtual]}}}
 \par
 {\bkmkstart AAAAAAAABL}
 {\bkmkend AAAAAAAABL}
@@ -518,18 +508,12 @@ std::string canal::tipoCanal () const{\f2 [virtual]}}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que obt\'E9m o tipo do canal. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Fun\'E7\'E3o que retorna o tipo do canal.\par
+\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
-Uma string com o tipo do canal.\par
-Uma string com o tipo do canal \par
+Uma string com o tipo do canal. \par
 }}}{
-Reimplementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABM \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
-{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 31                                 \{\par
-32     {\cf19 return} {\cf22 "canal"};\par
-33 \}\par
-}
+Implementado por {\b canalTexto} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABM \\*MERGEFORMAT}{\fldrslt pagenum}}}) e {\b canalVoz} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABN \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 A documenta\'E7\'E3o para essa classe foi gerada a partir dos seguintes arquivos:{\par
@@ -632,21 +616,21 @@ Fun\'E7\'E3o que obt\'E9m o nome do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::string {\b tipoCanal} () const\par
+virtual std::string {\b tipoCanal} () const =0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que obt\'E9m o tipo do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)\par
+virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que adiciona uma mensagem ao vector de mensagens. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::vector< {\b mensagem} > {\b getMensagens} ()\par
+virtual std::vector< {\b mensagem} > {\b getMensagens} ()=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que retorna o vector de mensagens do canal. }{
@@ -748,7 +732,7 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 30                                                                               \{\par
 31     this->mensagens.push_back(mensagem(idUser, mensg, dataHora));\par
@@ -776,7 +760,7 @@ Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 um vector contendo as mensagens do canal\par
 Um vector contendo as mensagens do canal. \par
 }}}{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 38                                             \{\par
 39     {\cf19 return} this->mensagens;\par
@@ -803,7 +787,7 @@ Fun\'E7\'E3o que retorna o tipo do canal. }}\par
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 String com o tipo do canal \par
 }}}{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 20                                      \{\par
 21     {\cf19 return} {\cf22 "texto"};\par
@@ -911,21 +895,21 @@ Fun\'E7\'E3o que obt\'E9m o nome do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::string {\b tipoCanal} () const\par
+virtual std::string {\b tipoCanal} () const =0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que obt\'E9m o tipo do canal. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)\par
+virtual void {\b enviarMensagem} (int idUser, std::string mensg, std::string dataHora)=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que adiciona uma mensagem ao vector de mensagens. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-virtual std::vector< {\b mensagem} > {\b getMensagens} ()\par
+virtual std::vector< {\b mensagem} > {\b getMensagens} ()=0\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o virtual que retorna o vector de mensagens do canal. }{
@@ -1027,7 +1011,7 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 31                                                                             \{\par
 32     this->ultimaMensagem = mensagem(idUser, mensg, dataHora);\par
@@ -1055,7 +1039,7 @@ Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 um vector de 1 elemento mensagem\par
 Um vector contendo as mensagens uma mensagem do canal. \par
 }}}{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABH \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 39                                           \{\par
 40     std::vector<mensagem> m;\par
@@ -1084,7 +1068,7 @@ Fun\'E7\'E3o que retorna o tipo do canal. }}\par
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 String com o tipo do canal \par
 }}}{
-Reimplementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
+Implementa {\b canal} ({\i p.{\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}}).}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 20                                    \{\par
 21     {\cf19 return} {\cf22 "voz"};\par
@@ -3679,11 +3663,11 @@ V\'E1 para a documenta\'E7\'E3o desse arquivo.{
 32 \par
 37         std::string getNomeCanal();\par
 38 \par
-43         {\cf17 virtual} std::string tipoCanal() {\cf17 const};\par
+43         {\cf17 virtual} std::string tipoCanal() {\cf17 const} = 0;\par
 44 \par
-51         {\cf17 virtual} {\cf18 void} enviarMensagem({\cf18 int} idUser, std::string mensg, std::string dataHora);\par
+51         {\cf17 virtual} {\cf18 void} enviarMensagem({\cf18 int} idUser, std::string mensg, std::string dataHora) = 0;\par
 52 \par
-57         {\cf17 virtual} std::vector<mensagem> getMensagens();\par
+57         {\cf17 virtual} std::vector<mensagem> getMensagens() = 0;\par
 58 \};\par
 59 {\cf21 #endif}\par
 }

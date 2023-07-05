@@ -40,7 +40,7 @@ class canal{
         * @brief Função virtual que obtém o tipo do canal.
         * @return Uma string com o tipo do canal.
         */
-        virtual std::string tipoCanal() const;
+        virtual std::string tipoCanal() const = 0;
 
         /**
         * @brief Função virtual que adiciona uma mensagem ao vector de mensagens.
@@ -48,12 +48,12 @@ class canal{
         * @param mensg A mensagem a ser enviada.
         * @param dataHora A data e hora da mensagem.
         */
-        virtual void enviarMensagem(int idUser, std::string mensg, std::string dataHora);
+        virtual void enviarMensagem(int idUser, std::string mensg, std::string dataHora) = 0;
 
         /**
         * @brief Função virtual que retorna o vector de mensagens do canal.
         * @return Um vector contendo as mensagens do canal.
         */
-        virtual std::vector<mensagem> getMensagens();
+        virtual std::vector<mensagem> getMensagens() = 0;
 };
 #endif

@@ -29,7 +29,10 @@ create-channel testefalho tipoErrado
 create-channel canal-texto texto
 create-channel canal-texto texto
 list-channels
+enter-channel servidor-legal3
+enter-server servidor-legal3
 remove-server servidor-legal2
+list-channels
 list-servers
 set-server-desc servidor-legal sem aspas
 set-server-desc servidor-legal "

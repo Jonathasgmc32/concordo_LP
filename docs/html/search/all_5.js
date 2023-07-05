@@ -13,7 +13,7 @@ var searchData=
   ['getindicecanalbynome_10',['getIndiceCanalByNome',['../classservidor.html#ac039a1027d427090340a0202fcd240d4',1,'servidor']]],
   ['getindiceservidorbyname_11',['getIndiceServidorByName',['../classsistema.html#a8bab609244f2bdc357b1b4c1fa234627',1,'sistema']]],
   ['getinformacaoserver_12',['getInformacaoServer',['../classsistema.html#ae0fc4bb91bd8a31a53e957fcc257f03d',1,'sistema']]],
-  ['getmensagens_13',['getMensagens',['../classcanal.html#a637d00085ed24ea448b8603d5eb95f58',1,'canal::getMensagens()'],['../classcanal_texto.html#a9ad2b8513abde7bd48903870036bc447',1,'canalTexto::getMensagens()'],['../classcanal_voz.html#a4658b86a7a1f443dd08c4d66f8be20c9',1,'canalVoz::getMensagens()']]],
+  ['getmensagens_13',['getMensagens',['../classcanal.html#a52c336ac954ed904d7a4eeb6f6a6a433',1,'canal::getMensagens()'],['../classcanal_texto.html#a9ad2b8513abde7bd48903870036bc447',1,'canalTexto::getMensagens()'],['../classcanal_voz.html#a4658b86a7a1f443dd08c4d66f8be20c9',1,'canalVoz::getMensagens()']]],
   ['getnome_14',['getNome',['../classusuario.html#a25351abaa7cb84e9fbe439c80d362729',1,'usuario']]],
   ['getnomecanal_15',['getNomeCanal',['../classcanal.html#ad13773a69ae644324c6aef8b19d82352',1,'canal']]],
   ['getnomeservidor_16',['getNomeServidor',['../classservidor.html#ae41e4a0f428d749b4c84902398da5d6a',1,'servidor']]],
