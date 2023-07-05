@@ -24,6 +24,11 @@ create-server servidor-legal3
 list-servers a
 list-servers
 remove-server teste
+enter-server servidor-legal2
+create-channel testefalho tipoErrado
+create-channel canal-texto texto
+create-channel canal-texto texto
+list-channels
 remove-server servidor-legal2
 list-servers
 set-server-desc servidor-legal sem aspas
@@ -38,6 +43,24 @@ info-server servidor-legal
 set-server-desc servidor-legal3 "Esse servidor tem um código, tente acha-lo"
 set-server-invite-code servidor-legal3 sl12345
 set-server-invite-code servidorInexistente codigo123
+enter-server servidor-legal
+create-channel texto-1 texto
+create-channel texto-2 texto
+create-channel voz-1 voz
+list-channels
+enter-server servidor-legal3
+create-channel texto-1 texto
+create-channel texto-2 texto
+create-channel voz-1 voz
+list-channels
+enter-channel texto-1
+send-message first
+send-message teste com mais mensagens
+list-messages
+enter-channel texto3
+enter-channel voz-1
+send-message mensagem Voz
+list-messages
 disconect
 login usuario2@email.com senhausuario2
 remove-server servidor-legal
@@ -49,9 +72,19 @@ enter-server servidor-legal3
 enter-server servidor-legal3 tentativafalha
 enter-server servidor-legal3 sl12345
 list-participants
+list-channels
+enter-channel texto-1
+list-messages
+send-message oláaaaaaaa
+list-messages
+enter-channel voz-1
+list-messages
+send-message aloooo
+list-messages
 leave-server
 leave-server
 list-participants
+list-channels
 enter-server servidor-legal3
 set-server-invite-code servidor-legal3 meucodigo
 disconect
@@ -63,5 +96,7 @@ remove-server servidor-legal3
 disconect
 login usuario2@email.com senhausuario2
 enter-server servidor-legal3
+enter-server servidor-legal
+create-channel meuCanal texto
 quit a
 quit

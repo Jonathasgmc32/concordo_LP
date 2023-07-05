@@ -2,8 +2,22 @@
 #include <vector>
 #include <sstream>
 #include <map>
+#include <ctime>
 #include "sistema.h"
 
+/**
+* @brief Gera a data e a hora atual
+* @return uma string que contem data e hora formatadas
+*/
+std::string horaAtual() {
+    std::time_t now = std::time(0);
+    std::tm* localTime = std::localtime(&now);
+    char buffer[80];
+    std::strftime(buffer, sizeof(buffer), "<%d/%m/%y - %H:%M:%S>", localTime);
+    std::string dataHoraString = buffer;
+    return dataHoraString;
+
+}
 /**
 * @brief Cria um map com os comandos, o estado de login desejado e a quantidade de parâmetros do comando
 * @param coms mapa original criado na main, passado por referência
@@ -22,6 +36,12 @@ void createComs(std :: map <std::string , std::pair<bool, int>> &coms){
     coms["enter-server"] = std::pair(true, 2);
     coms["leave-server"] = std::pair(true, 0);
     coms["list-participants"] = std::pair(true, 0);
+    coms["list-channels"] = std::pair(true, 0);
+    coms["create-channel"] = std::pair(true, 2);
+    coms["enter-channel"] = std::pair(true, 1);
+    coms["leave-channel"] = std::pair(true, 0);
+    coms["send-message"] = std::pair(true, 1);
+    coms["list-messages"] = std::pair(true, 0);
 }
 
 /**
@@ -34,7 +54,7 @@ std::vector<std::string> splitEntrada(std::string restanteLinha, std::string com
     std::vector<std::string> atributos;
     std::string a1, a2, a3, entComposta;
     std::istringstream iss(restanteLinha);
-    if(comando == "set-server-desc"){ //ou send-message
+    if(comando == "set-server-desc"){
         iss >> a1;
         atributos.push_back(a1);
         while(iss>> entComposta){
@@ -45,6 +65,17 @@ std::vector<std::string> splitEntrada(std::string restanteLinha, std::string com
         }
         if(!a2.empty()){
             atributos.push_back(a2);
+        }
+    }
+    else if(comando == "send-message"){
+        while(iss>> entComposta){
+            if(!a1.empty() && a1[a1.length() - 1 != ' ']){
+                a1 += " ";
+            }
+            a1 += entComposta;
+        }
+        if(!a1.empty()){
+            atributos.push_back(a1);
         }
     }
     else if (comando == "create-user"){
@@ -143,6 +174,24 @@ int main(){
                         }
                         if(comando == "list-participants"){
                             s.listarParticipantes();
+                        }
+                        if(comando == "list-channels"){
+                            s.listarCanais();
+                        }
+                        if(comando == "create-channel"){
+                            s.criarCanalEmServidor(atr_sep);
+                        }
+                        if(comando == "enter-channel"){
+                            s.entrarCanalEmServidor(atr_sep);
+                        }
+                        if(comando == "leave-channel"){
+                            s.sairCanalEmServidor();
+                        }
+                        if(comando == "send-message"){
+                            s.envioDeMensagem(atr_sep[0], horaAtual());
+                        }
+                        if(comando == "list-messages"){
+                            s.listarMensagens();
                         }
                     }
                     else{

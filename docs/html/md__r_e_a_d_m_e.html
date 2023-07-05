@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Concordo - Um clone do Discord</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Concordo<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Concordo - Um clone do Discord </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Aluno</h1>
+<p>&gt;Jonathas Gabriel Martins Costa</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Instalação e Execução</h1>
+<blockquote class="doxtable">
+<p>&zwj;<b>Para compilar o projeto é necessário ter o CMAKE instalado em sua máquina.</b> </p>
+</blockquote>
+<ul>
+<li>No prompt de comando, dê <code>git clone <a href="https://github.com/Jonathasgmc32/concordo_LP.git">https://github.com/Jonathasgmc32/concordo_LP.git</a></code> para clonar o repositório em sua maquina, ou baixe e descompacte o arquivo zip disponibilizado;</li>
+<li>Vá até a pasta "build" <code>(cd concordo_LP/build)</code>, depois use o comando <code>cmake ..</code> e depois use o comando <code>make</code> para compilar. Caso dê erro de cache, apague as pastas e arquivos referentes ao cmake da pasta build e tente novamente **(não apague entradasTeste.txt)**;</li>
+<li>Use <code>./program</code> para Executar o programa. Caso deseja usar um arquivo teste, contendo entradas de um exemplo de excecução, use <code>./program &lt; entradasTeste.txt</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Entradas</h1>
+<p>As entradas do programa são comandos, seguidos (ou não) por parâmetros. Aqui está a lista de comandos disponíveis:</p>
+<h3>Comandos que podem ser feitos a qualquer momento: </h3>
+<div class="fragment"><div class="line">quit</div>
+<div class="line">#Encerra o concord</div>
+</div><!-- fragment --><h3>Comandos que podem ser feitos com o status deslogado: </h3>
+<div class="fragment"><div class="line">create-user &lt;email&gt; &lt;senhaSemEspaço&gt; &lt;nome podendo ter espaço&gt;</div>
+<div class="line">#Cria um novo usuário</div>
+<div class="line"> </div>
+<div class="line">login &lt;email&gt; &lt;senhaSemEspaço&gt;</div>
+<div class="line">#Faz login</div>
+</div><!-- fragment --><h3>Comandos que podem ser feitos com o status logado: </h3>
+<h4>Em qualquer tela </h4>
+<div class="fragment"><div class="line">disconect</div>
+<div class="line">#Desloga de uma conta</div>
+<div class="line"> </div>
+<div class="line">create-server &lt;nomeDoServidorSemEspaço&gt;</div>
+<div class="line">#Cria um servidor</div>
+<div class="line"> </div>
+<div class="line">set-server-desc &lt;nomeDoServidorSemEspaço&gt; &quot;&lt;descriçao podendo ter espaço&gt;&quot;</div>
+<div class="line">#Muda a descrição do servidor</div>
+<div class="line"> </div>
+<div class="line">set-server-invite-code &lt;nomeDoServidorSemEspaço&gt; &lt;codigo&gt;</div>
+<div class="line">#Muda ou define o código do servidor</div>
+<div class="line"> </div>
+<div class="line">remove-server &lt;nomeDoServidorSemEspaço&gt;</div>
+<div class="line">#Remove um servidor</div>
+<div class="line"> </div>
+<div class="line">list-servers</div>
+<div class="line">#Lista os servidores cadastrados no sistema</div>
+<div class="line"> </div>
+<div class="line">info-server &lt;nomeDoServidorSemEspaço&gt;</div>
+<div class="line">#Mostra as informações gerais de um servidor</div>
+<div class="line"> </div>
+<div class="line">enter-server &lt;nomeDoServidorSemEspaço&gt;</div>
+<div class="line">#Entra em um servidor (sem requisito de código)</div>
+<div class="line"> </div>
+<div class="line">enter-server &lt;nomeDoServidorSemEspaço&gt; &lt;codigo&gt;</div>
+<div class="line">#Entra em um servidor (com requisito de código)</div>
+</div><!-- fragment --><h4>Visualizando algum servidor </h4>
+<div class="fragment"><div class="line">leave-server</div>
+<div class="line">#Sai do servidor (apenas visualização)</div>
+<div class="line"> </div>
+<div class="line">list-participants</div>
+<div class="line">#Lista os participantes do servidor</div>
+</div><!-- fragment --><p> &gt;Observação 1: Os comandos que mudam algum dado de um servidor só podem ser feitos pelo dono do servidor</p>
+<p>&gt;Observação 2: Comandos que forem feitos em locais inválidos (ex: leave-server mesmo não estando em um servidor) ou em um estado de login inválido (ex: desconect estando deslogado) retornarão uma mensagem de erro ou um feedback</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Roteiro de exemplo</h1>
+<h3>Criar dois usuários e logar com um deles</h3>
+<div class="fragment"><div class="line">create-user usuario1@gmail.com senhasegura Usuario1</div>
+<div class="line">create-user usuario2@gmail.com senhamaissegura Usuario bacana</div>
+<div class="line">login usuario1@gmail.com senhasegura</div>
+</div><!-- fragment --><h3>Criar e configurar um servidor (estando logado na conta 1), e desconectar</h3>
+<div class="fragment"><div class="line">create-server servidor-bacana</div>
+<div class="line">create-server meu-segundo-servidor</div>
+<div class="line">set-server-desc servidor-bacana &quot;um servidor para pessoas legais&quot;</div>
+<div class="line">set-server-desc meu-segundo-servidor &quot;servidor para pessoas mais próximas&quot;</div>
+<div class="line">set-server-invite-code meu-segundo-servidor codigo123</div>
+<div class="line">disconect</div>
+</div><!-- fragment --> <h3>Listar servidores, buscar informações e entrar em servidores com e sem código (estando logado na conta 2) </h3>
+<div class="fragment"><div class="line">list-servers</div>
+<div class="line">info-server servidor-bacana</div>
+<div class="line">info-server meu-segundo-servidor</div>
+<div class="line">enter-server servidor-bacana</div>
+<div class="line">enter-server meu-segundo-servidor</div>
+<div class="line">enter-server meu-segundo-servidor codigoaleatorio</div>
+<div class="line">enter-server meu-segundo-servidor codigo123</div>
+<div class="line">list-participants</div>
+<div class="line">leave-server</div>
+<div class="line">disconect</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Problemas e dificudades</h1>
+<p>A senha não está com hashing, então ao usar algum getSenha(), o valor é o mesmo que foi digitado. Isso é ruim quando for trabalhar com leitura de arquivo e tentarei aplicar isso nas proximas versões (pelo menos na parte 3 tentarei)</p>
+<p>Ler a entrada foi um trabalho um pouco complicado, tanto que a maneira que fiz não pareceu a melhor alternativa para a leitura.</p>
+<p>O script de teste não contempla entradas extremamente específicas, como caracteres diferentes do habitual alfabeto, ou que cada função possui um verificador de parâmetros máximo para que o teste não ficasse cansativo(mas sim, todas possuem esse verificador).</p>
+<p>Para a classe sistema, foi necessário adicionar um novo atributo: logado, que vê se o usuário está logado ou não. Isso foi necessário para a verificação de comandos ficar mais curta.</p>
+<p>Não colocar quit ao final de um arquivo de entrada faz um loop infinito do ultimo comando do arquivo. Isso pode ser problemático na parte 2 caso o último comando seja para enviar mensagem. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

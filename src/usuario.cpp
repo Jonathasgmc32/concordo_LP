@@ -21,22 +21,30 @@ usuario::usuario(const int id, const std::string nome, const std::string email, 
 
 /**
 * @brief Obtém o email do usuário
-* @return Sring contendo o email do usuário
+* @return String contendo o email do usuário
 */
-std::string usuario::getEmail(){
+std::string usuario::getEmail() const{
     return this->email;
 }
 /**
 * @brief Obtém a senha do usuário
-* @return Sring contendo a senha do usuário
+* @return String contendo a senha do usuário
 */
-std::string usuario::getSenha(){
+std::string usuario::getSenha() const{
     return this->senha;
 }
 /**
 * @brief Obtém o nome do usuário
-* @return Sring contendo o nome do usuário
+* @return String contendo o nome do usuário
 */
-std::string usuario::getNome(){
+std::string usuario::getNome() const{
     return this->nome;
+}
+
+/**
+* @brief Obtém o ID do usuário
+* @return Int contendo o nome do usuário
+*/
+int usuario::getId() const{
+    return this->id;
 }

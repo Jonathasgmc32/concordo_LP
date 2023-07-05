@@ -32,17 +32,22 @@ class usuario{
         * @brief Obtém o email do usuário
         * @return Sring contendo o email do usuário
         */
-        std::string getEmail();
+        std::string getEmail() const;
         /**
         * @brief Obtém a senha do usuário
         * @return Sring contendo a senha do usuário
         */
-        std::string getSenha();
+        std::string getSenha() const;
         /**
         * @brief Obtém o nome do usuário
         * @return Sring contendo o nome do usuário
         */
-        std::string getNome();
+        std::string getNome() const;
+        /**
+        * @brief Obtém o ID do usuário
+        * @return Sring contendo o nome do usuário
+        */
+        int getId() const;
 };
 
 #endif

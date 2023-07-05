@@ -159,9 +159,11 @@ CMakeFiles/program.dir/src/main.cpp.o: \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /usr/include/c++/11/bits/erase_if.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/ctime \
  /mnt/c/Users/jonat/concordo_LP/include/sistema.h \
  /mnt/c/Users/jonat/concordo_LP/include/usuario.h \
  /mnt/c/Users/jonat/concordo_LP/include/servidor.h \
  /mnt/c/Users/jonat/concordo_LP/include/canal.h \
- /mnt/c/Users/jonat/concordo_LP/include/mensagem.h
+ /mnt/c/Users/jonat/concordo_LP/include/mensagem.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalVoz.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalTexto.h

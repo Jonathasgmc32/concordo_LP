@@ -31,44 +31,12 @@ class sistema{
         */
         ~sistema();
         /**
-        * @brief Obtém o tamanho do vetor de usuários
-        * @return Tamanho do vetor de usuários
-        */
-        int getTamUser() const;
-        /**
         * @brief Obtém um usuário pela posição no vetor
         * @param posToSearch posição do vector para a procura
         * @return O usuário da posição
         */
         usuario getUsuarioByPos(int posToSerach) const;
-        /**
-        * @brief Obtém o ID do usuário atualmente logado no sistema
-        * @return ID do usuário atualmente logado
-        */
-        int getUsuarioAtual () const;
-        /**
-        * @brief Muda o id do usuário atualmente logado no sistema
-        * @param idUser novo valor para o Id atual 
-        */
-        void setUsuarioAtual(int idUser);
-        /**
-        * @brief Obtém o nome do servidor que está sendo visualizado
-        * @return Nome do servidor que está sendo visualizado
-        */
-        std::string getServidorAtual () const;
-        /**
-        * @brief Muda o nome do servidor que será visualizado
-        */
-        void setServidorAtual(std::string nomeServidor);
-        /**
-        * @brief Obtém o nome do canal que está selecionado (implementação na parte 2)
-        * @return Nome do canal que está selecionado.
-        */
-        std::string getCanalAtual () const;
-        /**
-        * @brief Define o canal atualmente selecionado (implementação na parte 2)
-        */
-        void setCanalAtual();
+        
         /**
         * @brief Verifica se um email está cadastrado no sistema
         * @param email Email a ser verificado
@@ -110,12 +78,6 @@ class sistema{
         * @param s Servidor a ser adicionado
         */
         void addServer(servidor s);
-        /**
-        * @brief Obtém um servidor pelo índice
-        * @param pos Índice da posição no vector de servidores
-        * @return Servidor na posição dada
-        */
-        servidor getServerByPos(int pos) const;
         /**
         * @brief Obtém o índice de um servidor pelo nome.
         * @param nomeServer Nome do servidor.
@@ -164,5 +126,38 @@ class sistema{
         * @brief Lista todos os participantes do servidor atual.
         */
         void listarParticipantes() const;
+        /**
+        * @brief Função que faz as verificações necessárias e imprime os canais de um servidor
+        */
+        void listarCanais() const;
+        /**
+        * @brief Função que faz as verificações necessárias e cria canais em um servidor
+        * @param abritubos nome do canal e tipo dele
+        */
+        void criarCanalEmServidor(std::vector<std::string> atributos);
+
+        /**
+        * @brief Função que faz as verificações necessárias e entra em um canal
+        * @param abritubos nome do canal
+        */
+        void entrarCanalEmServidor(std::vector<std::string> atributos);
+
+        /**
+        * @brief Função que faz as verificações necessárias e entra em um canal
+        * @param abritubos nome do canal
+        */
+        void sairCanalEmServidor();
+
+        /**
+        * @brief Função que gerencia o envio de mensagem em um canal de um servidor
+        * @param mensg Conteúdo da mensagem
+        * @param horaData Hora e data da mensagem
+        */
+        void envioDeMensagem(std::string mensg, std::string horaData);
+
+        /**
+        * @brief Função que lista mensagens de um canal de um servidor
+        */
+        void listarMensagens();
 };
 #endif

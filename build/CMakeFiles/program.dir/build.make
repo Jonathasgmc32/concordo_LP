@@ -125,12 +125,72 @@ CMakeFiles/program.dir/src/usuario.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/usuario.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/jonat/concordo_LP/src/usuario.cpp -o CMakeFiles/program.dir/src/usuario.cpp.s
 
+CMakeFiles/program.dir/src/mensagem.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/mensagem.cpp.o: ../src/mensagem.cpp
+CMakeFiles/program.dir/src/mensagem.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/mensagem.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/mensagem.cpp.o -MF CMakeFiles/program.dir/src/mensagem.cpp.o.d -o CMakeFiles/program.dir/src/mensagem.cpp.o -c /mnt/c/Users/jonat/concordo_LP/src/mensagem.cpp
+
+CMakeFiles/program.dir/src/mensagem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/mensagem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/jonat/concordo_LP/src/mensagem.cpp > CMakeFiles/program.dir/src/mensagem.cpp.i
+
+CMakeFiles/program.dir/src/mensagem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/mensagem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/jonat/concordo_LP/src/mensagem.cpp -o CMakeFiles/program.dir/src/mensagem.cpp.s
+
+CMakeFiles/program.dir/src/canal.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/canal.cpp.o: ../src/canal.cpp
+CMakeFiles/program.dir/src/canal.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/canal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/canal.cpp.o -MF CMakeFiles/program.dir/src/canal.cpp.o.d -o CMakeFiles/program.dir/src/canal.cpp.o -c /mnt/c/Users/jonat/concordo_LP/src/canal.cpp
+
+CMakeFiles/program.dir/src/canal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/canal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/jonat/concordo_LP/src/canal.cpp > CMakeFiles/program.dir/src/canal.cpp.i
+
+CMakeFiles/program.dir/src/canal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/canal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/jonat/concordo_LP/src/canal.cpp -o CMakeFiles/program.dir/src/canal.cpp.s
+
+CMakeFiles/program.dir/src/canalTexto.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/canalTexto.cpp.o: ../src/canalTexto.cpp
+CMakeFiles/program.dir/src/canalTexto.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/canalTexto.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/canalTexto.cpp.o -MF CMakeFiles/program.dir/src/canalTexto.cpp.o.d -o CMakeFiles/program.dir/src/canalTexto.cpp.o -c /mnt/c/Users/jonat/concordo_LP/src/canalTexto.cpp
+
+CMakeFiles/program.dir/src/canalTexto.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/canalTexto.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/jonat/concordo_LP/src/canalTexto.cpp > CMakeFiles/program.dir/src/canalTexto.cpp.i
+
+CMakeFiles/program.dir/src/canalTexto.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/canalTexto.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/jonat/concordo_LP/src/canalTexto.cpp -o CMakeFiles/program.dir/src/canalTexto.cpp.s
+
+CMakeFiles/program.dir/src/canalVoz.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/canalVoz.cpp.o: ../src/canalVoz.cpp
+CMakeFiles/program.dir/src/canalVoz.cpp.o: CMakeFiles/program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/canalVoz.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/program.dir/src/canalVoz.cpp.o -MF CMakeFiles/program.dir/src/canalVoz.cpp.o.d -o CMakeFiles/program.dir/src/canalVoz.cpp.o -c /mnt/c/Users/jonat/concordo_LP/src/canalVoz.cpp
+
+CMakeFiles/program.dir/src/canalVoz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/canalVoz.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/jonat/concordo_LP/src/canalVoz.cpp > CMakeFiles/program.dir/src/canalVoz.cpp.i
+
+CMakeFiles/program.dir/src/canalVoz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/canalVoz.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/jonat/concordo_LP/src/canalVoz.cpp -o CMakeFiles/program.dir/src/canalVoz.cpp.s
+
 # Object files for target program
 program_OBJECTS = \
 "CMakeFiles/program.dir/src/main.cpp.o" \
 "CMakeFiles/program.dir/src/servidor.cpp.o" \
 "CMakeFiles/program.dir/src/sistema.cpp.o" \
-"CMakeFiles/program.dir/src/usuario.cpp.o"
+"CMakeFiles/program.dir/src/usuario.cpp.o" \
+"CMakeFiles/program.dir/src/mensagem.cpp.o" \
+"CMakeFiles/program.dir/src/canal.cpp.o" \
+"CMakeFiles/program.dir/src/canalTexto.cpp.o" \
+"CMakeFiles/program.dir/src/canalVoz.cpp.o"
 
 # External object files for target program
 program_EXTERNAL_OBJECTS =
@@ -139,9 +199,13 @@ program: CMakeFiles/program.dir/src/main.cpp.o
 program: CMakeFiles/program.dir/src/servidor.cpp.o
 program: CMakeFiles/program.dir/src/sistema.cpp.o
 program: CMakeFiles/program.dir/src/usuario.cpp.o
+program: CMakeFiles/program.dir/src/mensagem.cpp.o
+program: CMakeFiles/program.dir/src/canal.cpp.o
+program: CMakeFiles/program.dir/src/canalTexto.cpp.o
+program: CMakeFiles/program.dir/src/canalVoz.cpp.o
 program: CMakeFiles/program.dir/build.make
 program: CMakeFiles/program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable program"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/jonat/concordo_LP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable program"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/program.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

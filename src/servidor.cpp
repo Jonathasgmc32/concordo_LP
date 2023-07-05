@@ -14,15 +14,21 @@ servidor::servidor(int idDono, std::string nomeServidor){
 }
 
 /**
- * * @brief Destrutor da classe servidor, delete os ponteiros para canais
+ * * @brief Destrutor da classe servidor
 */
 servidor::~servidor() {
-    for (auto canal: canais){
-        delete canal;
-    }
-    canais.clear();
+    clearServidor();
 }
 
+/**
+* @brief Função que desaloca os ponteiros de canais de um servidor
+*/
+void servidor::clearServidor(){
+    for (canal* c : this->canais) {
+        delete c;
+    }
+    this->canais.clear();
+}
 /**
 * @brief Obtém o nome do servidor
 * @return Nome do servidor
@@ -104,4 +110,93 @@ std::string servidor::getCodigoConvite() const{
 */
 std::vector<int> servidor::getAllUsers() const{
     return this->participantesId;
+}
+
+/**
+* @brief Imprime os canais, de acordo com seu tipo, ou imprime um feedback de que não ha canais
+*/
+
+void servidor::imprimirCanais() const{
+    int tam = this->canais.size();
+    int qtdText = 0, qtdVoz = 0;
+    std::cout << "#canais de texto" << std::endl;
+    for(int i = 0; i < tam; i++){
+        if(this->canais.at(i)->tipoCanal() == "texto"){
+            std::cout << this->canais.at(i)->getNomeCanal() << std::endl;
+            qtdText++;
+        }
+    }
+        if(qtdText == 0){
+            std::cout << "Não há canais de texto nesse servidor" << std::endl;
+        }
+    std::cout << "#canais de voz" << std::endl;
+    for(int i = 0; i < tam; i++){
+        if(this->canais.at(i)->tipoCanal() == "voz"){
+            std::cout << this->canais.at(i)->getNomeCanal() << std::endl;
+            qtdVoz++;
+        }
+    }
+        if(qtdVoz == 0){
+            std::cout << "Não há canais de voz nesse servidor" << std::endl;
+        }
+}
+
+/**
+* @brief Função que verifica se um canal já existe ou não
+* @param nome Nome do canal
+* @return int com indice do canal, ou -1 caso o canal não exista
+*/
+int servidor::getIndiceCanalByNome(std::string nomeCanal) const {
+    int tam = this->canais.size();
+    for(int i = 0; i < tam; i++){
+        if(this->canais.at(i)->getNomeCanal() == nomeCanal){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+/**
+* @brief Função que adiciona canal ao servidor
+* @param nome Nome do canal
+* @param tipo tipo do canal
+*/
+void servidor::addCanal(std::string nome, std::string tipo){
+    if(tipo != "texto" && tipo != "voz"){
+        std::cout << "O tipo só pode ser 'texto' ou 'voz'" << std::endl;
+        return;
+    }
+    if(getIndiceCanalByNome(nome) > -1){
+        std::cout << "O canal '" << nome <<"' já existe" << std::endl;
+        return;
+    }
+    if(tipo == "voz"){
+        canalVoz *c = new canalVoz(nome);
+        this->canais.push_back(c);
+    } else if(tipo == "texto"){
+        canalTexto *c = new canalTexto(nome);
+        this->canais.push_back(c);
+    }
+    
+    std::cout << "Canal de " << tipo << " '" << nome << "' adicionado com sucesso!" << std::endl;
+}
+
+/**
+* @brief Função que adiciona uma mensagem a um dos canais do servidor
+* @param idUser Id do usuário que enviou a mensagem
+* @param mensg string que contem o conteúdo da mensagem
+* @param dataHora string que contem a data e a hora de envio da mensagem
+* @param nomeCanal nome do canal que a mensagem será enviada
+*/
+void servidor::envarMensagem(int userId, std::string mensg, std::string dataHora, std::string nomeCanal){
+    this->canais.at(getIndiceCanalByNome(nomeCanal))->enviarMensagem(userId, mensg, dataHora);
+}
+
+/**
+* @brief Função que obtém um pontero de canal no vector de canais a partir do nome do canal
+* @return um ponteiro de canal
+*/
+canal* servidor::getCanalByName(std::string nome){
+    return this->canais.at(getIndiceCanalByNome(nome));
 }

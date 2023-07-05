@@ -9,4 +9,8 @@ add_executable( program
                 src/servidor.cpp 
                 src/sistema.cpp
                 src/usuario.cpp
+                src/mensagem.cpp
+                src/canal.cpp
+                src/canalTexto.cpp
+                src/canalVoz.cpp
                 )

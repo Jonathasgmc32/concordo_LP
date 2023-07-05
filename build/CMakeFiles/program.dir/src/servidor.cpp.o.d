@@ -153,4 +153,6 @@ CMakeFiles/program.dir/src/servidor.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /mnt/c/Users/jonat/concordo_LP/include/canal.h \
- /mnt/c/Users/jonat/concordo_LP/include/mensagem.h
+ /mnt/c/Users/jonat/concordo_LP/include/mensagem.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalVoz.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalTexto.h

@@ -155,4 +155,6 @@ CMakeFiles/program.dir/src/sistema.cpp.o: \
  /mnt/c/Users/jonat/concordo_LP/include/usuario.h \
  /mnt/c/Users/jonat/concordo_LP/include/servidor.h \
  /mnt/c/Users/jonat/concordo_LP/include/canal.h \
- /mnt/c/Users/jonat/concordo_LP/include/mensagem.h
+ /mnt/c/Users/jonat/concordo_LP/include/mensagem.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalVoz.h \
+ /mnt/c/Users/jonat/concordo_LP/include/canalTexto.h

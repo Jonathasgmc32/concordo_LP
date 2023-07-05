@@ -1,5 +1,5 @@
 /**
-* @file servidor.h
+* @file mensagem.h
 * @brief Definição da classe mensagem
 */
 #ifndef MENSAGEM_H
@@ -22,11 +22,27 @@ class mensagem{
         mensagem();
         /**
          * @brief Construtor da classe servidor, com os atributos
-         * @param dataHora data e hora da mensagem
-         * @param enviadaPor Id do usuário que enviou a mensagem
+         * @param id Id do usuário que enviou a mensagem
          * @param conteudo Texto da mensagem
+         * @param dataHora data e hora da mensagem
          */
-        mensagem(const std::string dataHora, const int envadaPor, const std::string conteudo);
+        mensagem(int id, std::string conteudo, std::string dataHora);
+
+        /**
+         * @brief Função que retorna o id de quem enviou a mensagem
+         * @return um int do id do usuário
+         */
+        int getIdUserMensagem();
+        /**
+         * @brief Função que retorna a data e a hora de envio da mensagem
+         * @return uma string contendo a data e a hora da mensagem
+         */
+        std::string getDataMensagem();
+        /**
+         * @brief Função que retorna o conteúdo da mensagem
+         * @return uma string contendo o conteúdo da mensagem
+         */
+        std::string getConteudoMensagem();
 };
 
 #endif

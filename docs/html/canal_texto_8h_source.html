@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Concordo: Código-Fonte de C:/Users/jonat/concordo_LP/include/canalTexto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Concordo<span id="projectnumber">&#160;2.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_94bbabc65a4507d4d2bfdad2479fb166.html">concordo_LP</a></li><li class="navelem"><a class="el" href="dir_a592bf4eb52b156aa95a650a4ae15292.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">canalTexto.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="canal_texto_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef CANALTEXTO_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define CANALTEXTO_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="canal_8h.html">canal.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classcanal_texto.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classcanal_texto.html">canalTexto</a> : <span class="keyword">public</span> <a class="code hl_class" href="classcanal.html">canal</a>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::vector&lt;mensagem&gt; mensagens;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="classcanal_texto.html">canalTexto</a>(std::string nome);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="classcanal_texto.html#a8be38334ab6c2470996d4d1d49427cb2">~canalTexto</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::string <a class="code hl_function" href="classcanal_texto.html#abd3eadac4d87b94ed968243d0c20cbe4">tipoCanal</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcanal_texto.html#afde9b01c607354b01534eb9cb35fad36">enviarMensagem</a>(<span class="keywordtype">int</span> idUser, std::string mensg, std::string dataHora) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;mensagem&gt; <a class="code hl_function" href="classcanal_texto.html#a9ad2b8513abde7bd48903870036bc447">getMensagens</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acanal_8h_html"><div class="ttname"><a href="canal_8h.html">canal.h</a></div><div class="ttdoc">Definição da classe canal.</div></div>
+<div class="ttc" id="aclasscanal_html"><div class="ttname"><a href="classcanal.html">canal</a></div><div class="ttdoc">Classe responsável pelo gerenciamento de canal.</div><div class="ttdef"><b>Definition:</b> canal.h:15</div></div>
+<div class="ttc" id="aclasscanal_texto_html"><div class="ttname"><a href="classcanal_texto.html">canalTexto</a></div><div class="ttdoc">Representa um canal de texto. Essa classe é derivada da classe &quot;canal&quot; e as funções aqui presentes sã...</div><div class="ttdef"><b>Definition:</b> canalTexto.h:19</div></div>
+<div class="ttc" id="aclasscanal_texto_html_a8be38334ab6c2470996d4d1d49427cb2"><div class="ttname"><a href="classcanal_texto.html#a8be38334ab6c2470996d4d1d49427cb2">canalTexto::~canalTexto</a></div><div class="ttdeci">~canalTexto()</div><div class="ttdoc">Destrutor da classe canalTexto.</div><div class="ttdef"><b>Definition:</b> canalTexto.cpp:15</div></div>
+<div class="ttc" id="aclasscanal_texto_html_a9ad2b8513abde7bd48903870036bc447"><div class="ttname"><a href="classcanal_texto.html#a9ad2b8513abde7bd48903870036bc447">canalTexto::getMensagens</a></div><div class="ttdeci">std::vector&lt; mensagem &gt; getMensagens() override</div><div class="ttdoc">Função que retorna o vector de mensagens do canal.</div><div class="ttdef"><b>Definition:</b> canalTexto.cpp:38</div></div>
+<div class="ttc" id="aclasscanal_texto_html_abd3eadac4d87b94ed968243d0c20cbe4"><div class="ttname"><a href="classcanal_texto.html#abd3eadac4d87b94ed968243d0c20cbe4">canalTexto::tipoCanal</a></div><div class="ttdeci">std::string tipoCanal() const override</div><div class="ttdoc">Função que retorna o tipo do canal.</div><div class="ttdef"><b>Definition:</b> canalTexto.cpp:20</div></div>
+<div class="ttc" id="aclasscanal_texto_html_afde9b01c607354b01534eb9cb35fad36"><div class="ttname"><a href="classcanal_texto.html#afde9b01c607354b01534eb9cb35fad36">canalTexto::enviarMensagem</a></div><div class="ttdeci">void enviarMensagem(int idUser, std::string mensg, std::string dataHora) override</div><div class="ttdoc">Adiciona uma mensagem ao vector de mensagens.</div><div class="ttdef"><b>Definition:</b> canalTexto.cpp:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
