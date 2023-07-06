@@ -266,14 +266,17 @@ Membros Públicos</h2></td></tr>
 <p>Função que retorna a mensagem presente no canal.</p>
 <dl class="section return"><dt>Retorna</dt><dd>um vector de 1 elemento mensagem</dd>
 <dd>
-Um vector contendo as mensagens uma mensagem do canal. </dd></dl>
+Um vector contendo uma mensagem do canal. </dd></dl>
 
 <p>Implementa <a class="el" href="classcanal.html#a52c336ac954ed904d7a4eeb6f6a6a433">canal</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>                                          {</div>
 <div class="line"><span class="lineno">   40</span>    std::vector&lt;mensagem&gt; m;</div>
-<div class="line"><span class="lineno">   41</span>    m.push_back(this-&gt;ultimaMensagem);</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">return</span> m;</div>
-<div class="line"><span class="lineno">   43</span>}</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span>(this-&gt;ultimaMensagem.<a class="code hl_function" href="classmensagem.html#ac3b3bccc5809eb22204847b8dc66a5cb">getConteudoMensagem</a>() != <span class="stringliteral">&quot;&quot;</span>){</div>
+<div class="line"><span class="lineno">   42</span>         m.push_back(this-&gt;ultimaMensagem);</div>
+<div class="line"><span class="lineno">   43</span>    }</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> m;</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+<div class="ttc" id="aclassmensagem_html_ac3b3bccc5809eb22204847b8dc66a5cb"><div class="ttname"><a href="classmensagem.html#ac3b3bccc5809eb22204847b8dc66a5cb">mensagem::getConteudoMensagem</a></div><div class="ttdeci">std::string getConteudoMensagem()</div><div class="ttdoc">Função que retorna o conteúdo da mensagem.</div><div class="ttdef"><b>Definition:</b> mensagem.cpp:39</div></div>
 </div><!-- fragment -->
 </div>
 </div>

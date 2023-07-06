@@ -196,103 +196,104 @@ Funções</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  115</span>          {</div>
 <div class="line"><span class="lineno">  116</span>    <a class="code hl_class" href="classsistema.html">sistema</a> s;</div>
 <div class="line"><span class="lineno">  117</span>    std::string linha;</div>
-<div class="line"><span class="lineno">  118</span>    std::string comando = <span class="stringliteral">&quot;start&quot;</span>;</div>
+<div class="line"><span class="lineno">  118</span>    std::string comando;</div>
 <div class="line"><span class="lineno">  119</span>    std :: map &lt;std::string , std::pair&lt;bool, int&gt;&gt; coms;</div>
 <div class="line"><span class="lineno">  120</span>    <a class="code hl_function" href="main_8cpp.html#a29f6cab54748b86c4f9307684945ecee">createComs</a>(coms);</div>
 <div class="line"><span class="lineno">  121</span>    <span class="keywordflow">while</span>(linha != <span class="stringliteral">&quot;quit&quot;</span>){</div>
-<div class="line"><span class="lineno">  122</span>        std::getline(std::cin, linha);</div>
-<div class="line"><span class="lineno">  123</span>        std::istringstream iss(linha);</div>
-<div class="line"><span class="lineno">  124</span>        iss &gt;&gt; comando;</div>
-<div class="line"><span class="lineno">  125</span>        std::string atributos;</div>
-<div class="line"><span class="lineno">  126</span>        std::string restanteLinha;</div>
-<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">while</span> (iss &gt;&gt; restanteLinha) {</div>
-<div class="line"><span class="lineno">  128</span>            atributos += restanteLinha + <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  129</span>        }</div>
-<div class="line"><span class="lineno">  130</span>        std::vector&lt;std::string&gt; atr_sep = <a class="code hl_function" href="main_8cpp.html#aab0c6aaa20877e06e44e99248f2d2ccb">splitEntrada</a>(atributos, comando);</div>
-<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">if</span>(coms.find(comando) != coms.end()){</div>
-<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span>(coms[comando].second != atr_sep.size()){</div>
-<div class="line"><span class="lineno">  133</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;O comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39; esperava &quot;</span> &lt;&lt; coms[comando].second &lt;&lt;</div>
-<div class="line"><span class="lineno">  134</span>                    <span class="stringliteral">&quot; argumentos, mas foram passados &quot;</span>&lt;&lt; atr_sep.size() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>             <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  137</span>                <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;quit&quot;</span>){</div>
-<div class="line"><span class="lineno">  138</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;Saindo do Concordo...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  139</span>                }</div>
-<div class="line"><span class="lineno">  140</span>                <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  141</span>                    <span class="keywordflow">if</span>(coms[comando].first == s.<a class="code hl_function" href="classsistema.html#af285bf01f7390946b9f1eb6a1e44c8f6">getEstadoLogin</a>()){</div>
-<div class="line"><span class="lineno">  142</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-user&quot;</span>){</div>
-<div class="line"><span class="lineno">  143</span>                            s.<a class="code hl_function" href="classsistema.html#a9743bce040dcb44c94fb427211597f64">createUser</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  144</span>                        }</div>
-<div class="line"><span class="lineno">  145</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;login&quot;</span>){</div>
-<div class="line"><span class="lineno">  146</span>                            s.<a class="code hl_function" href="classsistema.html#aa4ba350552bf1d72bad85068251b37e5">loginUser</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  147</span>                        }</div>
-<div class="line"><span class="lineno">  148</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;disconect&quot;</span>){</div>
-<div class="line"><span class="lineno">  149</span>                            s.<a class="code hl_function" href="classsistema.html#ad084bd6173bb5b73ecdd72b477d773fe">logoffUser</a>();</div>
-<div class="line"><span class="lineno">  150</span>                        }</div>
-<div class="line"><span class="lineno">  151</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-server&quot;</span>){</div>
-<div class="line"><span class="lineno">  152</span>                            s.<a class="code hl_function" href="classsistema.html#a4383fa7dfa78ef630ac8ebbe049a4015">createServer</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  153</span>                        }</div>
-<div class="line"><span class="lineno">  154</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-servers&quot;</span>){</div>
-<div class="line"><span class="lineno">  155</span>                            s.<a class="code hl_function" href="classsistema.html#a33ad2edc6b488bb2decc8e8cb08ae8de">listServers</a>();</div>
-<div class="line"><span class="lineno">  156</span>                        }</div>
-<div class="line"><span class="lineno">  157</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;remove-server&quot;</span>){</div>
-<div class="line"><span class="lineno">  158</span>                            s.<a class="code hl_function" href="classsistema.html#acce754bc96fbf965442a86921fbb2c81">deleteServer</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  159</span>                        }</div>
-<div class="line"><span class="lineno">  160</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;set-server-desc&quot;</span>){</div>
-<div class="line"><span class="lineno">  161</span>                            s.<a class="code hl_function" href="classsistema.html#a33f826939a4f51feae60ce0e9acb39af">setDescricao</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  162</span>                        }</div>
-<div class="line"><span class="lineno">  163</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;info-server&quot;</span>){</div>
-<div class="line"><span class="lineno">  164</span>                            s.<a class="code hl_function" href="classsistema.html#ae0fc4bb91bd8a31a53e957fcc257f03d">getInformacaoServer</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  165</span>                        }</div>
-<div class="line"><span class="lineno">  166</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;set-server-invite-code&quot;</span>){</div>
-<div class="line"><span class="lineno">  167</span>                        s.<a class="code hl_function" href="classsistema.html#a7dbfabdef037eab34ed846ca499bcdfb">setCodigoConvite</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  168</span>                        }</div>
-<div class="line"><span class="lineno">  169</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;enter-server&quot;</span>){</div>
-<div class="line"><span class="lineno">  170</span>                            s.<a class="code hl_function" href="classsistema.html#a21453b03f98351d9c6c76b34b5957074">enterServer</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  171</span>                        }</div>
-<div class="line"><span class="lineno">  172</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;leave-server&quot;</span>){</div>
-<div class="line"><span class="lineno">  173</span>                            s.<a class="code hl_function" href="classsistema.html#a2ac252131aac1b3b81fbfb9bea027b67">leaveServer</a>();</div>
-<div class="line"><span class="lineno">  174</span>                        }</div>
-<div class="line"><span class="lineno">  175</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-participants&quot;</span>){</div>
-<div class="line"><span class="lineno">  176</span>                            s.<a class="code hl_function" href="classsistema.html#a50af87668807c800ef0d55750b1bfeaf">listarParticipantes</a>();</div>
-<div class="line"><span class="lineno">  177</span>                        }</div>
-<div class="line"><span class="lineno">  178</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-channels&quot;</span>){</div>
-<div class="line"><span class="lineno">  179</span>                            s.<a class="code hl_function" href="classsistema.html#ad51f000ce8b4feffccf8bdbf248c8b40">listarCanais</a>();</div>
-<div class="line"><span class="lineno">  180</span>                        }</div>
-<div class="line"><span class="lineno">  181</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-channel&quot;</span>){</div>
-<div class="line"><span class="lineno">  182</span>                            s.<a class="code hl_function" href="classsistema.html#a500c6b0ab313d55d11e23ef5ee6afc90">criarCanalEmServidor</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  183</span>                        }</div>
-<div class="line"><span class="lineno">  184</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;enter-channel&quot;</span>){</div>
-<div class="line"><span class="lineno">  185</span>                            s.<a class="code hl_function" href="classsistema.html#abf5ee714c816403946463313605b2b48">entrarCanalEmServidor</a>(atr_sep);</div>
-<div class="line"><span class="lineno">  186</span>                        }</div>
-<div class="line"><span class="lineno">  187</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;leave-channel&quot;</span>){</div>
-<div class="line"><span class="lineno">  188</span>                            s.<a class="code hl_function" href="classsistema.html#a691718dcb948eddfb84e8c7109047f23">sairCanalEmServidor</a>();</div>
-<div class="line"><span class="lineno">  189</span>                        }</div>
-<div class="line"><span class="lineno">  190</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;send-message&quot;</span>){</div>
-<div class="line"><span class="lineno">  191</span>                            s.<a class="code hl_function" href="classsistema.html#aaec769ed6b70852445c75f0d7e08e96c">envioDeMensagem</a>(atr_sep[0], <a class="code hl_function" href="main_8cpp.html#ad68962310a3f7a54c8dcd5308bf3a27f">horaAtual</a>());</div>
-<div class="line"><span class="lineno">  192</span>                        }</div>
-<div class="line"><span class="lineno">  193</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-messages&quot;</span>){</div>
-<div class="line"><span class="lineno">  194</span>                            s.<a class="code hl_function" href="classsistema.html#a934fe2f9e2e11f303068ead0d515786b">listarMensagens</a>();</div>
-<div class="line"><span class="lineno">  195</span>                        }</div>
-<div class="line"><span class="lineno">  196</span>                    }</div>
-<div class="line"><span class="lineno">  197</span>                    <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  198</span>                        <span class="keywordflow">if</span>(s.<a class="code hl_function" href="classsistema.html#af285bf01f7390946b9f1eb6a1e44c8f6">getEstadoLogin</a>() == <span class="keyword">false</span>){</div>
-<div class="line"><span class="lineno">  199</span>                            std::cout &lt;&lt; <span class="stringliteral">&quot;É necessário está logado para executar o comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  200</span>                        }</div>
-<div class="line"><span class="lineno">  201</span>                        <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  202</span>                            std::cout &lt;&lt; <span class="stringliteral">&quot;O comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39; não pode ser feito enquanto logado&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  203</span>                        }</div>
-<div class="line"><span class="lineno">  204</span>                    }</div>
-<div class="line"><span class="lineno">  205</span>                }</div>
-<div class="line"><span class="lineno">  206</span>            }</div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">  209</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Comando inválido&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  210</span>        }</div>
-<div class="line"><span class="lineno">  211</span>        std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  212</span>    }</div>
-<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  214</span>}</div>
+<div class="line"><span class="lineno">  122</span>        comando = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  123</span>        std::getline(std::cin, linha);</div>
+<div class="line"><span class="lineno">  124</span>        std::istringstream iss(linha);</div>
+<div class="line"><span class="lineno">  125</span>        iss &gt;&gt; comando;</div>
+<div class="line"><span class="lineno">  126</span>        std::string atributos;</div>
+<div class="line"><span class="lineno">  127</span>        std::string restanteLinha;</div>
+<div class="line"><span class="lineno">  128</span>        <span class="keywordflow">while</span> (iss &gt;&gt; restanteLinha) {</div>
+<div class="line"><span class="lineno">  129</span>            atributos += restanteLinha + <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  130</span>        }</div>
+<div class="line"><span class="lineno">  131</span>        std::vector&lt;std::string&gt; atr_sep = <a class="code hl_function" href="main_8cpp.html#aab0c6aaa20877e06e44e99248f2d2ccb">splitEntrada</a>(atributos, comando);</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span>(coms.find(comando) != coms.end()){</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span>(coms[comando].second != atr_sep.size()){</div>
+<div class="line"><span class="lineno">  134</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;O comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39; esperava &quot;</span> &lt;&lt; coms[comando].second &lt;&lt;</div>
+<div class="line"><span class="lineno">  135</span>                    <span class="stringliteral">&quot; argumentos, mas foram passados &quot;</span>&lt;&lt; atr_sep.size() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  136</span>            }</div>
+<div class="line"><span class="lineno">  137</span>             <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  138</span>                <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;quit&quot;</span>){</div>
+<div class="line"><span class="lineno">  139</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;Saindo do Concordo...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  140</span>                }</div>
+<div class="line"><span class="lineno">  141</span>                <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  142</span>                    <span class="keywordflow">if</span>(coms[comando].first == s.<a class="code hl_function" href="classsistema.html#af285bf01f7390946b9f1eb6a1e44c8f6">getEstadoLogin</a>()){</div>
+<div class="line"><span class="lineno">  143</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-user&quot;</span>){</div>
+<div class="line"><span class="lineno">  144</span>                            s.<a class="code hl_function" href="classsistema.html#a9743bce040dcb44c94fb427211597f64">createUser</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  145</span>                        }</div>
+<div class="line"><span class="lineno">  146</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;login&quot;</span>){</div>
+<div class="line"><span class="lineno">  147</span>                            s.<a class="code hl_function" href="classsistema.html#aa4ba350552bf1d72bad85068251b37e5">loginUser</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  148</span>                        }</div>
+<div class="line"><span class="lineno">  149</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;disconect&quot;</span>){</div>
+<div class="line"><span class="lineno">  150</span>                            s.<a class="code hl_function" href="classsistema.html#ad084bd6173bb5b73ecdd72b477d773fe">logoffUser</a>();</div>
+<div class="line"><span class="lineno">  151</span>                        }</div>
+<div class="line"><span class="lineno">  152</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-server&quot;</span>){</div>
+<div class="line"><span class="lineno">  153</span>                            s.<a class="code hl_function" href="classsistema.html#a4383fa7dfa78ef630ac8ebbe049a4015">createServer</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  154</span>                        }</div>
+<div class="line"><span class="lineno">  155</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-servers&quot;</span>){</div>
+<div class="line"><span class="lineno">  156</span>                            s.<a class="code hl_function" href="classsistema.html#a33ad2edc6b488bb2decc8e8cb08ae8de">listServers</a>();</div>
+<div class="line"><span class="lineno">  157</span>                        }</div>
+<div class="line"><span class="lineno">  158</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;remove-server&quot;</span>){</div>
+<div class="line"><span class="lineno">  159</span>                            s.<a class="code hl_function" href="classsistema.html#acce754bc96fbf965442a86921fbb2c81">deleteServer</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  160</span>                        }</div>
+<div class="line"><span class="lineno">  161</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;set-server-desc&quot;</span>){</div>
+<div class="line"><span class="lineno">  162</span>                            s.<a class="code hl_function" href="classsistema.html#a33f826939a4f51feae60ce0e9acb39af">setDescricao</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  163</span>                        }</div>
+<div class="line"><span class="lineno">  164</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;info-server&quot;</span>){</div>
+<div class="line"><span class="lineno">  165</span>                            s.<a class="code hl_function" href="classsistema.html#ae0fc4bb91bd8a31a53e957fcc257f03d">getInformacaoServer</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  166</span>                        }</div>
+<div class="line"><span class="lineno">  167</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;set-server-invite-code&quot;</span>){</div>
+<div class="line"><span class="lineno">  168</span>                        s.<a class="code hl_function" href="classsistema.html#a7dbfabdef037eab34ed846ca499bcdfb">setCodigoConvite</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  169</span>                        }</div>
+<div class="line"><span class="lineno">  170</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;enter-server&quot;</span>){</div>
+<div class="line"><span class="lineno">  171</span>                            s.<a class="code hl_function" href="classsistema.html#a21453b03f98351d9c6c76b34b5957074">enterServer</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  172</span>                        }</div>
+<div class="line"><span class="lineno">  173</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;leave-server&quot;</span>){</div>
+<div class="line"><span class="lineno">  174</span>                            s.<a class="code hl_function" href="classsistema.html#a2ac252131aac1b3b81fbfb9bea027b67">leaveServer</a>();</div>
+<div class="line"><span class="lineno">  175</span>                        }</div>
+<div class="line"><span class="lineno">  176</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-participants&quot;</span>){</div>
+<div class="line"><span class="lineno">  177</span>                            s.<a class="code hl_function" href="classsistema.html#a50af87668807c800ef0d55750b1bfeaf">listarParticipantes</a>();</div>
+<div class="line"><span class="lineno">  178</span>                        }</div>
+<div class="line"><span class="lineno">  179</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-channels&quot;</span>){</div>
+<div class="line"><span class="lineno">  180</span>                            s.<a class="code hl_function" href="classsistema.html#ad51f000ce8b4feffccf8bdbf248c8b40">listarCanais</a>();</div>
+<div class="line"><span class="lineno">  181</span>                        }</div>
+<div class="line"><span class="lineno">  182</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;create-channel&quot;</span>){</div>
+<div class="line"><span class="lineno">  183</span>                            s.<a class="code hl_function" href="classsistema.html#a500c6b0ab313d55d11e23ef5ee6afc90">criarCanalEmServidor</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  184</span>                        }</div>
+<div class="line"><span class="lineno">  185</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;enter-channel&quot;</span>){</div>
+<div class="line"><span class="lineno">  186</span>                            s.<a class="code hl_function" href="classsistema.html#abf5ee714c816403946463313605b2b48">entrarCanalEmServidor</a>(atr_sep);</div>
+<div class="line"><span class="lineno">  187</span>                        }</div>
+<div class="line"><span class="lineno">  188</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;leave-channel&quot;</span>){</div>
+<div class="line"><span class="lineno">  189</span>                            s.<a class="code hl_function" href="classsistema.html#a691718dcb948eddfb84e8c7109047f23">sairCanalEmServidor</a>();</div>
+<div class="line"><span class="lineno">  190</span>                        }</div>
+<div class="line"><span class="lineno">  191</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;send-message&quot;</span>){</div>
+<div class="line"><span class="lineno">  192</span>                            s.<a class="code hl_function" href="classsistema.html#aaec769ed6b70852445c75f0d7e08e96c">envioDeMensagem</a>(atr_sep[0], <a class="code hl_function" href="main_8cpp.html#ad68962310a3f7a54c8dcd5308bf3a27f">horaAtual</a>());</div>
+<div class="line"><span class="lineno">  193</span>                        }</div>
+<div class="line"><span class="lineno">  194</span>                        <span class="keywordflow">if</span>(comando == <span class="stringliteral">&quot;list-messages&quot;</span>){</div>
+<div class="line"><span class="lineno">  195</span>                            s.<a class="code hl_function" href="classsistema.html#a934fe2f9e2e11f303068ead0d515786b">listarMensagens</a>();</div>
+<div class="line"><span class="lineno">  196</span>                        }</div>
+<div class="line"><span class="lineno">  197</span>                    }</div>
+<div class="line"><span class="lineno">  198</span>                    <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  199</span>                        <span class="keywordflow">if</span>(s.<a class="code hl_function" href="classsistema.html#af285bf01f7390946b9f1eb6a1e44c8f6">getEstadoLogin</a>() == <span class="keyword">false</span>){</div>
+<div class="line"><span class="lineno">  200</span>                            std::cout &lt;&lt; <span class="stringliteral">&quot;É necessário está logado para executar o comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  201</span>                        }</div>
+<div class="line"><span class="lineno">  202</span>                        <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  203</span>                            std::cout &lt;&lt; <span class="stringliteral">&quot;O comando &#39;&quot;</span> &lt;&lt; comando &lt;&lt; <span class="stringliteral">&quot;&#39; não pode ser feito enquanto logado&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  204</span>                        }</div>
+<div class="line"><span class="lineno">  205</span>                    }</div>
+<div class="line"><span class="lineno">  206</span>                }</div>
+<div class="line"><span class="lineno">  207</span>            }</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  210</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Comando inválido&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  211</span>        }</div>
+<div class="line"><span class="lineno">  212</span>        std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  215</span>}</div>
 <div class="ttc" id="aclasssistema_html"><div class="ttname"><a href="classsistema.html">sistema</a></div><div class="ttdoc">Classe responsável pelo gerenciamento do sistema.</div><div class="ttdef"><b>Definition:</b> sistema.h:16</div></div>
 <div class="ttc" id="aclasssistema_html_a21453b03f98351d9c6c76b34b5957074"><div class="ttname"><a href="classsistema.html#a21453b03f98351d9c6c76b34b5957074">sistema::enterServer</a></div><div class="ttdeci">void enterServer(std::vector&lt; std::string &gt; atributos)</div><div class="ttdoc">Entra em um servidor, caso não esteja nele/visualizando ele.</div><div class="ttdef"><b>Definition:</b> sistema.cpp:279</div></div>
 <div class="ttc" id="aclasssistema_html_a2ac252131aac1b3b81fbfb9bea027b67"><div class="ttname"><a href="classsistema.html#a2ac252131aac1b3b81fbfb9bea027b67">sistema::leaveServer</a></div><div class="ttdeci">void leaveServer()</div><div class="ttdoc">Sai de um servidor (apenas no quesito visualização)</div><div class="ttdef"><b>Definition:</b> sistema.cpp:328</div></div>
