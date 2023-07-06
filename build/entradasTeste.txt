@@ -57,11 +57,13 @@ create-channel texto-2 texto
 create-channel voz-1 voz
 list-channels
 enter-channel texto-1
+list-messages
 send-message first
 send-message teste com mais mensagens
 list-messages
 enter-channel texto3
 enter-channel voz-1
+list-messages
 send-message mensagem Voz
 list-messages
 disconect

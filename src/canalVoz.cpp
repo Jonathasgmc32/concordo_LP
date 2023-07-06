@@ -38,6 +38,8 @@ void canalVoz::enviarMensagem(int idUser, std::string mensg, std::string dataHor
 */
 std::vector<mensagem> canalVoz::getMensagens(){
     std::vector<mensagem> m;
-    m.push_back(this->ultimaMensagem);
+    if(this->ultimaMensagem.getConteudoMensagem() != ""){
+         m.push_back(this->ultimaMensagem);
+    }
     return m;
 }
