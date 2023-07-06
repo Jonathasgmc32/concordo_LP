@@ -34,7 +34,7 @@ void canalVoz::enviarMensagem(int idUser, std::string mensg, std::string dataHor
 
 /**
 * @brief Função que retorna a mensagem presente no canal.
-* @return Um vector contendo as mensagens uma mensagem do canal.
+* @return Um vector contendo uma mensagem do canal.
 */
 std::vector<mensagem> canalVoz::getMensagens(){
     std::vector<mensagem> m;
