@@ -156,6 +156,13 @@ disconect
 ```
 ## Adições, correções e Melhorias
 
+<h3>v3.0</h3>
+
+* Corrigido um problema grave em que adicionar multiplos servidores causava erro
+* Corrigido problema ao sair de canal
+* Adicionados carregamento e leitura de arquivos
+* Hashing para senha
+
 <h3>v2.0</h3>
 
 * Adicionado gerenciamento de canais (criar, entrar e sair de canal);
@@ -167,8 +174,6 @@ disconect
 * Retiradas algumas funções redundantes em sistema.h/sistema.cpp
 
 ## Problemas e dificudades
-
-A senha não está com hashing, então ao usar algum getSenha(), o valor é o mesmo que foi digitado. Isso é ruim quando for trabalhar com leitura de arquivo e tentarei aplicar isso nas proximas versões (pelo menos na parte 3 tentarei)
 
 Ler a entrada foi um trabalho um pouco complicado, tanto que a maneira que fiz não pareceu a melhor alternativa para a leitura.
 
@@ -184,3 +189,5 @@ foi rápida
 
 A classe mensagem também deu um bug esquisito, caso o nome da variavel que passei na função fosse a mesma que é
 o atributo da classe, no caso só ocorreu com a int enviadaPor (fazer "this->enviadaPor = enviadaPor" dava erros, mesmo que as demais não dessem)
+
+As funções de carregar e salvar PRECISAM que os arquivos estejam formatados da maneira que foi proposta. Qualquer desvio dessa maneira acarretará em erros. A manipulação dos ids dos usuários (trocar a ordem, ou repetir ids) também gerará erros, uma vez que o sistema quem gerencia os ids automaticamente, bem como a mainipulação de servidores.txt pode causar interações inesperadas (ter dois canais ou servidores com o mesmo nome)

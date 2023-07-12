@@ -6,6 +6,8 @@
 #define SISTEMA_H
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <functional>
 #include "usuario.h"
 #include "servidor.h"
 
@@ -21,6 +23,10 @@ class sistema{
         bool logado;
         std::string nomeServidorAtual;
         std::string nomeCanalAtual;
+        void salvarUsuarios();
+        void salvarServidores();
+        void carregarUsuarios();
+        void carregarServidores();
     public:
         /**
         * @brief Construtor da classe sistema
@@ -30,6 +36,11 @@ class sistema{
         * @brief Destrutor da classe sistema
         */
         ~sistema();
+
+        /**
+        * @brief Limpa todos os objetos alicados dinamicamente do vector de servidores
+        */
+        void clearAlocacao();
         /**
         * @brief Obtém um usuário pela posição no vetor
         * @param posToSearch posição do vector para a procura
@@ -125,11 +136,11 @@ class sistema{
         /**
         * @brief Lista todos os participantes do servidor atual.
         */
-        void listarParticipantes() const;
+        void listarParticipantes();
         /**
         * @brief Função que faz as verificações necessárias e imprime os canais de um servidor
         */
-        void listarCanais() const;
+        void listarCanais();
         /**
         * @brief Função que faz as verificações necessárias e cria canais em um servidor
         * @param abritubos nome do canal e tipo dele
@@ -159,5 +170,15 @@ class sistema{
         * @brief Função que lista mensagens de um canal de um servidor
         */
         void listarMensagens();
+
+        /**
+        * @brief Função que chama funções privadas que salvam os dados do sistema em dois txts
+        */
+        void salvar();
+
+        /**
+        * @brief Função que chama funções privadas que carregam os dados dos dois txts para o sistema
+        */
+        void carregar();
 };
 #endif

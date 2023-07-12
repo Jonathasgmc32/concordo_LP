@@ -65,6 +65,12 @@ class servidor{
         void addUserId(int id);
 
         /**
+         * @brief Obtém a descrição do servidor
+         * @return Uma string que contém a descrição do servidor
+         */
+        std::string getDescricao();
+
+        /**
          * @brief Define a descrição do servidor
          * @param novaDesc Nova descrição do servidor
          */
@@ -106,11 +112,22 @@ class servidor{
         int getIndiceCanalByNome(std::string nomeCanal) const;
 
         /**
+         * @brief Insere canal no vector de canais
+         * @param c canal a ser inserido
+         */
+        void insertCanal(canal *c);
+        /**
          * @brief Função que adiciona canal ao servidor
          * @param nome Nome do canal
          * @param tipo tipo do canal
          */
         void addCanal(std::string nome, std::string tipo);
+        
+        /**
+         * @brief Função que retorna todos os canais do servidor
+         * @return Um vector de ponteiros de canais
+         */
+        std::vector<canal*> getAllCanais();
         /**
          * @brief Função que desaloca os ponteiros de canais de um servidor
          */

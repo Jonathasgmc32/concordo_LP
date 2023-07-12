@@ -11,13 +11,13 @@ servidor::servidor(){}
 servidor::servidor(int idDono, std::string nomeServidor){
     this->userDonoId = idDono;
     this->nomeServidor = nomeServidor;
+    this->participantesId.push_back(idDono);
 }
 
 /**
  * * @brief Destrutor da classe servidor
 */
 servidor::~servidor() {
-    clearServidor();
 }
 
 /**
@@ -69,6 +69,14 @@ void servidor::addUserId(int id){
     if(buscaUserId(id) == false){
         this->participantesId.push_back(id);
     }
+}
+
+/**
+* @brief Obtém a descrição do servidor
+* @return Uma string que contém a descrição do servidor
+*/
+std::string servidor::getDescricao(){
+    return this->descServidor;
 }
 
 /**
@@ -156,6 +164,14 @@ int servidor::getIndiceCanalByNome(std::string nomeCanal) const {
     return -1;
 }
 
+/**
+* @brief Insere canal no vector de canais
+* @param c canal a ser inserido
+*/
+
+void servidor::insertCanal(canal *c){
+    this->canais.push_back(c);
+}
 
 /**
 * @brief Função que adiciona canal ao servidor
@@ -173,13 +189,23 @@ void servidor::addCanal(std::string nome, std::string tipo){
     }
     if(tipo == "voz"){
         canalVoz *c = new canalVoz(nome);
-        this->canais.push_back(c);
+        insertCanal(c);
+        //this->canais.push_back(c);
     } else if(tipo == "texto"){
         canalTexto *c = new canalTexto(nome);
-        this->canais.push_back(c);
+        insertCanal(c);
+        //this->canais.push_back(c);
     }
     
     std::cout << "Canal de " << tipo << " '" << nome << "' adicionado com sucesso!" << std::endl;
+}
+
+/**
+* @brief Função que retorna todos os canais do servidor
+* @return Um vector de ponteiros de canais
+*/
+std::vector<canal*> servidor::getAllCanais(){
+    return this ->canais;
 }
 
 /**

@@ -97,10 +97,8 @@ login usuario2@email.com senhausuario2
 enter-server servidor-legal3
 disconect
 login usuario1@email.com senhausuario1
-remove-server servidor-legal3
 disconect
 login usuario2@email.com senhausuario2
-enter-server servidor-legal3
 enter-server servidor-legal
 create-channel meuCanal texto
 quit a

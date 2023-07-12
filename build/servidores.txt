@@ -1,0 +1,137 @@
+7
+4
+servidor1
+
+
+1
+4
+2
+canal-texto
+TEXTO
+0
+canal-voz
+VOZ
+0
+4
+servidor2
+
+
+1
+4
+0
+4
+servidor3
+
+
+1
+4
+0
+4
+servidor4
+
+
+1
+4
+0
+1
+servidor-legal
+
+
+2
+1
+2
+3
+texto-1
+TEXTO
+0
+texto-2
+TEXTO
+0
+voz-1
+VOZ
+0
+1
+servidor-legal3
+Esse servidor tem um código, tente acha-lo
+sl12345
+2
+1
+2
+3
+texto-1
+TEXTO
+19
+1
+<11/07/23 - 21:52:18>
+first
+1
+<11/07/23 - 21:52:19>
+teste com mais mensagens
+2
+<11/07/23 - 21:52:19>
+oláaaaaaaa
+1
+<11/07/23 - 22:04:05>
+mensagem nova
+1
+<11/07/23 - 22:34:10>
+first
+1
+<11/07/23 - 22:34:10>
+teste com mais mensagens
+2
+<11/07/23 - 22:34:11>
+oláaaaaaaa
+1
+<11/07/23 - 22:35:50>
+first
+1
+<11/07/23 - 22:35:50>
+teste com mais mensagens
+2
+<11/07/23 - 22:35:51>
+oláaaaaaaa
+1
+<11/07/23 - 22:35:56>
+first
+1
+<11/07/23 - 22:35:56>
+teste com mais mensagens
+2
+<11/07/23 - 22:35:56>
+oláaaaaaaa
+1
+<11/07/23 - 22:38:51>
+first
+1
+<11/07/23 - 22:38:51>
+teste com mais mensagens
+2
+<11/07/23 - 22:38:51>
+oláaaaaaaa
+1
+<11/07/23 - 23:32:43>
+first
+1
+<11/07/23 - 23:32:43>
+teste com mais mensagens
+2
+<11/07/23 - 23:32:43>
+oláaaaaaaa
+texto-2
+TEXTO
+0
+voz-1
+VOZ
+1
+2
+<11/07/23 - 23:32:43>
+aloooo
+2
+novoServidor
+
+54312
+2
+2
+1
+0

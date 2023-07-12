@@ -17,6 +17,15 @@ sistema::~sistema() {
 }
 
 /**
+* @brief Limpa todos os objetos alicados dinamicamente do vector de servidores
+*/
+void sistema::clearAlocacao(){
+    for(int i = 0; i < this->todosServidores.size(); i++){
+        this->todosServidores.at(i).clearServidor();
+    }
+}
+
+/**
 * @brief Obtém um usuário pela posição no vector de usuários. Geralmente usada com laços for
 * @param posToSearch posição do vector para a procura
 * @return O usuário da posição
@@ -62,8 +71,10 @@ bool sistema::getEstadoLogin(){
 * @param atributos Vector de strings com os atributos de cadastro
 */
 void sistema::createUser(std::vector<std::string> atributos){
+    std::hash<std::string> hash_function;
+    std::size_t hash = hash_function(atributos.at(1));
     if(emailCadastrado(atributos.at(0)) == false){
-        addUsuario(usuario(this->todosUsuarios.size() + 1, atributos.at(2), atributos.at(0), atributos.at(1)));
+        addUsuario(usuario(this->todosUsuarios.size() + 1, atributos.at(2), atributos.at(0), std::to_string(hash)));
         std::cout << "Cadastro realizado com sucesso!" << std::endl;
     } else{
         std::cout << "Esse email já está cadastrado!" << std::endl;
@@ -89,10 +100,13 @@ void sistema::setLoginStatus(bool status, int idUser){
 */
 void sistema::loginUser(std::vector<std::string> atributos){
     int tam = this->todosUsuarios.size();
+    std::hash<std::string> hash_function;
+    std::size_t hash = hash_function(atributos.at(1));
+    std::string senhaInserida = std::to_string(hash);
     for(int i = 0; i < tam; i++){
         std::string email = getUsuarioByPos(i).getEmail();
         std::string senha = getUsuarioByPos(i).getSenha();
-        if(email == atributos.at(0) && senha == atributos.at(1)){
+        if(email == atributos.at(0) && senha == senhaInserida){
             setLoginStatus(true, getUsuarioByPos(i).getId());
             std::cout << "Logado como " << email << std::endl;
             return;
@@ -140,8 +154,7 @@ int sistema::getIndiceServidorByName(std::string nomeServer) const{
 */
 void sistema::createServer(std::vector<std::string> atributos){
     if(getIndiceServidorByName(atributos.at(0)) == -1){
-        addServer(servidor(this->usuarioAtualId, atributos.at(0)));
-        this->todosServidores.at(getIndiceServidorByName(atributos.at(0))).addUserId(this->usuarioAtualId);
+        this->todosServidores.emplace_back(servidor(this->usuarioAtualId, atributos.at(0)));
         std::cout << "Servidor '" << atributos.at(0) << "' criado com sucesso!" << std::endl;
         return;
     }
@@ -339,14 +352,21 @@ void sistema::leaveServer(){
 /**
 * @brief Verifica se o usuário está visualizando algum servidor, e, caso esteja, lista quem participa desse servidor visualizado
 */
-void sistema::listarParticipantes() const{
+void sistema::listarParticipantes(){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
-        std::vector<int> ids = this->todosServidores.at(this->getIndiceServidorByName(this->nomeServidorAtual)).getAllUsers();
-        int tam = ids.size();
-        for(int i = 0; i < tam; i++){
-            std::cout<< getUsuarioByPos(ids.at(i) - 1).getNome() << std::endl;
+        if(getIndiceServidorByName(this->nomeServidorAtual) > -1){
+            std::vector<int> ids = this->todosServidores.at(this->getIndiceServidorByName(this->nomeServidorAtual)).getAllUsers();
+            int tam = ids.size();
+            for(int i = 0; i < tam; i++){
+                std::cout<< getUsuarioByPos(ids.at(i) - 1).getNome() << std::endl;
+            }
+        }
+        else{
+            std::cout << "Esse servidor não existe mais" << std::endl;
+            this->nomeServidorAtual = "";
+            this->nomeCanalAtual = "";
         }
     }
 }
@@ -355,10 +375,16 @@ void sistema::listarParticipantes() const{
 * @brief Função que faz as verificações necessárias e imprime os canais de um servidor
 */
 
-void sistema::listarCanais() const{
+void sistema::listarCanais(){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+            std::cout << "Esse servidor não existe mais" << std::endl;
+            this->nomeServidorAtual = "";
+            this->nomeCanalAtual = "";
+            return;
+        }
         todosServidores.at(getIndiceServidorByName(nomeServidorAtual)).imprimirCanais();
     }
 }
@@ -371,6 +397,12 @@ void sistema::criarCanalEmServidor(std::vector<std::string> atributos){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     }
     else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+            std::cout << "Esse servidor não existe mais" << std::endl;
+            this->nomeServidorAtual = "";
+            this->nomeCanalAtual = "";
+            return;
+        }
         int indice = getIndiceServidorByName(this->nomeServidorAtual);
         if (todosServidores.at(indice).getIdDono() == this->usuarioAtualId){
             this->todosServidores.at(indice).addCanal(atributos.at(0), atributos.at(1));
@@ -389,6 +421,12 @@ void sistema::entrarCanalEmServidor(std::vector<std::string> atributos){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+            std::cout << "Esse servidor não existe mais" << std::endl;
+            this->nomeServidorAtual = "";
+            this->nomeCanalAtual = "";
+            return;
+        }
         if(this->nomeCanalAtual == atributos.at(0)){
             std::cout << "Você já está visualizando o canal '"<< atributos.at(0) << "'" << std::endl;
         }
@@ -411,11 +449,18 @@ void sistema::sairCanalEmServidor(){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+                std::cout << "Esse servidor não existe mais" << std::endl;
+                this->nomeServidorAtual = "";
+                this->nomeCanalAtual = "";
+                return;
+        }
         if(this->nomeCanalAtual == ""){
             std::cout << "Você não está visualizando nenhum canal no momento" << std::endl;
         }
         else{
             std::cout << "Saindo do canal..." << std::endl;
+            this->nomeCanalAtual = "";
         }
     }
 }
@@ -429,6 +474,12 @@ void sistema::envioDeMensagem(std::string mensg, std::string dataHora){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+            std::cout << "Esse servidor não existe mais" << std::endl;
+            this->nomeServidorAtual = "";
+            this->nomeCanalAtual = "";
+            return;
+        }
         if(this->nomeCanalAtual == ""){
             std::cout << "Você precisa está vusualizando um canal para poder usar esse comando" << std::endl;
         }
@@ -446,6 +497,12 @@ void sistema::listarMensagens(){
     if (this->nomeServidorAtual == ""){
         std::cout << "Você precisa está vusualizando um servidor para poder usar esse comando" << std::endl;
     } else{
+        if(getIndiceServidorByName(this->nomeServidorAtual) < 0){
+        std::cout << "Esse servidor não existe mais" << std::endl;
+        this->nomeServidorAtual = "";
+        this->nomeCanalAtual = "";
+        return;
+        }
         if(this->nomeCanalAtual == ""){
             std::cout << "Você precisa está vusualizando um canal para poder usar esse comando" << std::endl;
         }
@@ -462,4 +519,148 @@ void sistema::listarMensagens(){
             }
         }
     }
+}
+
+void sistema::salvarUsuarios(){
+    std::ofstream novoArquivo("usuarios.txt");
+    if (novoArquivo.is_open()) {
+        int tam = this->todosUsuarios.size();
+        novoArquivo << tam << std::endl;
+        for(int i = 0; i < tam; i++){
+            novoArquivo << getUsuarioByPos(i).getId() << std::endl;
+            novoArquivo << getUsuarioByPos(i).getNome() << std::endl;
+            novoArquivo << getUsuarioByPos(i).getEmail() << std::endl;
+            novoArquivo << getUsuarioByPos(i).getSenha() << std::endl;
+        }
+    }
+    novoArquivo.close();
+}
+void sistema::salvarServidores(){
+    std::ofstream novoArquivo("servidores.txt");
+    if (novoArquivo.is_open()) {
+        int tam = this->todosServidores.size();
+        novoArquivo << tam << std::endl;
+        for(int i = 0; i < tam; i++){
+            novoArquivo << todosServidores.at(i).getIdDono() << std::endl;
+            novoArquivo << todosServidores.at(i).getNomeServidor() << std::endl;
+            novoArquivo << todosServidores.at(i).getDescricao() << std::endl;
+            novoArquivo << todosServidores.at(i).getCodigoConvite() << std::endl;
+            int tamUsers = todosServidores.at(i).getAllUsers().size();
+            novoArquivo << tamUsers << std::endl;
+            for(int j = 0; j < tamUsers; j++){
+                novoArquivo << todosServidores.at(i).getAllUsers().at(j) << std::endl;
+            }
+            int tamCanal = todosServidores.at(i).getAllCanais().size();
+            novoArquivo << tamCanal << std::endl;
+            for(int k = 0; k < tamCanal; k++){
+                canal* c = todosServidores.at(i).getAllCanais().at(k);
+                novoArquivo << c->getNomeCanal() << std::endl;
+                if (c->tipoCanal() == "texto"){
+                    novoArquivo << "TEXTO" << std::endl;
+                }
+                else if(c->tipoCanal() == "voz"){
+                    novoArquivo << "VOZ" << std::endl;
+                }
+                int tamMen = c->getMensagens().size();
+                novoArquivo << tamMen << std::endl;
+                for(int l = 0; l< tamMen; l++){
+                    mensagem men = c->getMensagens().at(l);
+                    novoArquivo << men.getIdUserMensagem() << std::endl;
+                    novoArquivo << men.getDataMensagem() << std::endl;
+                    novoArquivo << men.getConteudoMensagem() << std::endl;
+                }
+            }
+        }
+    }
+    novoArquivo.close();
+}
+
+/**
+* @brief Função que chama funções privadas que salvam os dados do sistema em dois txts
+*/
+void sistema::salvar(){
+    salvarUsuarios();
+    salvarServidores();
+}
+
+void sistema::carregarUsuarios(){
+    std::ifstream arquivo("usuarios.txt");
+    if (!arquivo.is_open()) {
+        return;
+    }
+    this->todosUsuarios.clear();
+    int qtdUsers, idUser;
+    std::string linha, nome, email, senha;
+    if(std::getline(arquivo, linha)){
+        qtdUsers = std::stoi(linha);
+        for(int i = 0; i < qtdUsers; i++){
+            std::getline(arquivo, linha);
+            idUser = std::stoi(linha);
+            std::getline(arquivo, nome);
+            std::getline(arquivo, email);
+            std::getline(arquivo, senha);
+            addUsuario(usuario(idUser, nome, email, senha));
+        }
+    }
+    arquivo.close();
+}
+
+void sistema::carregarServidores(){
+    std::ifstream arquivo("servidores.txt");
+    if (!arquivo.is_open()) {
+        return;
+    }
+    clearAlocacao();
+    this->todosServidores.clear();
+    int qtdServer, idDono, qtdMembros, idMembro, qtdCanais, qtdMensagem;
+    std::string linha, nomeCanal, dataHora, conteudoMensagem;
+    if(std::getline(arquivo, linha)){
+        qtdServer = std::stoi(linha);
+        for(int i = 0; i <qtdServer; i++){
+            std::getline(arquivo, linha);
+            idDono = std::stoi(linha);
+            std::getline(arquivo, linha);
+            this->todosServidores.push_back(servidor(idDono, linha));
+            std::getline(arquivo, linha);
+            this->todosServidores.at(i).setDescricao(linha);
+            std::getline(arquivo, linha);
+            this->todosServidores.at(i).setCodigoConvite(linha);
+            std::getline(arquivo, linha);
+            qtdMembros = std::stoi(linha);
+            for(int j = 0; j < qtdMembros; j++){
+                std::getline(arquivo, linha);
+                idMembro = std::stoi(linha);
+                this->todosServidores.at(i).addUserId(idMembro);
+            }
+            std::getline(arquivo, linha);
+            qtdCanais = std::stoi(linha);
+            for(int j = 0; j < qtdCanais; j++){
+                std::getline(arquivo, nomeCanal);
+                std::getline(arquivo, linha);
+                if(linha == "TEXTO"){
+                    this->todosServidores[i].insertCanal(new canalTexto(nomeCanal));
+                } else if(linha == "VOZ"){
+                    this->todosServidores.at(i).insertCanal(new canalVoz(nomeCanal));
+                }
+                std::getline(arquivo, linha);
+                qtdMensagem = std::stoi(linha);
+                for(int k = 0; k < qtdMensagem; k++){
+                    std::getline(arquivo, linha);
+                    idMembro = std::stoi(linha);
+                    std::getline(arquivo, dataHora);
+                    std::getline(arquivo, conteudoMensagem);
+                    this->todosServidores.at(i).envarMensagem(idMembro, conteudoMensagem, dataHora, nomeCanal);
+                }
+            }
+        }
+    }
+    arquivo.close();
+}
+
+/**
+* @brief Função que chama funções privadas que carregam os dados dos dois txts para o sistema
+*/
+void sistema::carregar(){
+    carregarUsuarios();
+    carregarServidores();
 }

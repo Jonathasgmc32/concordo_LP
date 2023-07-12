@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Concordo<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">Concordo<span id="projectnumber">&#160;3.0</span>
    </div>
   </td>
  </tr>
@@ -104,6 +104,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a740529824c69bf3257267e5bb95adc64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#a740529824c69bf3257267e5bb95adc64">addUserId</a> (int id)</td></tr>
 <tr class="memdesc:a740529824c69bf3257267e5bb95adc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um ID de usuário ao servidor.  <br /></td></tr>
 <tr class="separator:a740529824c69bf3257267e5bb95adc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0df0718080f86bb8e02fd182d0309b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#aec0df0718080f86bb8e02fd182d0309b">getDescricao</a> ()</td></tr>
+<tr class="memdesc:aec0df0718080f86bb8e02fd182d0309b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém a descrição do servidor.  <br /></td></tr>
+<tr class="separator:aec0df0718080f86bb8e02fd182d0309b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ec1716d92d208a35735d95ff1b066b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#a22ec1716d92d208a35735d95ff1b066b">setDescricao</a> (std::string novaDesc)</td></tr>
 <tr class="memdesc:a22ec1716d92d208a35735d95ff1b066b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a descrição do servidor.  <br /></td></tr>
 <tr class="separator:a22ec1716d92d208a35735d95ff1b066b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,9 +128,15 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ac039a1027d427090340a0202fcd240d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a> (std::string nomeCanal) const</td></tr>
 <tr class="memdesc:ac039a1027d427090340a0202fcd240d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que verifica se um canal já existe ou não.  <br /></td></tr>
 <tr class="separator:ac039a1027d427090340a0202fcd240d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48df37513f1fc7b58c4fc3ee56afdda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#af48df37513f1fc7b58c4fc3ee56afdda">insertCanal</a> (<a class="el" href="classcanal.html">canal</a> *c)</td></tr>
+<tr class="memdesc:af48df37513f1fc7b58c4fc3ee56afdda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere canal no vector de canais.  <br /></td></tr>
+<tr class="separator:af48df37513f1fc7b58c4fc3ee56afdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac363b3d58644f3c8e213520590812dba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#ac363b3d58644f3c8e213520590812dba">addCanal</a> (std::string nome, std::string tipo)</td></tr>
 <tr class="memdesc:ac363b3d58644f3c8e213520590812dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que adiciona canal ao servidor.  <br /></td></tr>
 <tr class="separator:ac363b3d58644f3c8e213520590812dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0568a367116da1be7058ab64354139"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcanal.html">canal</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#abf0568a367116da1be7058ab64354139">getAllCanais</a> ()</td></tr>
+<tr class="memdesc:abf0568a367116da1be7058ab64354139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna todos os canais do servidor.  <br /></td></tr>
+<tr class="separator:abf0568a367116da1be7058ab64354139"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada1bcdd433f528ed6f86190d1383c737"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classservidor.html#ada1bcdd433f528ed6f86190d1383c737">clearServidor</a> ()</td></tr>
 <tr class="memdesc:ada1bcdd433f528ed6f86190d1383c737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que desaloca os ponteiros de canais de um servidor.  <br /></td></tr>
 <tr class="separator:ada1bcdd433f528ed6f86190d1383c737"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,7 +208,8 @@ Membros Públicos</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   11</span>                                                    {</div>
 <div class="line"><span class="lineno">   12</span>    this-&gt;userDonoId = idDono;</div>
 <div class="line"><span class="lineno">   13</span>    this-&gt;nomeServidor = nomeServidor;</div>
-<div class="line"><span class="lineno">   14</span>}</div>
+<div class="line"><span class="lineno">   14</span>    this-&gt;participantesId.push_back(idDono);</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -222,10 +232,8 @@ Membros Públicos</h2></td></tr>
 <ul>
 <li></li>
 </ul>
-<div class="fragment"><div class="line"><span class="lineno">   19</span>                    {</div>
-<div class="line"><span class="lineno">   20</span>    <a class="code hl_function" href="classservidor.html#ada1bcdd433f528ed6f86190d1383c737">clearServidor</a>();</div>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                    {</div>
 <div class="line"><span class="lineno">   21</span>}</div>
-<div class="ttc" id="aclassservidor_html_ada1bcdd433f528ed6f86190d1383c737"><div class="ttname"><a href="classservidor.html#ada1bcdd433f528ed6f86190d1383c737">servidor::clearServidor</a></div><div class="ttdeci">void clearServidor()</div><div class="ttdoc">Função que desaloca os ponteiros de canais de um servidor.</div><div class="ttdef"><b>Definition:</b> servidor.cpp:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -264,28 +272,31 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  165</span>                                                     {</div>
-<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span>(tipo != <span class="stringliteral">&quot;texto&quot;</span> &amp;&amp; tipo != <span class="stringliteral">&quot;voz&quot;</span>){</div>
-<div class="line"><span class="lineno">  167</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;O tipo só pode ser &#39;texto&#39; ou &#39;voz&#39;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  169</span>    }</div>
-<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nome) &gt; -1){</div>
-<div class="line"><span class="lineno">  171</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;O canal &#39;&quot;</span> &lt;&lt; nome &lt;&lt;<span class="stringliteral">&quot;&#39; já existe&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">if</span>(tipo == <span class="stringliteral">&quot;voz&quot;</span>){</div>
-<div class="line"><span class="lineno">  175</span>        <a class="code hl_class" href="classcanal_voz.html">canalVoz</a> *c = <span class="keyword">new</span> <a class="code hl_class" href="classcanal_voz.html">canalVoz</a>(nome);</div>
-<div class="line"><span class="lineno">  176</span>        this-&gt;canais.push_back(c);</div>
-<div class="line"><span class="lineno">  177</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tipo == <span class="stringliteral">&quot;texto&quot;</span>){</div>
-<div class="line"><span class="lineno">  178</span>        <a class="code hl_class" href="classcanal_texto.html">canalTexto</a> *c = <span class="keyword">new</span> <a class="code hl_class" href="classcanal_texto.html">canalTexto</a>(nome);</div>
-<div class="line"><span class="lineno">  179</span>        this-&gt;canais.push_back(c);</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-<div class="line"><span class="lineno">  181</span>    </div>
-<div class="line"><span class="lineno">  182</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Canal de &quot;</span> &lt;&lt; tipo &lt;&lt; <span class="stringliteral">&quot; &#39;&quot;</span> &lt;&lt; nome &lt;&lt; <span class="stringliteral">&quot;&#39; adicionado com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  183</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                     {</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">if</span>(tipo != <span class="stringliteral">&quot;texto&quot;</span> &amp;&amp; tipo != <span class="stringliteral">&quot;voz&quot;</span>){</div>
+<div class="line"><span class="lineno">  183</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;O tipo só pode ser &#39;texto&#39; ou &#39;voz&#39;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  184</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  185</span>    }</div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nome) &gt; -1){</div>
+<div class="line"><span class="lineno">  187</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;O canal &#39;&quot;</span> &lt;&lt; nome &lt;&lt;<span class="stringliteral">&quot;&#39; já existe&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span>(tipo == <span class="stringliteral">&quot;voz&quot;</span>){</div>
+<div class="line"><span class="lineno">  191</span>        <a class="code hl_class" href="classcanal_voz.html">canalVoz</a> *c = <span class="keyword">new</span> <a class="code hl_class" href="classcanal_voz.html">canalVoz</a>(nome);</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="classservidor.html#af48df37513f1fc7b58c4fc3ee56afdda">insertCanal</a>(c);</div>
+<div class="line"><span class="lineno">  193</span>        <span class="comment">//this-&gt;canais.push_back(c);</span></div>
+<div class="line"><span class="lineno">  194</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(tipo == <span class="stringliteral">&quot;texto&quot;</span>){</div>
+<div class="line"><span class="lineno">  195</span>        <a class="code hl_class" href="classcanal_texto.html">canalTexto</a> *c = <span class="keyword">new</span> <a class="code hl_class" href="classcanal_texto.html">canalTexto</a>(nome);</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="classservidor.html#af48df37513f1fc7b58c4fc3ee56afdda">insertCanal</a>(c);</div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">//this-&gt;canais.push_back(c);</span></div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="line"><span class="lineno">  199</span>    </div>
+<div class="line"><span class="lineno">  200</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Canal de &quot;</span> &lt;&lt; tipo &lt;&lt; <span class="stringliteral">&quot; &#39;&quot;</span> &lt;&lt; nome &lt;&lt; <span class="stringliteral">&quot;&#39; adicionado com sucesso!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  201</span>}</div>
 <div class="ttc" id="aclasscanal_texto_html"><div class="ttname"><a href="classcanal_texto.html">canalTexto</a></div><div class="ttdoc">Representa um canal de texto. Essa classe é derivada da classe &quot;canal&quot; e as funções aqui presentes sã...</div><div class="ttdef"><b>Definition:</b> canalTexto.h:19</div></div>
 <div class="ttc" id="aclasscanal_voz_html"><div class="ttname"><a href="classcanal_voz.html">canalVoz</a></div><div class="ttdoc">Representa um canal de voz. Essa classe é derivada da classe &quot;canal&quot; e as funções aqui presentes são ...</div><div class="ttdef"><b>Definition:</b> canalVoz.h:19</div></div>
-<div class="ttc" id="aclassservidor_html_ac039a1027d427090340a0202fcd240d4"><div class="ttname"><a href="classservidor.html#ac039a1027d427090340a0202fcd240d4">servidor::getIndiceCanalByNome</a></div><div class="ttdeci">int getIndiceCanalByNome(std::string nomeCanal) const</div><div class="ttdoc">Função que verifica se um canal já existe ou não.</div><div class="ttdef"><b>Definition:</b> servidor.cpp:149</div></div>
+<div class="ttc" id="aclassservidor_html_ac039a1027d427090340a0202fcd240d4"><div class="ttname"><a href="classservidor.html#ac039a1027d427090340a0202fcd240d4">servidor::getIndiceCanalByNome</a></div><div class="ttdeci">int getIndiceCanalByNome(std::string nomeCanal) const</div><div class="ttdoc">Função que verifica se um canal já existe ou não.</div><div class="ttdef"><b>Definition:</b> servidor.cpp:157</div></div>
+<div class="ttc" id="aclassservidor_html_af48df37513f1fc7b58c4fc3ee56afdda"><div class="ttname"><a href="classservidor.html#af48df37513f1fc7b58c4fc3ee56afdda">servidor::insertCanal</a></div><div class="ttdeci">void insertCanal(canal *c)</div><div class="ttdoc">Insere canal no vector de canais.</div><div class="ttdef"><b>Definition:</b> servidor.cpp:172</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -432,9 +443,32 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  192</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  193</span>    this-&gt;canais.at(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nomeCanal))-&gt;enviarMensagem(userId, mensg, dataHora);</div>
-<div class="line"><span class="lineno">  194</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                                                                {</div>
+<div class="line"><span class="lineno">  219</span>    this-&gt;canais.at(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nomeCanal))-&gt;enviarMensagem(userId, mensg, dataHora);</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf0568a367116da1be7058ab64354139" name="abf0568a367116da1be7058ab64354139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0568a367116da1be7058ab64354139">&#9670;&#160;</a></span>getAllCanais()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classcanal.html">canal</a> * &gt; servidor::getAllCanais </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que retorna todos os canais do servidor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Um vector de ponteiros de canais </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  207</span>                                        {</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">return</span> <span class="keyword">this</span> -&gt;canais;</div>
+<div class="line"><span class="lineno">  209</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,9 +489,9 @@ Membros Públicos</h2></td></tr>
 
 <p>Obtém todos os IDs dos usuários participantes do servidor. </p>
 <dl class="section return"><dt>Retorna</dt><dd>Vetor com os IDs dos usuários participantes </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                                          {</div>
-<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> this-&gt;participantesId;</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                          {</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> this-&gt;participantesId;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -479,9 +513,9 @@ Membros Públicos</h2></td></tr>
 
 <p>Função que obtém um pontero de canal no vector de canais a partir do nome do canal. </p>
 <dl class="section return"><dt>Retorna</dt><dd>um ponteiro de canal </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  200</span>                                             {</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">return</span> this-&gt;canais.at(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nome));</div>
-<div class="line"><span class="lineno">  202</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>                                             {</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">return</span> this-&gt;canais.at(<a class="code hl_function" href="classservidor.html#ac039a1027d427090340a0202fcd240d4">getIndiceCanalByNome</a>(nome));</div>
+<div class="line"><span class="lineno">  228</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,9 +536,32 @@ Membros Públicos</h2></td></tr>
 
 <p>Obtém o código de convite do servidor. </p>
 <dl class="section return"><dt>Retorna</dt><dd>Código de convite do servidor </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>                                          {</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> this-&gt;codigoConvite;</div>
-<div class="line"><span class="lineno">  105</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                          {</div>
+<div class="line"><span class="lineno">  112</span>    <span class="keywordflow">return</span> this-&gt;codigoConvite;</div>
+<div class="line"><span class="lineno">  113</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aec0df0718080f86bb8e02fd182d0309b" name="aec0df0718080f86bb8e02fd182d0309b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec0df0718080f86bb8e02fd182d0309b">&#9670;&#160;</a></span>getDescricao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string servidor::getDescricao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém a descrição do servidor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma string que contém a descrição do servidor </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                {</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">return</span> this-&gt;descServidor;</div>
+<div class="line"><span class="lineno">   80</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -555,15 +612,15 @@ Membros Públicos</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>int com indice do canal, ou -1 caso o canal não exista </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>                                                            {</div>
-<div class="line"><span class="lineno">  150</span>    <span class="keywordtype">int</span> tam = this-&gt;canais.size();</div>
-<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;getNomeCanal() == nomeCanal){</div>
-<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">return</span> i;</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  157</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>                                                            {</div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordtype">int</span> tam = this-&gt;canais.size();</div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;getNomeCanal() == nomeCanal){</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">return</span> i;</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span>    }</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -607,30 +664,30 @@ Membros Públicos</h2></td></tr>
 
 <p>Imprime o nome dos canais, classificando em texto e voz. </p>
 <p>Imprime os canais, de acordo com seu tipo, ou imprime um feedback de que não ha canais. </p>
-<div class="fragment"><div class="line"><span class="lineno">  119</span>                                   {</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordtype">int</span> tam = this-&gt;canais.size();</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordtype">int</span> qtdText = 0, qtdVoz = 0;</div>
-<div class="line"><span class="lineno">  122</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;#canais de texto&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;tipoCanal() == <span class="stringliteral">&quot;texto&quot;</span>){</div>
-<div class="line"><span class="lineno">  125</span>            std::cout &lt;&lt; this-&gt;canais.at(i)-&gt;getNomeCanal() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  126</span>            qtdText++;</div>
-<div class="line"><span class="lineno">  127</span>        }</div>
-<div class="line"><span class="lineno">  128</span>    }</div>
-<div class="line"><span class="lineno">  129</span>        <span class="keywordflow">if</span>(qtdText == 0){</div>
-<div class="line"><span class="lineno">  130</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Não há canais de texto nesse servidor&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  131</span>        }</div>
-<div class="line"><span class="lineno">  132</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;#canais de voz&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
-<div class="line"><span class="lineno">  134</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;tipoCanal() == <span class="stringliteral">&quot;voz&quot;</span>){</div>
-<div class="line"><span class="lineno">  135</span>            std::cout &lt;&lt; this-&gt;canais.at(i)-&gt;getNomeCanal() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  136</span>            qtdVoz++;</div>
-<div class="line"><span class="lineno">  137</span>        }</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">if</span>(qtdVoz == 0){</div>
-<div class="line"><span class="lineno">  140</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Não há canais de voz nesse servidor&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                   {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordtype">int</span> tam = this-&gt;canais.size();</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordtype">int</span> qtdText = 0, qtdVoz = 0;</div>
+<div class="line"><span class="lineno">  130</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;#canais de texto&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;tipoCanal() == <span class="stringliteral">&quot;texto&quot;</span>){</div>
+<div class="line"><span class="lineno">  133</span>            std::cout &lt;&lt; this-&gt;canais.at(i)-&gt;getNomeCanal() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  134</span>            qtdText++;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordflow">if</span>(qtdText == 0){</div>
+<div class="line"><span class="lineno">  138</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Não há canais de texto nesse servidor&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  139</span>        }</div>
+<div class="line"><span class="lineno">  140</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;#canais de voz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; tam; i++){</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span>(this-&gt;canais.at(i)-&gt;tipoCanal() == <span class="stringliteral">&quot;voz&quot;</span>){</div>
+<div class="line"><span class="lineno">  143</span>            std::cout &lt;&lt; this-&gt;canais.at(i)-&gt;getNomeCanal() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  144</span>            qtdVoz++;</div>
+<div class="line"><span class="lineno">  145</span>        }</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span>(qtdVoz == 0){</div>
+<div class="line"><span class="lineno">  148</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Não há canais de voz nesse servidor&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -651,11 +708,40 @@ Membros Públicos</h2></td></tr>
 
 <p>Exibe informações sobre o servidor. </p>
 <p>Exibe informações sobre o servidor (nome, descrição e quantidade de membros) </p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                               {</div>
-<div class="line"><span class="lineno">   86</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Nome do Servidor: &quot;</span> &lt;&lt; this-&gt;nomeServidor &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   87</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Descrição do Servidor: &quot;</span> &lt;&lt; this-&gt;descServidor &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   88</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Quantidade de membros: &quot;</span> &lt;&lt; this-&gt;participantesId.size() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   89</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                               {</div>
+<div class="line"><span class="lineno">   94</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Nome do Servidor: &quot;</span> &lt;&lt; this-&gt;nomeServidor &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   95</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Descrição do Servidor: &quot;</span> &lt;&lt; this-&gt;descServidor &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   96</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Quantidade de membros: &quot;</span> &lt;&lt; this-&gt;participantesId.size() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   97</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af48df37513f1fc7b58c4fc3ee56afdda" name="af48df37513f1fc7b58c4fc3ee56afdda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48df37513f1fc7b58c4fc3ee56afdda">&#9670;&#160;</a></span>insertCanal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void servidor::insertCanal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcanal.html">canal</a> *&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere canal no vector de canais. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>canal a ser inserido </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>                                  {</div>
+<div class="line"><span class="lineno">  173</span>    this-&gt;canais.push_back(c);</div>
+<div class="line"><span class="lineno">  174</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -683,9 +769,9 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                   {</div>
-<div class="line"><span class="lineno">   96</span>    this-&gt;codigoConvite = novoCodigo;</div>
-<div class="line"><span class="lineno">   97</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  103</span>                                                   {</div>
+<div class="line"><span class="lineno">  104</span>    this-&gt;codigoConvite = novoCodigo;</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -712,9 +798,9 @@ Membros Públicos</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   78</span>                                             {</div>
-<div class="line"><span class="lineno">   79</span>    this-&gt;descServidor = novaDesc;</div>
-<div class="line"><span class="lineno">   80</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>                                             {</div>
+<div class="line"><span class="lineno">   87</span>    this-&gt;descServidor = novaDesc;</div>
+<div class="line"><span class="lineno">   88</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

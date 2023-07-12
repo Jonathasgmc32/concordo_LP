@@ -107,10 +107,10 @@
 }
 {\info 
 {\title {\comment Concordo  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-2.0 \par
+3.0 \par
 }}Concordo}
 {\comment Gerado por doxygen 1.9.6.}
-{\creatim \yr2023\mo7\dy5\hr22\min34\sec22}
+{\creatim \yr2023\mo7\dy11\hr23\min33\sec51}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -123,7 +123,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Vers\'E3o 2.0\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Quarta, 5 de Julho de 2023 }}\par
+Vers\'E3o 3.0\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Ter\'E7a, 11 de Julho de 2023 }}\par
 \page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
@@ -158,9 +158,9 @@ mensagem\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABU \\*MERGEFORMAT}{\fld
 \par
 servidor\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACA \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-sistema\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACT \\*MERGEFORMAT}{\fldrslt pagenum}}
+sistema\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACW \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-usuario\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+usuario\tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 }
 \pard\plain \sect\sbkpage
@@ -190,10 +190,10 @@ Classe respons\'E1vel pelo gerenciamento de mensagem })} \tab {\field\fldedit {\
 Classe respons\'E1vel pelo gerenciamento de servidor })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACA \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b sistema} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Classe respons\'E1vel pelo gerenciamento do sistema })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACT \\*MERGEFORMAT}{\fldrslt pagenum}}
+Classe respons\'E1vel pelo gerenciamento do sistema })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACW \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b {\b usuario} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Classe respons\'E1vel pelo gerenciamento de usu\'E1rio })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADV \\*MERGEFORMAT}{\fldrslt pagenum}}
+Classe respons\'E1vel pelo gerenciamento de usu\'E1rio })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEB \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -1389,6 +1389,13 @@ Adiciona um ID de usu\'E1rio ao servidor. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::string {\b getDescricao} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Obt\'E9m a descri\'E7\'E3o do servidor. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b setDescricao} (std::string novaDesc)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -1438,10 +1445,24 @@ Fun\'E7\'E3o que verifica se um canal j\'E1 existe ou n\'E3o. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b insertCanal} ({\b canal} *c)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere canal no vector de canais. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 void {\b addCanal} (std::string nome, std::string tipo)\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o que adiciona canal ao servidor. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+std::vector< {\b canal} * > {\b getAllCanais} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que retorna todos os canais do servidor. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
@@ -1531,7 +1552,8 @@ Par\'E2metros\par}
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 11                                                     \{\par
 12     this->userDonoId = idDono;\par
 13     this->nomeServidor = nomeServidor;\par
-14 \}\par
+14     this->participantesId.push_back(idDono);\par
+15 \}\par
 }
 }
 {\xe \v ~servidor\:servidor}
@@ -1554,8 +1576,7 @@ Destrutor da classe servidor. }}\par
 \pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 \par}
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 19                     \{\par
-20     clearServidor();\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 20                     \{\par
 21 \}\par
 }
 }
@@ -1595,25 +1616,27 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 165                                                      \{\par
-166     {\cf19 if}(tipo != {\cf22 "texto"} && tipo != {\cf22 "voz"})\{\par
-167         std::cout << {\cf22 "O tipo s\'F3 pode ser 'texto' ou 'voz'"} << std::endl;\par
-168         {\cf19 return};\par
-169     \}\par
-170     {\cf19 if}(getIndiceCanalByNome(nome) > -1)\{\par
-171         std::cout << {\cf22 "O canal '"} << nome <<{\cf22 "' j\'E1 existe"} << std::endl;\par
-172         {\cf19 return};\par
-173     \}\par
-174     {\cf19 if}(tipo == {\cf22 "voz"})\{\par
-175         canalVoz *c = {\cf17 new} canalVoz(nome);\par
-176         this->canais.push_back(c);\par
-177     \} {\cf19 else} {\cf19 if}(tipo == {\cf22 "texto"})\{\par
-178         canalTexto *c = {\cf17 new} canalTexto(nome);\par
-179         this->canais.push_back(c);\par
-180     \}\par
-181     \par
-182     std::cout << {\cf22 "Canal de "} << tipo << {\cf22 " '"} << nome << {\cf22 "' adicionado com sucesso!"} << std::endl;\par
-183 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 181                                                      \{\par
+182     {\cf19 if}(tipo != {\cf22 "texto"} && tipo != {\cf22 "voz"})\{\par
+183         std::cout << {\cf22 "O tipo s\'F3 pode ser 'texto' ou 'voz'"} << std::endl;\par
+184         {\cf19 return};\par
+185     \}\par
+186     {\cf19 if}(getIndiceCanalByNome(nome) > -1)\{\par
+187         std::cout << {\cf22 "O canal '"} << nome <<{\cf22 "' j\'E1 existe"} << std::endl;\par
+188         {\cf19 return};\par
+189     \}\par
+190     {\cf19 if}(tipo == {\cf22 "voz"})\{\par
+191         canalVoz *c = {\cf17 new} canalVoz(nome);\par
+192         insertCanal(c);\par
+193         {\cf20 //this->canais.push_back(c);}\par
+194     \} {\cf19 else} {\cf19 if}(tipo == {\cf22 "texto"})\{\par
+195         canalTexto *c = {\cf17 new} canalTexto(nome);\par
+196         insertCanal(c);\par
+197         {\cf20 //this->canais.push_back(c);}\par
+198     \}\par
+199     \par
+200     std::cout << {\cf22 "Canal de "} << tipo << {\cf22 " '"} << nome << {\cf22 "' adicionado com sucesso!"} << std::endl;\par
+201 \}\par
 }
 }
 {\xe \v addUserId\:servidor}
@@ -1756,9 +1779,34 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 192                                                                                                 \{\par
-193     this->canais.at(getIndiceCanalByNome(nomeCanal))->enviarMensagem(userId, mensg, dataHora);\par
-194 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 218                                                                                                 \{\par
+219     this->canais.at(getIndiceCanalByNome(nomeCanal))->enviarMensagem(userId, mensg, dataHora);\par
+220 \}\par
+}
+}
+{\xe \v getAllCanais\:servidor}
+{\xe \v servidor\:getAllCanais}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::vector< {\b canal} * > servidor::getAllCanais ()}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que retorna todos os canais do servidor. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Um vector de ponteiros de canais \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 207                                         \{\par
+208     {\cf19 return} {\cf17 this} ->canais;\par
+209 \}\par
 }
 }
 {\xe \v getAllUsers\:servidor}
@@ -1767,8 +1815,8 @@ Par\'E2metros\par}
 {\b 
 std::vector< int > servidor::getAllUsers () const}}
 \par
-{\bkmkstart AAAAAAAACJ}
-{\bkmkend AAAAAAAACJ}
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1781,9 +1829,9 @@ Obt\'E9m todos os IDs dos usu\'E1rios participantes do servidor. }}\par
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 Vetor com os IDs dos usu\'E1rios participantes \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 111                                           \{\par
-112     {\cf19 return} this->participantesId;\par
-113 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 119                                           \{\par
+120     {\cf19 return} this->participantesId;\par
+121 \}\par
 }
 }
 {\xe \v getCanalByName\:servidor}
@@ -1792,8 +1840,8 @@ Vetor com os IDs dos usu\'E1rios participantes \par
 {\b 
 {\b canal} * servidor::getCanalByName (std::string  {\i nome})}}
 \par
-{\bkmkstart AAAAAAAACK}
-{\bkmkend AAAAAAAACK}
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1806,9 +1854,9 @@ Fun\'E7\'E3o que obt\'E9m um pontero de canal no vector de canais a partir do no
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 um ponteiro de canal \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 200                                              \{\par
-201     {\cf19 return} this->canais.at(getIndiceCanalByNome(nome));\par
-202 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 226                                              \{\par
+227     {\cf19 return} this->canais.at(getIndiceCanalByNome(nome));\par
+228 \}\par
 }
 }
 {\xe \v getCodigoConvite\:servidor}
@@ -1817,8 +1865,8 @@ um ponteiro de canal \par
 {\b 
 std::string servidor::getCodigoConvite () const}}
 \par
-{\bkmkstart AAAAAAAACL}
-{\bkmkend AAAAAAAACL}
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1831,9 +1879,34 @@ Obt\'E9m o c\'F3digo de convite do servidor. }}\par
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 C\'F3digo de convite do servidor \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 103                                           \{\par
-104     {\cf19 return} this->codigoConvite;\par
-105 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 111                                           \{\par
+112     {\cf19 return} this->codigoConvite;\par
+113 \}\par
+}
+}
+{\xe \v getDescricao\:servidor}
+{\xe \v servidor\:getDescricao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+std::string servidor::getDescricao ()}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Obt\'E9m a descri\'E7\'E3o do servidor. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Uma string que cont\'E9m a descri\'E7\'E3o do servidor \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 78                                 \{\par
+79     {\cf19 return} this->descServidor;\par
+80 \}\par
 }
 }
 {\xe \v getIdDono\:servidor}
@@ -1842,8 +1915,8 @@ C\'F3digo de convite do servidor \par
 {\b 
 int servidor::getIdDono () const}}
 \par
-{\bkmkstart AAAAAAAACM}
-{\bkmkend AAAAAAAACM}
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1867,8 +1940,8 @@ ID do usu\'E1rio dono do servidor \par
 {\b 
 int servidor::getIndiceCanalByNome (std::string  {\i nomeCanal}) const}}
 \par
-{\bkmkstart AAAAAAAACN}
-{\bkmkend AAAAAAAACN}
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1890,15 +1963,15 @@ Par\'E2metros\par}
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 int com indice do canal, ou -1 caso o canal n\'E3o exista \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 149                                                             \{\par
-150     {\cf18 int} tam = this->canais.size();\par
-151     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
-152         {\cf19 if}(this->canais.at(i)->getNomeCanal() == nomeCanal)\{\par
-153             {\cf19 return} i;\par
-154         \}\par
-155     \}\par
-156     {\cf19 return} -1;\par
-157 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 157                                                             \{\par
+158     {\cf18 int} tam = this->canais.size();\par
+159     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
+160         {\cf19 if}(this->canais.at(i)->getNomeCanal() == nomeCanal)\{\par
+161             {\cf19 return} i;\par
+162         \}\par
+163     \}\par
+164     {\cf19 return} -1;\par
+165 \}\par
 }
 }
 {\xe \v getNomeServidor\:servidor}
@@ -1907,8 +1980,8 @@ int com indice do canal, ou -1 caso o canal n\'E3o exista \par
 {\b 
 std::string servidor::getNomeServidor () const}}
 \par
-{\bkmkstart AAAAAAAACO}
-{\bkmkend AAAAAAAACO}
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1932,8 +2005,8 @@ Nome do servidor \par
 {\b 
 void servidor::imprimirCanais () const}}
 \par
-{\bkmkstart AAAAAAAACP}
-{\bkmkend AAAAAAAACP}
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1943,30 +2016,30 @@ Imprime o nome dos canais, classificando em texto e voz. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Imprime os canais, de acordo com seu tipo, ou imprime um feedback de que n\'E3o ha canais. \par
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 119                                    \{\par
-120     {\cf18 int} tam = this->canais.size();\par
-121     {\cf18 int} qtdText = 0, qtdVoz = 0;\par
-122     std::cout << {\cf22 "#canais de texto"} << std::endl;\par
-123     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
-124         {\cf19 if}(this->canais.at(i)->tipoCanal() == {\cf22 "texto"})\{\par
-125             std::cout << this->canais.at(i)->getNomeCanal() << std::endl;\par
-126             qtdText++;\par
-127         \}\par
-128     \}\par
-129         {\cf19 if}(qtdText == 0)\{\par
-130             std::cout << {\cf22 "N\'E3o h\'E1 canais de texto nesse servidor"} << std::endl;\par
-131         \}\par
-132     std::cout << {\cf22 "#canais de voz"} << std::endl;\par
-133     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
-134         {\cf19 if}(this->canais.at(i)->tipoCanal() == {\cf22 "voz"})\{\par
-135             std::cout << this->canais.at(i)->getNomeCanal() << std::endl;\par
-136             qtdVoz++;\par
-137         \}\par
-138     \}\par
-139         {\cf19 if}(qtdVoz == 0)\{\par
-140             std::cout << {\cf22 "N\'E3o h\'E1 canais de voz nesse servidor"} << std::endl;\par
-141         \}\par
-142 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 127                                    \{\par
+128     {\cf18 int} tam = this->canais.size();\par
+129     {\cf18 int} qtdText = 0, qtdVoz = 0;\par
+130     std::cout << {\cf22 "#canais de texto"} << std::endl;\par
+131     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
+132         {\cf19 if}(this->canais.at(i)->tipoCanal() == {\cf22 "texto"})\{\par
+133             std::cout << this->canais.at(i)->getNomeCanal() << std::endl;\par
+134             qtdText++;\par
+135         \}\par
+136     \}\par
+137         {\cf19 if}(qtdText == 0)\{\par
+138             std::cout << {\cf22 "N\'E3o h\'E1 canais de texto nesse servidor"} << std::endl;\par
+139         \}\par
+140     std::cout << {\cf22 "#canais de voz"} << std::endl;\par
+141     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
+142         {\cf19 if}(this->canais.at(i)->tipoCanal() == {\cf22 "voz"})\{\par
+143             std::cout << this->canais.at(i)->getNomeCanal() << std::endl;\par
+144             qtdVoz++;\par
+145         \}\par
+146     \}\par
+147         {\cf19 if}(qtdVoz == 0)\{\par
+148             std::cout << {\cf22 "N\'E3o h\'E1 canais de voz nesse servidor"} << std::endl;\par
+149         \}\par
+150 \}\par
 }
 }
 {\xe \v infoServer\:servidor}
@@ -1975,8 +2048,8 @@ Imprime os canais, de acordo com seu tipo, ou imprime um feedback de que n\'E3o 
 {\b 
 void servidor::infoServer () const}}
 \par
-{\bkmkstart AAAAAAAACQ}
-{\bkmkend AAAAAAAACQ}
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -1986,11 +2059,42 @@ Exibe informa\'E7\'F5es sobre o servidor. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Exibe informa\'E7\'F5es sobre o servidor (nome, descri\'E7\'E3o e quantidade de membros) \par
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 85                                \{\par
-86     std::cout << {\cf22 "Nome do Servidor: "} << this->nomeServidor << std::endl;\par
-87     std::cout << {\cf22 "Descri\'E7\'E3o do Servidor: "} << this->descServidor << std::endl;\par
-88     std::cout << {\cf22 "Quantidade de membros: "} << this->participantesId.size() << std::endl;\par
-89 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 93                                \{\par
+94     std::cout << {\cf22 "Nome do Servidor: "} << this->nomeServidor << std::endl;\par
+95     std::cout << {\cf22 "Descri\'E7\'E3o do Servidor: "} << this->descServidor << std::endl;\par
+96     std::cout << {\cf22 "Quantidade de membros: "} << this->participantesId.size() << std::endl;\par
+97 \}\par
+}
+}
+{\xe \v insertCanal\:servidor}
+{\xe \v servidor\:insertCanal}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void servidor::insertCanal ({\b canal} *  {\i c})}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere canal no vector de canais. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i c} \cell }{canal a ser inserido \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 172                                   \{\par
+173     this->canais.push_back(c);\par
+174 \}\par
 }
 }
 {\xe \v setCodigoConvite\:servidor}
@@ -1999,8 +2103,8 @@ Exibe informa\'E7\'F5es sobre o servidor (nome, descri\'E7\'E3o e quantidade de 
 {\b 
 void servidor::setCodigoConvite (std::string  {\i novoCodigo})}}
 \par
-{\bkmkstart AAAAAAAACR}
-{\bkmkend AAAAAAAACR}
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2019,9 +2123,9 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 95                                                    \{\par
-96     this->codigoConvite = novoCodigo;\par
-97 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 103                                                    \{\par
+104     this->codigoConvite = novoCodigo;\par
+105 \}\par
 }
 }
 {\xe \v setDescricao\:servidor}
@@ -2030,8 +2134,8 @@ Par\'E2metros\par}
 {\b 
 void servidor::setDescricao (std::string  {\i novaDesc})}}
 \par
-{\bkmkstart AAAAAAAACS}
-{\bkmkend AAAAAAAACS}
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2050,9 +2154,9 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 78                                              \{\par
-79     this->descServidor = novaDesc;\par
-80 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 86                                              \{\par
+87     this->descServidor = novaDesc;\par
+88 \}\par
 }
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -2069,8 +2173,8 @@ C:/Users/jonat/concordo_LP/src/{\b servidor.cpp}\par
 Refer\'EAncia da Classe sistema\par \pard\plain 
 {\tc\tcl2 \v sistema}
 {\xe \v sistema}
-{\bkmkstart AAAAAAAACT}
-{\bkmkend AAAAAAAACT}
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -2094,6 +2198,13 @@ Construtor da classe sistema. }{
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Destrutor da classe sistema. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b clearAlocacao} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Limpa todos os objetos alicados dinamicamente do vector de servidores. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
@@ -2223,14 +2334,14 @@ Sai de um servidor (apenas no quesito visualiza\'E7\'E3o) }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b listarParticipantes} () const\par
+void {\b listarParticipantes} ()\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Lista todos os participantes do servidor atual. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
-void {\b listarCanais} () const\par
+void {\b listarCanais} ()\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o que faz as verifica\'E7\'F5es necess\'E1rias e imprime os canais de um servidor. }{
@@ -2271,6 +2382,20 @@ void {\b listarMensagens} ()\par
 Fun\'E7\'E3o que lista mensagens de um canal de um servidor. }{
 }\par
 }\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b salvar} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que chama fun\'E7\'F5es privadas que salvam os dados do sistema em dois txts. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b carregar} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que chama fun\'E7\'F5es privadas que carregam os dados dos dois txts para o sistema. }{
+}\par
+}\par}
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
@@ -2290,8 +2415,8 @@ Construtores e Destrutores\par
 {\b 
 sistema::sistema ()}}
 \par
-{\bkmkstart AAAAAAAACU}
-{\bkmkend AAAAAAAACU}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2313,8 +2438,8 @@ Construtor da classe sistema. Os valores padr\'F5es para representar que ningu\'
 {\b 
 sistema::~sistema ()}}
 \par
-{\bkmkstart AAAAAAAACV}
-{\bkmkend AAAAAAAACV}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2336,8 +2461,8 @@ Documenta\'E7\'E3o das fun\'E7\'F5es\par
 {\b 
 void sistema::addServer ({\b servidor}  {\i s})}}
 \par
-{\bkmkstart AAAAAAAACW}
-{\bkmkend AAAAAAAACW}
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2362,9 +2487,9 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 116                                  \{\par
-117     this->todosServidores.push_back(s);\par
-118 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 130                                  \{\par
+131     this->todosServidores.push_back(s);\par
+132 \}\par
 }
 }
 {\xe \v addUsuario\:sistema}
@@ -2373,8 +2498,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::addUsuario ({\b usuario}  {\i u})}}
 \par
-{\bkmkstart AAAAAAAACX}
-{\bkmkend AAAAAAAACX}
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2393,9 +2518,52 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 47                                  \{\par
-48     this->todosUsuarios.push_back(u);\par
-49 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 56                                  \{\par
+57     this->todosUsuarios.push_back(u);\par
+58 \}\par
+}
+}
+{\xe \v carregar\:sistema}
+{\xe \v sistema\:carregar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sistema::carregar ()}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que chama fun\'E7\'F5es privadas que carregam os dados dos dois txts para o sistema. }}\par
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 663                       \{\par
+664     carregarUsuarios();\par
+665     carregarServidores();\par
+666 \}\par
+}
+}
+{\xe \v clearAlocacao\:sistema}
+{\xe \v sistema\:clearAlocacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sistema::clearAlocacao ()}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Limpa todos os objetos alicados dinamicamente do vector de servidores. }}\par
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 22                            \{\par
+23     {\cf19 for}({\cf18 int} i = 0; i < this->todosServidores.size(); i++)\{\par
+24         this->todosServidores.at(i).clearServidor();\par
+25     \}\par
+26 \}\par
 }
 }
 {\xe \v createServer\:sistema}
@@ -2404,8 +2572,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::createServer (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAACY}
-{\bkmkend AAAAAAAACY}
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2424,15 +2592,14 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 141                                                         \{\par
-142     {\cf19 if}(getIndiceServidorByName(atributos.at(0)) == -1)\{\par
-143         addServer(servidor(this->usuarioAtualId, atributos.at(0)));\par
-144         this->todosServidores.at(getIndiceServidorByName(atributos.at(0))).addUserId(this->usuarioAtualId);\par
-145         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' criado com sucesso!"} << std::endl;\par
-146         {\cf19 return};\par
-147     \}\par
-148     std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' j\'E1 existe."} << std::endl;\par
-149 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 155                                                         \{\par
+156     {\cf19 if}(getIndiceServidorByName(atributos.at(0)) == -1)\{\par
+157         this->todosServidores.emplace_back(servidor(this->usuarioAtualId, atributos.at(0)));\par
+158         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' criado com sucesso!"} << std::endl;\par
+159         {\cf19 return};\par
+160     \}\par
+161     std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' j\'E1 existe."} << std::endl;\par
+162 \}\par
 }
 }
 {\xe \v createUser\:sistema}
@@ -2441,8 +2608,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::createUser (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAACZ}
-{\bkmkend AAAAAAAACZ}
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2461,14 +2628,16 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 64                                                       \{\par
-65     {\cf19 if}(emailCadastrado(atributos.at(0)) == {\cf17 false})\{\par
-66         addUsuario(usuario(this->todosUsuarios.size() + 1, atributos.at(2), atributos.at(0), atributos.at(1)));\par
-67         std::cout << {\cf22 "Cadastro realizado com sucesso!"} << std::endl;\par
-68     \} {\cf19 else}\{\par
-69         std::cout << {\cf22 "Esse email j\'E1 est\'E1 cadastrado!"} << std::endl;\par
-70     \}\par
-71 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 73                                                       \{\par
+74     std::hash<std::string> hash_function;\par
+75     std::size_t hash = hash_function(atributos.at(1));\par
+76     {\cf19 if}(emailCadastrado(atributos.at(0)) == {\cf17 false})\{\par
+77         addUsuario(usuario(this->todosUsuarios.size() + 1, atributos.at(2), atributos.at(0), std::to_string(hash)));\par
+78         std::cout << {\cf22 "Cadastro realizado com sucesso!"} << std::endl;\par
+79     \} {\cf19 else}\{\par
+80         std::cout << {\cf22 "Esse email j\'E1 est\'E1 cadastrado!"} << std::endl;\par
+81     \}\par
+82 \}\par
 }
 }
 {\xe \v criarCanalEmServidor\:sistema}
@@ -2477,8 +2646,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::criarCanalEmServidor (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADA}
-{\bkmkend AAAAAAAADA}
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2497,20 +2666,26 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 369                                                                 \{\par
-370     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-371         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-372     \}\par
-373     {\cf19 else}\{\par
-374         {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
-375         {\cf19 if} (todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
-376             this->todosServidores.at(indice).addCanal(atributos.at(0), atributos.at(1));\par
-377         \}\par
-378         {\cf19 else}\{\par
-379             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
-380         \}\par
-381     \}\par
-382 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 395                                                                 \{\par
+396     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+397         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+398     \}\par
+399     {\cf19 else}\{\par
+400         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+401             std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+402             this->nomeServidorAtual = {\cf22 ""};\par
+403             this->nomeCanalAtual = {\cf22 ""};\par
+404             {\cf19 return};\par
+405         \}\par
+406         {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
+407         {\cf19 if} (todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
+408             this->todosServidores.at(indice).addCanal(atributos.at(0), atributos.at(1));\par
+409         \}\par
+410         {\cf19 else}\{\par
+411             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
+412         \}\par
+413     \}\par
+414 \}\par
 }
 }
 {\xe \v deleteServer\:sistema}
@@ -2519,8 +2694,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::deleteServer (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADB}
-{\bkmkend AAAAAAAADB}
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2539,26 +2714,26 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 171                                                         \{\par
-172     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
-173     {\cf19 if}(indice > -1)\{\par
-174         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
-175             {\cf19 if}(this->nomeServidorAtual == atributos.at(0))\{\par
-176                 this->nomeServidorAtual = {\cf22 ""};\par
-177                 this->nomeCanalAtual = {\cf22 ""};\par
-178             \}\par
-179             this->todosServidores.at(indice).clearServidor();\par
-180             this->todosServidores.erase(this->todosServidores.begin() + indice);\par
-181             std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' removido com sucesso"} << std::endl;\par
-182         \}\par
-183         {\cf19 else}\{\par
-184             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
-185         \}\par
-186     \}\par
-187     {\cf19 else}\{\par
-188         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
-189     \}\par
-190 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 184                                                         \{\par
+185     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
+186     {\cf19 if}(indice > -1)\{\par
+187         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
+188             {\cf19 if}(this->nomeServidorAtual == atributos.at(0))\{\par
+189                 this->nomeServidorAtual = {\cf22 ""};\par
+190                 this->nomeCanalAtual = {\cf22 ""};\par
+191             \}\par
+192             this->todosServidores.at(indice).clearServidor();\par
+193             this->todosServidores.erase(this->todosServidores.begin() + indice);\par
+194             std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' removido com sucesso"} << std::endl;\par
+195         \}\par
+196         {\cf19 else}\{\par
+197             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
+198         \}\par
+199     \}\par
+200     {\cf19 else}\{\par
+201         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
+202     \}\par
+203 \}\par
 }
 }
 {\xe \v emailCadastrado\:sistema}
@@ -2567,8 +2742,8 @@ Par\'E2metros\par}
 {\b 
 bool sistema::emailCadastrado (std::string  {\i email}) const}}
 \par
-{\bkmkstart AAAAAAAADC}
-{\bkmkend AAAAAAAADC}
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2590,15 +2765,15 @@ Par\'E2metros\par}
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 Booleano, verdadeiro se o email est\'E1 cadastrado, falso caso contr\'E1rio \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 33                                                   \{\par
-34     {\cf18 int} tam = this->todosUsuarios.size();\par
-35     {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
-36         {\cf19 if}(getUsuarioByPos(i).getEmail() == email)\{\par
-37             {\cf19 return} {\cf17 true};\par
-38         \}\par
-39     \}\par
-40     {\cf19 return} {\cf17 false};\par
-41 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 42                                                   \{\par
+43     {\cf18 int} tam = this->todosUsuarios.size();\par
+44     {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
+45         {\cf19 if}(getUsuarioByPos(i).getEmail() == email)\{\par
+46             {\cf19 return} {\cf17 true};\par
+47         \}\par
+48     \}\par
+49     {\cf19 return} {\cf17 false};\par
+50 \}\par
 }
 }
 {\xe \v enterServer\:sistema}
@@ -2607,8 +2782,8 @@ Booleano, verdadeiro se o email est\'E1 cadastrado, falso caso contr\'E1rio \par
 {\b 
 void sistema::enterServer (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADD}
-{\bkmkend AAAAAAAADD}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2627,51 +2802,51 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 279                                                        \{\par
-280     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
-281     {\cf19 if} (indice > -1)\{\par
-282 \par
-283         {\cf19 if}(this->todosServidores.at(indice).buscaUserId(this->usuarioAtualId) == {\cf17 true})\{\par
-284             {\cf19 if} (this->nomeServidorAtual == todosServidores.at(indice).getNomeServidor())\{\par
-285                 std::cout << {\cf22 "Voc\'EA j\'E1 est\'E1 visualizando o servidor '"} << todosServidores.at(indice).getNomeServidor()\par
-286                 << {\cf22 "'"} << std::endl;\par
-287             \}\par
-288             {\cf19 else}\{\par
-289                 std::cout << {\cf22 "Agora voc\'EA est\'E1 visualizando o servidor '"} << todosServidores.at(indice).getNomeServidor()\par
-290                 << {\cf22 "'"} << std::endl;\par
-291                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
-292                 this->nomeCanalAtual = {\cf22 ""};\par
-293             \}\par
-294         \}\par
-295         {\cf19 else}\{\par
-296             {\cf19 if}(this->todosServidores.at(indice).getCodigoConvite() == {\cf22 ""})\{\par
-297                 this->todosServidores.at(indice).addUserId(this->usuarioAtualId);\par
-298                 std::cout << {\cf22 "Voc\'EA entrou no servidor '"} << todosServidores.at(indice).getNomeServidor()\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 292                                                        \{\par
+293     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
+294     {\cf19 if} (indice > -1)\{\par
+295 \par
+296         {\cf19 if}(this->todosServidores.at(indice).buscaUserId(this->usuarioAtualId) == {\cf17 true})\{\par
+297             {\cf19 if} (this->nomeServidorAtual == todosServidores.at(indice).getNomeServidor())\{\par
+298                 std::cout << {\cf22 "Voc\'EA j\'E1 est\'E1 visualizando o servidor '"} << todosServidores.at(indice).getNomeServidor()\par
 299                 << {\cf22 "'"} << std::endl;\par
-300                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
-301                 this->nomeCanalAtual = {\cf22 ""};\par
-302             \}\par
-303             {\cf19 else}\{\par
-304                 {\cf19 if}(atributos.at(1) == {\cf22 ""})\{\par
-305                     std::cout << {\cf22 "O servidor '"} << todosServidores.at(indice).getNomeServidor()\par
-306                 << {\cf22 "' requer um c\'F3digo de convite"} << std::endl;\par
-307                 \}\par
-308                 {\cf19 else} {\cf19 if} (atributos.at(1) == todosServidores.at(indice).getCodigoConvite())\{\par
-309                     this->todosServidores.at(indice).addUserId(this->usuarioAtualId);\par
-310                 std::cout << {\cf22 "Voc\'EA entrou no servidor '"} << todosServidores.at(indice).getNomeServidor()\par
-311                 << {\cf22 "'"} << std::endl;\par
-312                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
-313                 this->nomeCanalAtual = {\cf22 ""};\par
-314                 \} {\cf19 else}\{\par
-315                     std::cout << {\cf22 "C\'F3digo de convite inv\'E1lido"} << std::endl;\par
-316                 \}\par
-317             \}\par
-318         \}\par
-319     \}\par
-320     {\cf19 else}\{\par
-321         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
-322     \}\par
-323 \}\par
+300             \}\par
+301             {\cf19 else}\{\par
+302                 std::cout << {\cf22 "Agora voc\'EA est\'E1 visualizando o servidor '"} << todosServidores.at(indice).getNomeServidor()\par
+303                 << {\cf22 "'"} << std::endl;\par
+304                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
+305                 this->nomeCanalAtual = {\cf22 ""};\par
+306             \}\par
+307         \}\par
+308         {\cf19 else}\{\par
+309             {\cf19 if}(this->todosServidores.at(indice).getCodigoConvite() == {\cf22 ""})\{\par
+310                 this->todosServidores.at(indice).addUserId(this->usuarioAtualId);\par
+311                 std::cout << {\cf22 "Voc\'EA entrou no servidor '"} << todosServidores.at(indice).getNomeServidor()\par
+312                 << {\cf22 "'"} << std::endl;\par
+313                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
+314                 this->nomeCanalAtual = {\cf22 ""};\par
+315             \}\par
+316             {\cf19 else}\{\par
+317                 {\cf19 if}(atributos.at(1) == {\cf22 ""})\{\par
+318                     std::cout << {\cf22 "O servidor '"} << todosServidores.at(indice).getNomeServidor()\par
+319                 << {\cf22 "' requer um c\'F3digo de convite"} << std::endl;\par
+320                 \}\par
+321                 {\cf19 else} {\cf19 if} (atributos.at(1) == todosServidores.at(indice).getCodigoConvite())\{\par
+322                     this->todosServidores.at(indice).addUserId(this->usuarioAtualId);\par
+323                 std::cout << {\cf22 "Voc\'EA entrou no servidor '"} << todosServidores.at(indice).getNomeServidor()\par
+324                 << {\cf22 "'"} << std::endl;\par
+325                 this->nomeServidorAtual = todosServidores.at(indice).getNomeServidor();\par
+326                 this->nomeCanalAtual = {\cf22 ""};\par
+327                 \} {\cf19 else}\{\par
+328                     std::cout << {\cf22 "C\'F3digo de convite inv\'E1lido"} << std::endl;\par
+329                 \}\par
+330             \}\par
+331         \}\par
+332     \}\par
+333     {\cf19 else}\{\par
+334         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
+335     \}\par
+336 \}\par
 }
 }
 {\xe \v entrarCanalEmServidor\:sistema}
@@ -2680,8 +2855,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::entrarCanalEmServidor (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADE}
-{\bkmkend AAAAAAAADE}
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2706,24 +2881,30 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 388                                                                  \{\par
-389     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-390         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-391     \} {\cf19 else}\{\par
-392         {\cf19 if}(this->nomeCanalAtual == atributos.at(0))\{\par
-393             std::cout << {\cf22 "Voc\'EA j\'E1 est\'E1 visualizando o canal '"}<< atributos.at(0) << {\cf22 "'"} << std::endl;\par
-394         \}\par
-395         {\cf19 else}\{\par
-396             {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
-397             {\cf19 if}(todosServidores.at(indice).getIndiceCanalByNome(atributos.at(0)) < 0)\{\par
-398                 std::cout << {\cf22 "O canal '"}<< atributos.at(0) << {\cf22 "' n\'E3o existe nesse servidor"} << std::endl;\par
-399             \} {\cf19 else}\{\par
-400                 this->nomeCanalAtual = atributos.at(0);\par
-401                 std::cout << {\cf22 "Voc\'EA entrou no canal '"}<< atributos.at(0) << {\cf22 "'"} << std::endl;\par
-402             \}\par
-403         \}\par
-404     \}\par
-405 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 420                                                                  \{\par
+421     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+422         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+423     \} {\cf19 else}\{\par
+424         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+425             std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+426             this->nomeServidorAtual = {\cf22 ""};\par
+427             this->nomeCanalAtual = {\cf22 ""};\par
+428             {\cf19 return};\par
+429         \}\par
+430         {\cf19 if}(this->nomeCanalAtual == atributos.at(0))\{\par
+431             std::cout << {\cf22 "Voc\'EA j\'E1 est\'E1 visualizando o canal '"}<< atributos.at(0) << {\cf22 "'"} << std::endl;\par
+432         \}\par
+433         {\cf19 else}\{\par
+434             {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
+435             {\cf19 if}(todosServidores.at(indice).getIndiceCanalByNome(atributos.at(0)) < 0)\{\par
+436                 std::cout << {\cf22 "O canal '"}<< atributos.at(0) << {\cf22 "' n\'E3o existe nesse servidor"} << std::endl;\par
+437             \} {\cf19 else}\{\par
+438                 this->nomeCanalAtual = atributos.at(0);\par
+439                 std::cout << {\cf22 "Voc\'EA entrou no canal '"}<< atributos.at(0) << {\cf22 "'"} << std::endl;\par
+440             \}\par
+441         \}\par
+442     \}\par
+443 \}\par
 }
 }
 {\xe \v envioDeMensagem\:sistema}
@@ -2732,8 +2913,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::envioDeMensagem (std::string  {\i mensg}, std::string  {\i dataHora})}}
 \par
-{\bkmkstart AAAAAAAADF}
-{\bkmkend AAAAAAAADF}
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2770,19 +2951,25 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 428                                                                 \{\par
-429     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-430         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-431     \} {\cf19 else}\{\par
-432         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
-433             std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um canal para poder usar esse comando"} << std::endl;\par
-434         \}\par
-435         {\cf19 else}\{\par
-436             {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
-437             this->todosServidores.at(indice).envarMensagem(this->usuarioAtualId, mensg, dataHora, this->nomeCanalAtual);\par
-438         \}\par
-439     \}\par
-440 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 473                                                                 \{\par
+474     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+475         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+476     \} {\cf19 else}\{\par
+477         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+478             std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+479             this->nomeServidorAtual = {\cf22 ""};\par
+480             this->nomeCanalAtual = {\cf22 ""};\par
+481             {\cf19 return};\par
+482         \}\par
+483         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
+484             std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um canal para poder usar esse comando"} << std::endl;\par
+485         \}\par
+486         {\cf19 else}\{\par
+487             {\cf18 int} indice = getIndiceServidorByName(this->nomeServidorAtual);\par
+488             this->todosServidores.at(indice).envarMensagem(this->usuarioAtualId, mensg, dataHora, this->nomeCanalAtual);\par
+489         \}\par
+490     \}\par
+491 \}\par
 }
 }
 {\xe \v getEstadoLogin\:sistema}
@@ -2791,8 +2978,8 @@ Par\'E2metros\par}
 {\b 
 bool sistema::getEstadoLogin ()}}
 \par
-{\bkmkstart AAAAAAAADG}
-{\bkmkend AAAAAAAADG}
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2805,9 +2992,9 @@ Obt\'E9m o estado do login no sistema. }}\par
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 verdadeiro, se logado, falso caso contr\'E1rio \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 55                             \{\par
-56     {\cf19 return} this->logado;\par
-57 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 64                             \{\par
+65     {\cf19 return} this->logado;\par
+66 \}\par
 }
 }
 {\xe \v getIndiceServidorByName\:sistema}
@@ -2816,8 +3003,8 @@ verdadeiro, se logado, falso caso contr\'E1rio \par
 {\b 
 int sistema::getIndiceServidorByName (std::string  {\i nomeServer}) const}}
 \par
-{\bkmkstart AAAAAAAADH}
-{\bkmkend AAAAAAAADH}
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2851,15 +3038,15 @@ Par\'E2metros\par}
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 \'CDndice do servidor encontrado, ou -1 caso n\'E3o encontre \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 125                                                               \{\par
-126     {\cf18 int} tam = this->todosServidores.size();\par
-127     {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
-128         {\cf19 if}(this->todosServidores.at(i).getNomeServidor() == nomeServer)\{\par
-129             {\cf19 return} i;\par
-130         \}\par
-131     \}\par
-132     {\cf19 return} -1;\par
-133 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 139                                                               \{\par
+140     {\cf18 int} tam = this->todosServidores.size();\par
+141     {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
+142         {\cf19 if}(this->todosServidores.at(i).getNomeServidor() == nomeServer)\{\par
+143             {\cf19 return} i;\par
+144         \}\par
+145     \}\par
+146     {\cf19 return} -1;\par
+147 \}\par
 }
 }
 {\xe \v getInformacaoServer\:sistema}
@@ -2868,8 +3055,8 @@ Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \s
 {\b 
 void sistema::getInformacaoServer (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADI}
-{\bkmkend AAAAAAAADI}
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2888,15 +3075,15 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 232                                                                \{\par
-233     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
-234     {\cf19 if}(indice > -1)\{\par
-235         todosServidores.at(indice).infoServer();\par
-236     \}\par
-237     {\cf19 else}\{\par
-238         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
-239     \}\par
-240 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 245                                                                \{\par
+246     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
+247     {\cf19 if}(indice > -1)\{\par
+248         todosServidores.at(indice).infoServer();\par
+249     \}\par
+250     {\cf19 else}\{\par
+251         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
+252     \}\par
+253 \}\par
 }
 }
 {\xe \v getUsuarioByPos\:sistema}
@@ -2905,8 +3092,8 @@ Par\'E2metros\par}
 {\b 
 {\b usuario} sistema::getUsuarioByPos (int  {\i posToSerach}) const}}
 \par
-{\bkmkstart AAAAAAAADJ}
-{\bkmkend AAAAAAAADJ}
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2928,9 +3115,9 @@ Par\'E2metros\par}
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 O usu\'E1rio da posi\'E7\'E3o \par
 }}}{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 24                                                      \{\par
-25     {\cf19 return} this->todosUsuarios.at(posToSerach);\par
-26 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 33                                                      \{\par
+34     {\cf19 return} this->todosUsuarios.at(posToSerach);\par
+35 \}\par
 }
 }
 {\xe \v leaveServer\:sistema}
@@ -2939,8 +3126,8 @@ O usu\'E1rio da posi\'E7\'E3o \par
 {\b 
 void sistema::leaveServer ()}}
 \par
-{\bkmkstart AAAAAAAADK}
-{\bkmkend AAAAAAAADK}
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2950,26 +3137,26 @@ Sai de um servidor (apenas no quesito visualiza\'E7\'E3o) }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Verifica se est\'E1 visualizando um servidor, e sai dele caso esteja (muda a vizualiza\'E7\'E3o para uma strng vazia);. \par
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 328                          \{\par
-329     {\cf19 if}(this->nomeServidorAtual == {\cf22 ""})\{\par
-330         std::cout << {\cf22 "Voc\'EA n\'E3o est\'E1 visualizando nenhum servidor"} << std::endl;\par
-331     \}\par
-332     {\cf19 else}\{\par
-333         std::cout << {\cf22 "Saindo do servidor '"} << this->nomeServidorAtual << {\cf22 "'"} << std::endl;\par
-334         this->nomeServidorAtual = {\cf22 ""};\par
-335         this->nomeCanalAtual = {\cf22 ""};\par
-336     \}\par
-337 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 341                          \{\par
+342     {\cf19 if}(this->nomeServidorAtual == {\cf22 ""})\{\par
+343         std::cout << {\cf22 "Voc\'EA n\'E3o est\'E1 visualizando nenhum servidor"} << std::endl;\par
+344     \}\par
+345     {\cf19 else}\{\par
+346         std::cout << {\cf22 "Saindo do servidor '"} << this->nomeServidorAtual << {\cf22 "'"} << std::endl;\par
+347         this->nomeServidorAtual = {\cf22 ""};\par
+348         this->nomeCanalAtual = {\cf22 ""};\par
+349     \}\par
+350 \}\par
 }
 }
 {\xe \v listarCanais\:sistema}
 {\xe \v sistema\:listarCanais}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void sistema::listarCanais () const}}
+void sistema::listarCanais ()}}
 \par
-{\bkmkstart AAAAAAAADL}
-{\bkmkend AAAAAAAADL}
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -2977,13 +3164,19 @@ void sistema::listarCanais () const}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o que faz as verifica\'E7\'F5es necess\'E1rias e imprime os canais de um servidor. }}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 358                                 \{\par
-359     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-360         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-361     \} {\cf19 else}\{\par
-362         todosServidores.at(getIndiceServidorByName(nomeServidorAtual)).imprimirCanais();\par
-363     \}\par
-364 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 378                           \{\par
+379     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+380         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+381     \} {\cf19 else}\{\par
+382         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+383             std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+384             this->nomeServidorAtual = {\cf22 ""};\par
+385             this->nomeCanalAtual = {\cf22 ""};\par
+386             {\cf19 return};\par
+387         \}\par
+388         todosServidores.at(getIndiceServidorByName(nomeServidorAtual)).imprimirCanais();\par
+389     \}\par
+390 \}\par
 }
 }
 {\xe \v listarMensagens\:sistema}
@@ -2992,8 +3185,8 @@ Fun\'E7\'E3o que faz as verifica\'E7\'F5es necess\'E1rias e imprime os canais de
 {\b 
 void sistema::listarMensagens ()}}
 \par
-{\bkmkstart AAAAAAAADM}
-{\bkmkend AAAAAAAADM}
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3003,37 +3196,43 @@ Fun\'E7\'E3o que lista mensagens de um canal de um servidor. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Fun\'E7\'E3o que faz as verifica\'E7\'F5es necess\'E1rias, obt\'E9m as mensagens presentes no canal, e imprime-as. \par
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 445                              \{\par
-446     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-447         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-448     \} {\cf19 else}\{\par
-449         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
-450             std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um canal para poder usar esse comando"} << std::endl;\par
-451         \}\par
-452         {\cf19 else}\{\par
-453             canal* c = this->todosServidores.at(getIndiceServidorByName(this->nomeServidorAtual)).getCanalByName(this->nomeCanalAtual);\par
-454             {\cf19 if}(c->getMensagens().size() == 0)\{\par
-455                 std::cout << {\cf22 "N\'E3o h\'E1 mensagens nesse canal"} << std::endl;\par
-456             \}\par
-457             {\cf19 else}\{\par
-458                 std::vector<mensagem> m = c->getMensagens();\par
-459                 {\cf19 for}({\cf18 int} i = 0; i < m.size(); i++)\{\par
-460                     std::cout << getUsuarioByPos(m.at(i).getIdUserMensagem() - 1).getNome() << {\cf22 " "} << m.at(i).getDataMensagem() << {\cf22 ": "} << m.at(i).getConteudoMensagem() << std::endl;\par
-461                 \}\par
-462             \}\par
-463         \}\par
-464     \}\par
-465 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 496                              \{\par
+497     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+498         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+499     \} {\cf19 else}\{\par
+500         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+501         std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+502         this->nomeServidorAtual = {\cf22 ""};\par
+503         this->nomeCanalAtual = {\cf22 ""};\par
+504         {\cf19 return};\par
+505         \}\par
+506         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
+507             std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um canal para poder usar esse comando"} << std::endl;\par
+508         \}\par
+509         {\cf19 else}\{\par
+510             canal* c = this->todosServidores.at(getIndiceServidorByName(this->nomeServidorAtual)).getCanalByName(this->nomeCanalAtual);\par
+511             {\cf19 if}(c->getMensagens().size() == 0)\{\par
+512                 std::cout << {\cf22 "N\'E3o h\'E1 mensagens nesse canal"} << std::endl;\par
+513             \}\par
+514             {\cf19 else}\{\par
+515                 std::vector<mensagem> m = c->getMensagens();\par
+516                 {\cf19 for}({\cf18 int} i = 0; i < m.size(); i++)\{\par
+517                     std::cout << getUsuarioByPos(m.at(i).getIdUserMensagem() - 1).getNome() << {\cf22 " "} << m.at(i).getDataMensagem() << {\cf22 ": "} << m.at(i).getConteudoMensagem() << std::endl;\par
+518                 \}\par
+519             \}\par
+520         \}\par
+521     \}\par
+522 \}\par
 }
 }
 {\xe \v listarParticipantes\:sistema}
 {\xe \v sistema\:listarParticipantes}
 \pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
 {\b 
-void sistema::listarParticipantes () const}}
+void sistema::listarParticipantes ()}}
 \par
-{\bkmkstart AAAAAAAADN}
-{\bkmkend AAAAAAAADN}
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3043,17 +3242,24 @@ Lista todos os participantes do servidor atual. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Verifica se o usu\'E1rio est\'E1 visualizando algum servidor, e, caso esteja, lista quem participa desse servidor visualizado. \par
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 342                                        \{\par
-343     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-344         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-345     \} {\cf19 else}\{\par
-346         std::vector<int> ids = this->todosServidores.at(this->getIndiceServidorByName(this->nomeServidorAtual)).getAllUsers();\par
-347         {\cf18 int} tam = ids.size();\par
-348         {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
-349             std::cout<< getUsuarioByPos(ids.at(i) - 1).getNome() << std::endl;\par
-350         \}\par
-351     \}\par
-352 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 355                                  \{\par
+356     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+357         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+358     \} {\cf19 else}\{\par
+359         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) > -1)\{\par
+360             std::vector<int> ids = this->todosServidores.at(this->getIndiceServidorByName(this->nomeServidorAtual)).getAllUsers();\par
+361             {\cf18 int} tam = ids.size();\par
+362             {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
+363                 std::cout<< getUsuarioByPos(ids.at(i) - 1).getNome() << std::endl;\par
+364             \}\par
+365         \}\par
+366         {\cf19 else}\{\par
+367             std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+368             this->nomeServidorAtual = {\cf22 ""};\par
+369             this->nomeCanalAtual = {\cf22 ""};\par
+370         \}\par
+371     \}\par
+372 \}\par
 }
 }
 {\xe \v listServers\:sistema}
@@ -3062,8 +3268,8 @@ Verifica se o usu\'E1rio est\'E1 visualizando algum servidor, e, caso esteja, li
 {\b 
 void sistema::listServers () const}}
 \par
-{\bkmkstart AAAAAAAADO}
-{\bkmkend AAAAAAAADO}
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3071,17 +3277,17 @@ void sistema::listServers () const}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Lista todos os servidores do sistema. }}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 154                                \{\par
-155     {\cf18 int} tam = this->todosServidores.size();\par
-156     {\cf19 if}(tam == 0)\{\par
-157         std::cout << {\cf22 "N\'E3o h\'E1 servidores criados"} << std::endl;\par
-158     \}\par
-159     {\cf19 else}\{\par
-160         {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
-161             std::cout << todosServidores.at(i).getNomeServidor() << std::endl;\par
-162         \}\par
-163     \}\par
-164 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 167                                \{\par
+168     {\cf18 int} tam = this->todosServidores.size();\par
+169     {\cf19 if}(tam == 0)\{\par
+170         std::cout << {\cf22 "N\'E3o h\'E1 servidores criados"} << std::endl;\par
+171     \}\par
+172     {\cf19 else}\{\par
+173         {\cf19 for} ({\cf18 int} i = 0; i < tam; i++)\{\par
+174             std::cout << todosServidores.at(i).getNomeServidor() << std::endl;\par
+175         \}\par
+176     \}\par
+177 \}\par
 }
 }
 {\xe \v loginUser\:sistema}
@@ -3090,8 +3296,8 @@ Lista todos os servidores do sistema. }}\par
 {\b 
 void sistema::loginUser (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADP}
-{\bkmkend AAAAAAAADP}
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3110,19 +3316,22 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 90                                                      \{\par
-91     {\cf18 int} tam = this->todosUsuarios.size();\par
-92     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
-93         std::string email = getUsuarioByPos(i).getEmail();\par
-94         std::string senha = getUsuarioByPos(i).getSenha();\par
-95         {\cf19 if}(email == atributos.at(0) && senha == atributos.at(1))\{\par
-96             setLoginStatus({\cf17 true}, getUsuarioByPos(i).getId());\par
-97             std::cout << {\cf22 "Logado como "} << email << std::endl;\par
-98             {\cf19 return};\par
-99         \}\par
-100     \}\par
-101     std::cout << {\cf22 "Email ou Senha incorretos"} << std::endl;\par
-102 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 101                                                      \{\par
+102     {\cf18 int} tam = this->todosUsuarios.size();\par
+103     std::hash<std::string> hash_function;\par
+104     std::size_t hash = hash_function(atributos.at(1));\par
+105     std::string senhaInserida = std::to_string(hash);\par
+106     {\cf19 for}({\cf18 int} i = 0; i < tam; i++)\{\par
+107         std::string email = getUsuarioByPos(i).getEmail();\par
+108         std::string senha = getUsuarioByPos(i).getSenha();\par
+109         {\cf19 if}(email == atributos.at(0) && senha == senhaInserida)\{\par
+110             setLoginStatus({\cf17 true}, getUsuarioByPos(i).getId());\par
+111             std::cout << {\cf22 "Logado como "} << email << std::endl;\par
+112             {\cf19 return};\par
+113         \}\par
+114     \}\par
+115     std::cout << {\cf22 "Email ou Senha incorretos"} << std::endl;\par
+116 \}\par
 }
 }
 {\xe \v logoffUser\:sistema}
@@ -3131,8 +3340,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::logoffUser ()}}
 \par
-{\bkmkstart AAAAAAAADQ}
-{\bkmkend AAAAAAAADQ}
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3140,10 +3349,10 @@ void sistema::logoffUser ()}}
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Desloga o usu\'E1rio atualmente logado. }}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 107                         \{\par
-108     std::cout << {\cf22 "Desconectando Usu\'E1rio "} << getUsuarioByPos(this->usuarioAtualId - 1).getEmail() << std::endl;\par
-109     setLoginStatus({\cf17 false}, -1);\par
-110 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 121                         \{\par
+122     std::cout << {\cf22 "Desconectando Usu\'E1rio "} << getUsuarioByPos(this->usuarioAtualId - 1).getEmail() << std::endl;\par
+123     setLoginStatus({\cf17 false}, -1);\par
+124 \}\par
 }
 }
 {\xe \v sairCanalEmServidor\:sistema}
@@ -3152,8 +3361,8 @@ Desloga o usu\'E1rio atualmente logado. }}\par
 {\b 
 void sistema::sairCanalEmServidor ()}}
 \par
-{\bkmkstart AAAAAAAADR}
-{\bkmkend AAAAAAAADR}
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3172,18 +3381,46 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 410                                  \{\par
-411     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
-412         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
-413     \} {\cf19 else}\{\par
-414         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
-415             std::cout << {\cf22 "Voc\'EA n\'E3o est\'E1 visualizando nenhum canal no momento"} << std::endl;\par
-416         \}\par
-417         {\cf19 else}\{\par
-418             std::cout << {\cf22 "Saindo do canal..."} << std::endl;\par
-419         \}\par
-420     \}\par
-421 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 448                                  \{\par
+449     {\cf19 if} (this->nomeServidorAtual == {\cf22 ""})\{\par
+450         std::cout << {\cf22 "Voc\'EA precisa est\'E1 vusualizando um servidor para poder usar esse comando"} << std::endl;\par
+451     \} {\cf19 else}\{\par
+452         {\cf19 if}(getIndiceServidorByName(this->nomeServidorAtual) < 0)\{\par
+453                 std::cout << {\cf22 "Esse servidor n\'E3o existe mais"} << std::endl;\par
+454                 this->nomeServidorAtual = {\cf22 ""};\par
+455                 this->nomeCanalAtual = {\cf22 ""};\par
+456                 {\cf19 return};\par
+457         \}\par
+458         {\cf19 if}(this->nomeCanalAtual == {\cf22 ""})\{\par
+459             std::cout << {\cf22 "Voc\'EA n\'E3o est\'E1 visualizando nenhum canal no momento"} << std::endl;\par
+460         \}\par
+461         {\cf19 else}\{\par
+462             std::cout << {\cf22 "Saindo do canal..."} << std::endl;\par
+463             this->nomeCanalAtual = {\cf22 ""};\par
+464         \}\par
+465     \}\par
+466 \}\par
+}
+}
+{\xe \v salvar\:sistema}
+{\xe \v sistema\:salvar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void sistema::salvar ()}}
+\par
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Fun\'E7\'E3o que chama fun\'E7\'F5es privadas que salvam os dados do sistema em dois txts. }}\par
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 581                     \{\par
+582     salvarUsuarios();\par
+583     salvarServidores();\par
+584 \}\par
 }
 }
 {\xe \v setCodigoConvite\:sistema}
@@ -3192,8 +3429,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::setCodigoConvite (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADS}
-{\bkmkend AAAAAAAADS}
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3212,27 +3449,27 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 248                                                             \{\par
-249     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
-250     {\cf19 if} (indice > -1)\{\par
-251         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
-252             this->todosServidores.at(indice).setCodigoConvite(atributos.at(1));\par
-253             {\cf19 if}(atributos.at(1) == {\cf22 ""})\{\par
-254                 std::cout << {\cf22 "O C\'F3digo de convite foi removido"} << std::endl;\par
-255             \}\par
-256             {\cf19 else}\{\par
-257                 std::cout << {\cf22 "C\'F3digo de convite alterado com sucesso!"} << std::endl;\par
-258             \}\par
-259         \}\par
-260         {\cf19 else}\{\par
-261             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
-262         \}\par
-263 \par
-264     \}\par
-265     {\cf19 else}\{\par
-266         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
-267     \}\par
-268 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 261                                                             \{\par
+262     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
+263     {\cf19 if} (indice > -1)\{\par
+264         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
+265             this->todosServidores.at(indice).setCodigoConvite(atributos.at(1));\par
+266             {\cf19 if}(atributos.at(1) == {\cf22 ""})\{\par
+267                 std::cout << {\cf22 "O C\'F3digo de convite foi removido"} << std::endl;\par
+268             \}\par
+269             {\cf19 else}\{\par
+270                 std::cout << {\cf22 "C\'F3digo de convite alterado com sucesso!"} << std::endl;\par
+271             \}\par
+272         \}\par
+273         {\cf19 else}\{\par
+274             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
+275         \}\par
+276 \par
+277     \}\par
+278     {\cf19 else}\{\par
+279         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
+280     \}\par
+281 \}\par
 }
 }
 {\xe \v setDescricao\:sistema}
@@ -3241,8 +3478,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::setDescricao (std::vector< std::string >  {\i atributos})}}
 \par
-{\bkmkstart AAAAAAAADT}
-{\bkmkend AAAAAAAADT}
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3261,34 +3498,34 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 198                                                         \{\par
-199     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
-200     {\cf19 if} (indice > -1)\{\par
-201         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
-202             std::string novaDesc = atributos.at(1);\par
-203             {\cf19 if}(novaDesc.length() >=2)\{\par
-204                 {\cf19 if}(novaDesc[0] != {\cf23 '"'} || novaDesc[novaDesc.length()-1] != {\cf23 '"'})\{\par
-205                 std::cout << {\cf22 "A descri\'E7\'E3o deve ser passada entre aspas duplas (\\"<descricao>\\")"}\par
-206                 << std::endl;\par
-207                 \}\par
-208                 {\cf19 else}\{\par
-209                     novaDesc = novaDesc.substr(1, novaDesc.length() -2);\par
-210                     this->todosServidores.at(indice).setDescricao(novaDesc);\par
-211                     std::cout << {\cf22 "Descri\'E7\'E3o alterada com sucesso"} << std::endl;\par
-212                 \}\par
-213             \}\par
-214             {\cf19 else}\{\par
-215                 std::cout << {\cf22 "H\'E1 algo de errado no parametro <descricao>"} << std::endl;\par
-216             \}\par
-217         \}\par
-218         {\cf19 else}\{\par
-219             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
-220         \}\par
-221     \}\par
-222     {\cf19 else}\{\par
-223         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
-224     \}\par
-225 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 211                                                         \{\par
+212     {\cf18 int} indice = getIndiceServidorByName(atributos.at(0));\par
+213     {\cf19 if} (indice > -1)\{\par
+214         {\cf19 if}(todosServidores.at(indice).getIdDono() == this->usuarioAtualId)\{\par
+215             std::string novaDesc = atributos.at(1);\par
+216             {\cf19 if}(novaDesc.length() >=2)\{\par
+217                 {\cf19 if}(novaDesc[0] != {\cf23 '"'} || novaDesc[novaDesc.length()-1] != {\cf23 '"'})\{\par
+218                 std::cout << {\cf22 "A descri\'E7\'E3o deve ser passada entre aspas duplas (\\"<descricao>\\")"}\par
+219                 << std::endl;\par
+220                 \}\par
+221                 {\cf19 else}\{\par
+222                     novaDesc = novaDesc.substr(1, novaDesc.length() -2);\par
+223                     this->todosServidores.at(indice).setDescricao(novaDesc);\par
+224                     std::cout << {\cf22 "Descri\'E7\'E3o alterada com sucesso"} << std::endl;\par
+225                 \}\par
+226             \}\par
+227             {\cf19 else}\{\par
+228                 std::cout << {\cf22 "H\'E1 algo de errado no parametro <descricao>"} << std::endl;\par
+229             \}\par
+230         \}\par
+231         {\cf19 else}\{\par
+232             std::cout << {\cf22 "Esse servidor n\'E3o pertence a voc\'EA"} << std::endl;\par
+233         \}\par
+234     \}\par
+235     {\cf19 else}\{\par
+236         std::cout << {\cf22 "Servidor '"} << atributos.at(0) << {\cf22 "' n\'E3o foi encontrado"} << std::endl;\par
+237     \}\par
+238 \}\par
 }
 }
 {\xe \v setLoginStatus\:sistema}
@@ -3297,8 +3534,8 @@ Par\'E2metros\par}
 {\b 
 void sistema::setLoginStatus (bool  {\i status}, int  {\i idUser})}}
 \par
-{\bkmkstart AAAAAAAADU}
-{\bkmkend AAAAAAAADU}
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3323,12 +3560,12 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 78                                                    \{\par
-79     this->logado = status;\par
-80     this->usuarioAtualId = idUser;\par
-81     this->nomeServidorAtual = {\cf22 ""};\par
-82     this->nomeCanalAtual = {\cf22 ""};\par
-83 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 89                                                    \{\par
+90     this->logado = status;\par
+91     this->usuarioAtualId = idUser;\par
+92     this->nomeServidorAtual = {\cf22 ""};\par
+93     this->nomeCanalAtual = {\cf22 ""};\par
+94 \}\par
 }
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -3345,8 +3582,8 @@ C:/Users/jonat/concordo_LP/src/{\b sistema.cpp}\par
 Refer\'EAncia da Classe usuario\par \pard\plain 
 {\tc\tcl2 \v usuario}
 {\xe \v usuario}
-{\bkmkstart AAAAAAAADV}
-{\bkmkend AAAAAAAADV}
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
@@ -3419,8 +3656,8 @@ Construtores e Destrutores\par
 {\b 
 usuario::usuario ()}}
 \par
-{\bkmkstart AAAAAAAADW}
-{\bkmkend AAAAAAAADW}
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3437,8 +3674,8 @@ Construtor padr\'E3o da classe usuario. }}\par
 {\b 
 usuario::usuario (const int  {\i id}, const std::string  {\i nome}, const std::string  {\i email}, const std::string  {\i senha})}}
 \par
-{\bkmkstart AAAAAAAADX}
-{\bkmkend AAAAAAAADX}
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3493,8 +3730,8 @@ Documenta\'E7\'E3o das fun\'E7\'F5es\par
 {\b 
 std::string usuario::getEmail () const}}
 \par
-{\bkmkstart AAAAAAAADY}
-{\bkmkend AAAAAAAADY}
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3519,8 +3756,8 @@ String contendo o email do usu\'E1rio \par
 {\b 
 int usuario::getId () const}}
 \par
-{\bkmkstart AAAAAAAADZ}
-{\bkmkend AAAAAAAADZ}
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3545,8 +3782,8 @@ Int contendo o nome do usu\'E1rio \par
 {\b 
 std::string usuario::getNome () const}}
 \par
-{\bkmkstart AAAAAAAAEA}
-{\bkmkend AAAAAAAAEA}
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3571,8 +3808,8 @@ String contendo o nome do usu\'E1rio \par
 {\b 
 std::string usuario::getSenha () const}}
 \par
-{\bkmkstart AAAAAAAAEB}
-{\bkmkend AAAAAAAAEB}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
@@ -3972,28 +4209,33 @@ V\'E1 para a documenta\'E7\'E3o desse arquivo.{
 60 \par
 65         {\cf18 void} addUserId({\cf18 int} {\cf18 id});\par
 66 \par
-71         {\cf18 void} setDescricao(std::string novaDesc);\par
+71         std::string getDescricao();\par
 72 \par
-76         {\cf18 void} infoServer() {\cf17 const};\par
-77 \par
-82         {\cf18 void} setCodigoConvite(std::string novoCodigo);\par
+77         {\cf18 void} setDescricao(std::string novaDesc);\par
+78 \par
+82         {\cf18 void} infoServer() {\cf17 const};\par
 83 \par
-88         std::string getCodigoConvite() {\cf17 const};\par
+88         {\cf18 void} setCodigoConvite(std::string novoCodigo);\par
 89 \par
-94         std::vector<int> getAllUsers() {\cf17 const};\par
+94         std::string getCodigoConvite() {\cf17 const};\par
 95 \par
-99         {\cf18 void} imprimirCanais() {\cf17 const};\par
-100 \par
-106         {\cf18 int} getIndiceCanalByNome(std::string nomeCanal) {\cf17 const};\par
-107 \par
-113         {\cf18 void} addCanal(std::string nome, std::string tipo);\par
-117         {\cf18 void} clearServidor();\par
-118 \par
-126         {\cf18 void} envarMensagem({\cf18 int} idUser, std::string mensg, std::string dataHora, std::string nomeCanal);\par
-127 \par
-132         canal* getCanalByName(std::string nome);\par
-133 \};\par
-134 {\cf21 #endif}\par
+100         std::vector<int> getAllUsers() {\cf17 const};\par
+101 \par
+105         {\cf18 void} imprimirCanais() {\cf17 const};\par
+106 \par
+112         {\cf18 int} getIndiceCanalByNome(std::string nomeCanal) {\cf17 const};\par
+113 \par
+118         {\cf18 void} insertCanal(canal *c);\par
+124         {\cf18 void} addCanal(std::string nome, std::string tipo);\par
+125         \par
+130         std::vector<canal*> getAllCanais();\par
+134         {\cf18 void} clearServidor();\par
+135 \par
+143         {\cf18 void} envarMensagem({\cf18 int} idUser, std::string mensg, std::string dataHora, std::string nomeCanal);\par
+144 \par
+149         canal* getCanalByName(std::string nome);\par
+150 \};\par
+151 {\cf21 #endif}\par
 }
 \par \pard\plain 
 
@@ -4012,6 +4254,8 @@ Defini\'E7\'E3o da classe sistema. }}\par
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
 {\f2 #include <vector>}\par
+{\f2 #include <fstream>}\par
+{\f2 #include <functional>}\par
 {\f2 #include "usuario.h"}\par
 {\f2 #include "servidor.h"}\par
 }
@@ -4051,52 +4295,64 @@ V\'E1 para a documenta\'E7\'E3o desse arquivo.{
 6 {\cf21 #define SISTEMA_H}\par
 7 {\cf21 #include <iostream>}\par
 8 {\cf21 #include <vector>}\par
-9 {\cf21 #include "usuario.h"}\par
-10 {\cf21 #include "servidor.h"}\par
-11 \par
-16 {\cf17 class }sistema\{\par
-17     {\cf17 private}:\par
-18         std::vector<usuario> todosUsuarios;\par
-19         std::vector<servidor> todosServidores;\par
-20         {\cf18 int} usuarioAtualId;\par
-21         {\cf18 bool} logado;\par
-22         std::string nomeServidorAtual;\par
-23         std::string nomeCanalAtual;\par
-24     {\cf17 public}:\par
-28         sistema();\par
-32         ~sistema();\par
-38         usuario getUsuarioByPos({\cf18 int} posToSerach) {\cf17 const};\par
-39         \par
-45         {\cf18 bool} emailCadastrado(std::string email) {\cf17 const};\par
-50         {\cf18 void} addUsuario(usuario u);\par
-55         {\cf18 bool} getEstadoLogin();\par
-60         {\cf18 void} createUser(std::vector<std::string> atributos);\par
-66         {\cf18 void} setLoginStatus({\cf18 bool} status, {\cf18 int} idUser);\par
-71         {\cf18 void} loginUser(std::vector<std::string> atributos);\par
-75         {\cf18 void} logoffUser();\par
-80         {\cf18 void} addServer(servidor s);\par
-86         {\cf18 int} getIndiceServidorByName(std::string nomeServer) {\cf17 const};\par
-91         {\cf18 void} createServer(std::vector<std::string> atributos);\par
-95         {\cf18 void} listServers() {\cf17 const};\par
-100         {\cf18 void} deleteServer(std::vector<std::string> atributos);\par
-105         {\cf18 void} setDescricao(std::vector<std::string> atributos);\par
-110         {\cf18 void} getInformacaoServer(std::vector<std::string> atributos);\par
-115         {\cf18 void} setCodigoConvite(std::vector<std::string> atributos);\par
-120         {\cf18 void} enterServer(std::vector<std::string> atributos);\par
-124         {\cf18 void} leaveServer();\par
-128         {\cf18 void} listarParticipantes() {\cf17 const};\par
-132         {\cf18 void} listarCanais() {\cf17 const};\par
-137         {\cf18 void} criarCanalEmServidor(std::vector<std::string> atributos);\par
-138 \par
-143         {\cf18 void} entrarCanalEmServidor(std::vector<std::string> atributos);\par
-144 \par
-149         {\cf18 void} sairCanalEmServidor();\par
-150 \par
-156         {\cf18 void} envioDeMensagem(std::string mensg, std::string horaData);\par
-157 \par
-161         {\cf18 void} listarMensagens();\par
-162 \};\par
-163 {\cf21 #endif}\par
+9 {\cf21 #include <fstream>}\par
+10 {\cf21 #include <functional>}\par
+11 {\cf21 #include "usuario.h"}\par
+12 {\cf21 #include "servidor.h"}\par
+13 \par
+18 {\cf17 class }sistema\{\par
+19     {\cf17 private}:\par
+20         std::vector<usuario> todosUsuarios;\par
+21         std::vector<servidor> todosServidores;\par
+22         {\cf18 int} usuarioAtualId;\par
+23         {\cf18 bool} logado;\par
+24         std::string nomeServidorAtual;\par
+25         std::string nomeCanalAtual;\par
+26         {\cf18 void} salvarUsuarios();\par
+27         {\cf18 void} salvarServidores();\par
+28         {\cf18 void} carregarUsuarios();\par
+29         {\cf18 void} carregarServidores();\par
+30     {\cf17 public}:\par
+34         sistema();\par
+38         ~sistema();\par
+39 \par
+43         {\cf18 void} clearAlocacao();\par
+49         usuario getUsuarioByPos({\cf18 int} posToSerach) {\cf17 const};\par
+50         \par
+56         {\cf18 bool} emailCadastrado(std::string email) {\cf17 const};\par
+61         {\cf18 void} addUsuario(usuario u);\par
+66         {\cf18 bool} getEstadoLogin();\par
+71         {\cf18 void} createUser(std::vector<std::string> atributos);\par
+77         {\cf18 void} setLoginStatus({\cf18 bool} status, {\cf18 int} idUser);\par
+82         {\cf18 void} loginUser(std::vector<std::string> atributos);\par
+86         {\cf18 void} logoffUser();\par
+91         {\cf18 void} addServer(servidor s);\par
+97         {\cf18 int} getIndiceServidorByName(std::string nomeServer) {\cf17 const};\par
+102         {\cf18 void} createServer(std::vector<std::string> atributos);\par
+106         {\cf18 void} listServers() {\cf17 const};\par
+111         {\cf18 void} deleteServer(std::vector<std::string> atributos);\par
+116         {\cf18 void} setDescricao(std::vector<std::string> atributos);\par
+121         {\cf18 void} getInformacaoServer(std::vector<std::string> atributos);\par
+126         {\cf18 void} setCodigoConvite(std::vector<std::string> atributos);\par
+131         {\cf18 void} enterServer(std::vector<std::string> atributos);\par
+135         {\cf18 void} leaveServer();\par
+139         {\cf18 void} listarParticipantes();\par
+143         {\cf18 void} listarCanais();\par
+148         {\cf18 void} criarCanalEmServidor(std::vector<std::string> atributos);\par
+149 \par
+154         {\cf18 void} entrarCanalEmServidor(std::vector<std::string> atributos);\par
+155 \par
+160         {\cf18 void} sairCanalEmServidor();\par
+161 \par
+167         {\cf18 void} envioDeMensagem(std::string mensg, std::string horaData);\par
+168 \par
+172         {\cf18 void} listarMensagens();\par
+173 \par
+177         {\cf18 void} salvar();\par
+178 \par
+182         {\cf18 void} carregar();\par
+183 \};\par
+184 {\cf21 #endif}\par
 }
 \par \pard\plain 
 
@@ -4380,84 +4636,94 @@ Fun\'E7\'E3o main. Cria um objeto da classe sistema, faz as verifica\'E7\'F5es d
 135                     {\cf22 " argumentos, mas foram passados "}<< atr_sep.size() << std::endl;\par
 136             \}\par
 137              {\cf19 else}\{\par
-138                 {\cf19 if}(comando == {\cf22 "quit"})\{\par
-139                         std::cout << {\cf22 "Saindo do Concordo..."} << std::endl;\par
-140                 \}\par
-141                 {\cf19 else}\{\par
-142                     {\cf19 if}(coms[comando].first == s.getEstadoLogin())\{\par
-143                         {\cf19 if}(comando == {\cf22 "create-user"})\{\par
-144                             s.createUser(atr_sep);\par
-145                         \}\par
-146                         {\cf19 if}(comando == {\cf22 "login"})\{\par
-147                             s.loginUser(atr_sep);\par
+138                 s.carregar();\par
+139                 {\cf19 if}(comando == {\cf22 "quit"})\{\par
+140                         std::cout << {\cf22 "Saindo do Concordo..."} << std::endl;\par
+141                         s.clearAlocacao();\par
+142                 \}\par
+143                 {\cf19 else}\{\par
+144                     {\cf19 if}(coms[comando].first == s.getEstadoLogin())\{\par
+145                         {\cf19 if}(comando == {\cf22 "create-user"})\{\par
+146                             s.createUser(atr_sep);\par
+147                             s.salvar();\par
 148                         \}\par
-149                         {\cf19 if}(comando == {\cf22 "disconect"})\{\par
-150                             s.logoffUser();\par
+149                         {\cf19 else} {\cf19 if}(comando == {\cf22 "login"})\{\par
+150                             s.loginUser(atr_sep);\par
 151                         \}\par
-152                         {\cf19 if}(comando == {\cf22 "create-server"})\{\par
-153                             s.createServer(atr_sep);\par
+152                         {\cf19 else} {\cf19 if}(comando == {\cf22 "disconect"})\{\par
+153                             s.logoffUser();\par
 154                         \}\par
-155                         {\cf19 if}(comando == {\cf22 "list-servers"})\{\par
-156                             s.listServers();\par
-157                         \}\par
-158                         {\cf19 if}(comando == {\cf22 "remove-server"})\{\par
-159                             s.deleteServer(atr_sep);\par
-160                         \}\par
-161                         {\cf19 if}(comando == {\cf22 "set-server-desc"})\{\par
-162                             s.setDescricao(atr_sep);\par
-163                         \}\par
-164                         {\cf19 if}(comando == {\cf22 "info-server"})\{\par
-165                             s.getInformacaoServer(atr_sep);\par
-166                         \}\par
-167                         {\cf19 if}(comando == {\cf22 "set-server-invite-code"})\{\par
-168                         s.setCodigoConvite(atr_sep);\par
+155                         {\cf19 else} {\cf19 if}(comando == {\cf22 "create-server"})\{\par
+156                             s.createServer(atr_sep);\par
+157                             s.salvar();\par
+158                         \}\par
+159                         {\cf19 else} {\cf19 if}(comando == {\cf22 "list-servers"})\{\par
+160                             s.listServers();\par
+161                         \}\par
+162                         {\cf19 else} {\cf19 if}(comando == {\cf22 "remove-server"})\{\par
+163                             s.deleteServer(atr_sep);\par
+164                             s.salvar();\par
+165                         \}\par
+166                         {\cf19 else} {\cf19 if}(comando == {\cf22 "set-server-desc"})\{\par
+167                             s.setDescricao(atr_sep);\par
+168                             s.salvar();\par
 169                         \}\par
-170                         {\cf19 if}(comando == {\cf22 "enter-server"})\{\par
-171                             s.enterServer(atr_sep);\par
+170                         {\cf19 else} {\cf19 if}(comando == {\cf22 "info-server"})\{\par
+171                             s.getInformacaoServer(atr_sep);\par
 172                         \}\par
-173                         {\cf19 if}(comando == {\cf22 "leave-server"})\{\par
-174                             s.leaveServer();\par
-175                         \}\par
-176                         {\cf19 if}(comando == {\cf22 "list-participants"})\{\par
-177                             s.listarParticipantes();\par
-178                         \}\par
-179                         {\cf19 if}(comando == {\cf22 "list-channels"})\{\par
-180                             s.listarCanais();\par
-181                         \}\par
-182                         {\cf19 if}(comando == {\cf22 "create-channel"})\{\par
-183                             s.criarCanalEmServidor(atr_sep);\par
-184                         \}\par
-185                         {\cf19 if}(comando == {\cf22 "enter-channel"})\{\par
-186                             s.entrarCanalEmServidor(atr_sep);\par
-187                         \}\par
-188                         {\cf19 if}(comando == {\cf22 "leave-channel"})\{\par
-189                             s.sairCanalEmServidor();\par
-190                         \}\par
-191                         {\cf19 if}(comando == {\cf22 "send-message"})\{\par
-192                             s.envioDeMensagem(atr_sep[0], horaAtual());\par
+173                         {\cf19 else} {\cf19 if}(comando == {\cf22 "set-server-invite-code"})\{\par
+174                             s.setCodigoConvite(atr_sep);\par
+175                             s.salvar();\par
+176                         \}\par
+177                         {\cf19 else} {\cf19 if}(comando == {\cf22 "enter-server"})\{\par
+178                             s.enterServer(atr_sep);\par
+179                             s.salvar();\par
+180                         \}\par
+181                         {\cf19 else} {\cf19 if}(comando == {\cf22 "leave-server"})\{\par
+182                             s.leaveServer();\par
+183                         \}\par
+184                         {\cf19 else} {\cf19 if}(comando == {\cf22 "list-participants"})\{\par
+185                             s.listarParticipantes();\par
+186                         \}\par
+187                         {\cf19 else} {\cf19 if}(comando == {\cf22 "list-channels"})\{\par
+188                             s.listarCanais();\par
+189                         \}\par
+190                         {\cf19 else} {\cf19 if}(comando == {\cf22 "create-channel"})\{\par
+191                             s.criarCanalEmServidor(atr_sep);\par
+192                             s.salvar();\par
 193                         \}\par
-194                         {\cf19 if}(comando == {\cf22 "list-messages"})\{\par
-195                             s.listarMensagens();\par
+194                         {\cf19 else} {\cf19 if}(comando == {\cf22 "enter-channel"})\{\par
+195                             s.entrarCanalEmServidor(atr_sep);\par
 196                         \}\par
-197                     \}\par
-198                     {\cf19 else}\{\par
-199                         {\cf19 if}(s.getEstadoLogin() == {\cf17 false})\{\par
-200                             std::cout << {\cf22 "\'C9 necess\'E1rio est\'E1 logado para executar o comando '"} << comando << {\cf22 "'"} << std::endl;\par
-201                         \}\par
-202                         {\cf19 else}\{\par
-203                             std::cout << {\cf22 "O comando '"} << comando << {\cf22 "' n\'E3o pode ser feito enquanto logado"} << std::endl;\par
-204                         \}\par
-205                     \}\par
-206                 \}\par
-207             \}\par
-208         \}\par
-209         {\cf19 else}\{\par
-210             std::cout << {\cf22 "Comando inv\'E1lido"} << std::endl;\par
-211         \}\par
-212         std::cout << std::endl;\par
-213     \}\par
-214     {\cf19 return} 0;\par
-215 \}\par
+197                         {\cf19 else} {\cf19 if}(comando == {\cf22 "leave-channel"})\{\par
+198                             s.sairCanalEmServidor();\par
+199                         \}\par
+200                         {\cf19 else} {\cf19 if}(comando == {\cf22 "send-message"})\{\par
+201                             s.envioDeMensagem(atr_sep[0], horaAtual());\par
+202                             s.salvar();\par
+203                         \}\par
+204                         {\cf19 else} {\cf19 if}(comando == {\cf22 "list-messages"})\{\par
+205                             s.listarMensagens();\par
+206                         \}\par
+207                     \}\par
+208                     {\cf19 else}\{\par
+209                         {\cf19 if}(s.getEstadoLogin() == {\cf17 false})\{\par
+210                             std::cout << {\cf22 "\'C9 necess\'E1rio est\'E1 logado para executar o comando '"} << comando << {\cf22 "'"} << std::endl;\par
+211                         \}\par
+212                         {\cf19 else}\{\par
+213                             std::cout << {\cf22 "O comando '"} << comando << {\cf22 "' n\'E3o pode ser feito enquanto logado"} << std::endl;\par
+214                         \}\par
+215                     \}\par
+216                 \}\par
+217             \}\par
+218         \}\par
+219         {\cf19 else}\{\par
+220             std::cout << {\cf22 "Comando inv\'E1lido"} << std::endl;\par
+221         \}\par
+222         std::cout << std::endl;\par
+223     \}\par
+224     {\cf19 return} 0;\par
+225 \}\par
 }
 }
 {\xe \v splitEntrada\:main.cpp}

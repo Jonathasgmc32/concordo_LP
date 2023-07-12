@@ -135,63 +135,73 @@ int main(){
                     " argumentos, mas foram passados "<< atr_sep.size() << std::endl;
             }
              else{
+                s.carregar();
                 if(comando == "quit"){
                         std::cout << "Saindo do Concordo..." << std::endl;
+                        s.clearAlocacao();
                 }
                 else{
                     if(coms[comando].first == s.getEstadoLogin()){
                         if(comando == "create-user"){
                             s.createUser(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "login"){
+                        else if(comando == "login"){
                             s.loginUser(atr_sep);
                         }
-                        if(comando == "disconect"){
+                        else if(comando == "disconect"){
                             s.logoffUser();
                         }
-                        if(comando == "create-server"){
+                        else if(comando == "create-server"){
                             s.createServer(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "list-servers"){
+                        else if(comando == "list-servers"){
                             s.listServers();
                         }
-                        if(comando == "remove-server"){
+                        else if(comando == "remove-server"){
                             s.deleteServer(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "set-server-desc"){
+                        else if(comando == "set-server-desc"){
                             s.setDescricao(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "info-server"){
+                        else if(comando == "info-server"){
                             s.getInformacaoServer(atr_sep);
                         }
-                        if(comando == "set-server-invite-code"){
-                        s.setCodigoConvite(atr_sep);
+                        else if(comando == "set-server-invite-code"){
+                            s.setCodigoConvite(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "enter-server"){
+                        else if(comando == "enter-server"){
                             s.enterServer(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "leave-server"){
+                        else if(comando == "leave-server"){
                             s.leaveServer();
                         }
-                        if(comando == "list-participants"){
+                        else if(comando == "list-participants"){
                             s.listarParticipantes();
                         }
-                        if(comando == "list-channels"){
+                        else if(comando == "list-channels"){
                             s.listarCanais();
                         }
-                        if(comando == "create-channel"){
+                        else if(comando == "create-channel"){
                             s.criarCanalEmServidor(atr_sep);
+                            s.salvar();
                         }
-                        if(comando == "enter-channel"){
+                        else if(comando == "enter-channel"){
                             s.entrarCanalEmServidor(atr_sep);
                         }
-                        if(comando == "leave-channel"){
+                        else if(comando == "leave-channel"){
                             s.sairCanalEmServidor();
                         }
-                        if(comando == "send-message"){
+                        else if(comando == "send-message"){
                             s.envioDeMensagem(atr_sep[0], horaAtual());
+                            s.salvar();
                         }
-                        if(comando == "list-messages"){
+                        else if(comando == "list-messages"){
                             s.listarMensagens();
                         }
                     }

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Concordo<span id="projectnumber">&#160;2.0</span>
+   <div id="projectname">Concordo<span id="projectnumber">&#160;3.0</span>
    </div>
   </td>
  </tr>
@@ -77,6 +77,8 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#ab9a0c6f883fbc160e75d0733f2e69fee">addServer</a>(servidor s)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a7b13fd45068aeeab2966f9321f728c8f">addUsuario</a>(usuario u)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#aa051f7e27c1afb0132978d3eb88e4cf9">carregar</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#aa6b8071d7bccf361195c7fc8fc7174c1">clearAlocacao</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a4383fa7dfa78ef630ac8ebbe049a4015">createServer</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a9743bce040dcb44c94fb427211597f64">createUser</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a500c6b0ab313d55d11e23ef5ee6afc90">criarCanalEmServidor</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
@@ -90,18 +92,19 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#ae0fc4bb91bd8a31a53e957fcc257f03d">getInformacaoServer</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a5be417f4a06f46ff9b842a50654638d7">getUsuarioByPos</a>(int posToSerach) const</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a2ac252131aac1b3b81fbfb9bea027b67">leaveServer</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#ad51f000ce8b4feffccf8bdbf248c8b40">listarCanais</a>() const</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a12bd6d1228ef737a6ce6e4d3eeeae8a8">listarCanais</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a934fe2f9e2e11f303068ead0d515786b">listarMensagens</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a50af87668807c800ef0d55750b1bfeaf">listarParticipantes</a>() const</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a851224360f684282119a2ab66ce71258">listarParticipantes</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a33ad2edc6b488bb2decc8e8cb08ae8de">listServers</a>() const</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#aa4ba350552bf1d72bad85068251b37e5">loginUser</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classsistema.html#ad084bd6173bb5b73ecdd72b477d773fe">logoffUser</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a691718dcb948eddfb84e8c7109047f23">sairCanalEmServidor</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a7dbfabdef037eab34ed846ca499bcdfb">setCodigoConvite</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a33f826939a4f51feae60ce0e9acb39af">setDescricao</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#afbef3cb61e2cff2d030ed12f4d58cd49">setLoginStatus</a>(bool status, int idUser)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a0537e39d727e61a1da756500a676bbc2">sistema</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a5e3977fc972442e825f8e0f63d31cdbf">~sistema</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a998ed68a42f47bcd68e212bb969dd494">salvar</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a7dbfabdef037eab34ed846ca499bcdfb">setCodigoConvite</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a33f826939a4f51feae60ce0e9acb39af">setDescricao</a>(std::vector&lt; std::string &gt; atributos)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#afbef3cb61e2cff2d030ed12f4d58cd49">setLoginStatus</a>(bool status, int idUser)</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classsistema.html#a0537e39d727e61a1da756500a676bbc2">sistema</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classsistema.html#a5e3977fc972442e825f8e0f63d31cdbf">~sistema</a>()</td><td class="entry"><a class="el" href="classsistema.html">sistema</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
